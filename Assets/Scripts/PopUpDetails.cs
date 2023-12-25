@@ -6,8 +6,8 @@ public class PopUpDetails : MonoBehaviour
 {
     public RectTransform uiElement; // Reference to the UI element you want to move
     public float moveSpeed = 80f; // Distance to move the UI upwards
-    public float moveDistanceUp = -10;
-    public float moveDistanceDown = -532f;
+    public float moveDistanceUp;
+    public float moveDistanceDown;
 
     private bool isMoving = false;
     private bool Up = false;
