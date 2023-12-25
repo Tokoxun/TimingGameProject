@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PopUpDetails : MonoBehaviour
 {
+    public DetailsColorSwitch clrSwtch;
     public RectTransform uiElement; // Reference to the UI element you want to move
     public float moveSpeed = 80f; // Distance to move the UI upwards
     public float moveDistanceUp;
@@ -49,6 +50,7 @@ public class PopUpDetails : MonoBehaviour
 
     public void MoveUIUp()
     {
+        clrSwtch.ChangeSourceImage();
         // Triggered when the button is pressed
         isMoving = true;
     }
