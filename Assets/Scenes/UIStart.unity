@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 175860962}
   - component: {fileID: 175860964}
   - component: {fileID: 175860963}
+  - component: {fileID: 175860965}
   m_Layer: 5
   m_Name: DetailsImage
   m_TagString: Untagged
@@ -199,6 +200,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175860961}
   m_CullTransparentMesh: 1
+--- !u!114 &175860965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175860961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce30979268bc184f9cda9d9901302e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeNum: 1
+  imageToChange: {fileID: 175860963}
+  greenSprite: {fileID: 21300000, guid: 893b8a9c0745dee4081882c0d830feaa, type: 3}
+  redSprite: {fileID: 21300000, guid: 21e8a6e4a30b853469dc3889aa04eff2, type: 3}
 --- !u!1 &258495651
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,6 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6accd9309190e479c754fc15b17036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clrSwtch: {fileID: 175860965}
   uiElement: {fileID: 175860962}
   moveSpeed: 800
   moveDistanceUp: 350
