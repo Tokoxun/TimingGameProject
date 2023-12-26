@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4ce30979268bc184f9cda9d9901302e6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - imageToChange: {instanceID: 0}
+  - greenSprite: {fileID: 21300000, guid: 893b8a9c0745dee4081882c0d830feaa, type: 3}
+  - redSprite: {fileID: 21300000, guid: 21e8a6e4a30b853469dc3889aa04eff2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
