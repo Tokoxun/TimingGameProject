@@ -11,6 +11,7 @@ public class SpinScript : MonoBehaviour
 
     void Start()
     {
+        spinSpeed -= DifficultyManager.addArwSpd;
         changeOrNot = new float[3];
         changeOrNot[0] = spinSpeed;
         changeOrNot[1] = -spinSpeed;
