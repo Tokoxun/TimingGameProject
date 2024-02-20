@@ -5,12 +5,21 @@ using UnityEngine;
 public class ArwSpdUp : MonoBehaviour
 {
     private float SpdUp = 5f;
-    public void arwSpdUp()
+    private bool toggled = false;
+
+    public void AddSpdOrCancel()
     {
-        SpinScript spinningSpeed = FindObjectOfType<SpinScript>();
-        if(spinningSpeed != null)
+        if(toggled == false)
         {
-            spinningSpeed.spinSpeed -= SpdUp;
+            DifficultyManager.addArwSpd += SpdUp;
+            toggled = true;
+            return;
+        }
+        if(toggled == true)
+        {
+            DifficultyManager.addArwSpd -= SpdUp;
+            toggled = false;
+            return;
         }
     }
 }
