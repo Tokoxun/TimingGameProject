@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6850703985077009709}
   - component: {fileID: 5901611826479879679}
+  - component: {fileID: 1159945965427983123}
   m_Layer: 0
   m_Name: BlackMark
   m_TagString: Untagged
@@ -86,6 +87,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1159945965427983123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175650656508704787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scdHitMark: {fileID: 7817460267446984006}
+  trdHitMark: {fileID: 5435780499871757750}
 --- !u!1 &5435780499871757750
 GameObject:
   m_ObjectHideFlags: 0
