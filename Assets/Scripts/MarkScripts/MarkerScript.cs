@@ -14,6 +14,16 @@ public class MarkerScript : MonoBehaviour
     {
         if(col.CompareTag("point"))
         {
+            if(trdHitMark.activeSelf)
+            {
+                trdHitMark.SetActive(false);
+                return;
+            }
+            if(scdHitMark.activeSelf)
+            {
+                scdHitMark.SetActive(false);
+                return;
+            }
             gameObject.SetActive(false);
         }
     }
