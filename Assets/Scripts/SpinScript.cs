@@ -20,13 +20,13 @@ public class SpinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion rotation = transform.rotation;
+        // Quaternion rotation = transform.rotation;
 
-        // Extract the Z-axis rotation angle
-        float zRotation = rotation.eulerAngles.z;
+        // // Extract the Z-axis rotation angle
+        // float zRotation = rotation.eulerAngles.z;
 
-        // Output the rotation angle
-        Debug.Log("Z-axis rotation: " + zRotation);
+        // // Output the rotation angle
+        // Debug.Log("Z-axis rotation: " + zRotation);
         transform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
         changeTime += Time.deltaTime;
         if(changeTime >= dirChangeTime)
