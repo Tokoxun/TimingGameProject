@@ -13,7 +13,10 @@ public class MarkerRespawn : MonoBehaviour
         if(!mrk.activeSelf)
         {
             DisappearingScript resetDisap = GetComponent<DisappearingScript>();
-            resetDisap.AppearTime = 0;
+            if(resetDisap != null)
+            {
+                resetDisap.AppearTime = 0;
+            }
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= respawnTime)
             {
