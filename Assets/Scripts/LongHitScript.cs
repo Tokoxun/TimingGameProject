@@ -15,7 +15,6 @@ public class LongHitScript : MonoBehaviour
     {
         hitPoint.enabled = true;
         hitted = true;
-        Debug.Log("activated");
     }
 
     public void OnTriggerEnter2D(Collider2D col)
