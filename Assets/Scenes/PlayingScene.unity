@@ -524,6 +524,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 418036392531678951, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
   m_PrefabInstance: {fileID: 357877040}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &357877043 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1416984227126596251, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+  m_PrefabInstance: {fileID: 357877040}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357877042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bad59b5c7ed7147a28807ef6d3dff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371925865
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,9 +764,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: HitScript, Assembly-CSharp
-        m_MethodName: OnButtonPress
+      - m_Target: {fileID: 775822709}
+        m_TargetAssemblyTypeName: LongHitScript, Assembly-CSharp
+        m_MethodName: OnButtonPressLong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 357877043}
+        m_TargetAssemblyTypeName: ShortHitScript, Assembly-CSharp
+        m_MethodName: OnButtonPressShort
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -874,6 +897,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 125022957924839973, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
   m_PrefabInstance: {fileID: 775822706}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &775822709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7452382045689765042, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
+  m_PrefabInstance: {fileID: 775822706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775822708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ec277dcbe8bba40804d2840e3b6558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &776018579
 GameObject:
   m_ObjectHideFlags: 0
