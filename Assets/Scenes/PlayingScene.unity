@@ -887,6 +887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776018580}
   - component: {fileID: 776018581}
+  - component: {fileID: 776018582}
   m_Layer: 0
   m_Name: markPivotPoint4
   m_TagString: Untagged
@@ -924,6 +925,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: -35
   buffedSpnSpd: 0
+--- !u!114 &776018582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776018579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mrk: {fileID: 2025327486}
+  respawnTime: 0.5
 --- !u!1 &795049865
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 795049866}
   - component: {fileID: 795049867}
+  - component: {fileID: 795049868}
   m_Layer: 0
   m_Name: markPivotPoint5
   m_TagString: Untagged
@@ -971,6 +987,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: -35
   buffedSpnSpd: 0
+--- !u!114 &795049868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795049865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mrk: {fileID: 952653829}
+  respawnTime: 0.5
 --- !u!1001 &810847461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1028,6 +1058,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!1 &810847462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  m_PrefabInstance: {fileID: 810847461}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &952653828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1085,6 +1120,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!1 &952653829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  m_PrefabInstance: {fileID: 952653828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983624669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,6 +1135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 983624670}
   - component: {fileID: 983624671}
+  - component: {fileID: 983624672}
   m_Layer: 0
   m_Name: markPivotPoint2
   m_TagString: Untagged
@@ -1132,6 +1173,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: -35
   buffedSpnSpd: 0
+--- !u!114 &983624672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983624669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mrk: {fileID: 810847462}
+  respawnTime: 0.5
 --- !u!1 &1082887121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,6 +1289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1096768354}
   - component: {fileID: 1096768355}
+  - component: {fileID: 1096768356}
   m_Layer: 0
   m_Name: markPivotPoint1
   m_TagString: Untagged
@@ -1271,6 +1327,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: -35
   buffedSpnSpd: 0
+--- !u!114 &1096768356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096768353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mrk: {fileID: 1244068500}
+  respawnTime: 0.5
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116595675}
   - component: {fileID: 1116595676}
+  - component: {fileID: 1116595677}
   m_Layer: 0
   m_Name: markPivotPoint3
   m_TagString: Untagged
@@ -1318,6 +1389,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinSpeed: -35
   buffedSpnSpd: 0
+--- !u!114 &1116595677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116595674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mrk: {fileID: 1328510383}
+  respawnTime: 0.5
 --- !u!1001 &1244068499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1375,6 +1460,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!1 &1244068500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  m_PrefabInstance: {fileID: 1244068499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1328510382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1432,6 +1522,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!1 &1328510383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  m_PrefabInstance: {fileID: 1328510382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1391260966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6850703985077009709, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
@@ -1783,6 +1878,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!1 &2025327486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  m_PrefabInstance: {fileID: 2025327485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2090641709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6850703985077009709, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
