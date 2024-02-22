@@ -11,12 +11,6 @@ public class LongHitScript : MonoBehaviour
     private float resetTimer;
     public Collider2D hitPoint;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        hitPoint.enabled = false;
-    }
-
     public void OnButtonPressLong()
     {
         hitPoint.enabled = true;

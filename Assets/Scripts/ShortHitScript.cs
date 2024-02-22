@@ -10,12 +10,6 @@ public class ShortHitScript : MonoBehaviour
     private float hitReset = 0.2f;
     private float resetTimer;
     public Collider2D hitPoint;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        hitPoint.enabled = false;
-    }
 
     public void OnButtonPressShort()
     {
