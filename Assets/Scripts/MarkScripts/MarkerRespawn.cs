@@ -7,6 +7,7 @@ public class MarkerRespawn : MonoBehaviour
     public GameObject mrk;
     public float respawnTime = 0.5f;
     private float respawnTimer;
+    public MarkerScript markRes;
     
     void Update()
     {
@@ -20,6 +21,7 @@ public class MarkerRespawn : MonoBehaviour
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= respawnTime)
             {
+                markRes.Respawn();
                 mrk.SetActive(true);
                 respawnTimer = 0;
             }
