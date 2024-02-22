@@ -27,4 +27,10 @@ public class MarkerScript : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void Respawn()
+    {
+        gameObject.SetActive(true);
+        scdHitMark.SetActive(DifficultyManager.secondHit);
+    }
 }
