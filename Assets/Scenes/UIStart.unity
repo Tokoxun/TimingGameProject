@@ -648,7 +648,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1317188818}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SecondPivotPoint, Assembly-CSharp
         m_MethodName: SecondPivotPointOrCancel
         m_Mode: 1
@@ -1098,10 +1098,6 @@ GameObject:
   - component: {fileID: 1317188814}
   - component: {fileID: 1317188813}
   - component: {fileID: 1317188815}
-  - component: {fileID: 1317188816}
-  - component: {fileID: 1317188817}
-  - component: {fileID: 1317188818}
-  - component: {fileID: 1317188819}
   m_Layer: 0
   m_Name: UIFunc
   m_TagString: Untagged
@@ -1151,54 +1147,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9703415f595908b4d9e2de17b174f4b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1317188816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317188812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 266134758c27b1c458c62951fc7ad1dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1317188817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317188812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04a19f2f581a504b978a17a61d6c20f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1317188818
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317188812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060346c9b04c3744ab234e00266990d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1317188819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317188812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81f318a99b66e884ca99cfcef4f36753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1432306278
@@ -1363,7 +1311,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1317188819}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChoosingHitter, Assembly-CSharp
         m_MethodName: LongChoice
         m_Mode: 1
@@ -1483,7 +1431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SecondHit
+  m_Text: ThreeHit
 --- !u!222 &1501454547
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1575,7 +1523,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1317188819}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChoosingHitter, Assembly-CSharp
         m_MethodName: ShortChoice
         m_Mode: 1
@@ -1625,6 +1573,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522997502}
   m_CullTransparentMesh: 1
+--- !u!1 &1551796048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1551796055}
+  - component: {fileID: 1551796054}
+  - component: {fileID: 1551796053}
+  - component: {fileID: 1551796052}
+  - component: {fileID: 1551796051}
+  - component: {fileID: 1551796050}
+  - component: {fileID: 1551796049}
+  m_Layer: 0
+  m_Name: RisksFunc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1551796049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201c6bdd1ea3c9348a7ae156d5fe3adf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1551796050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060346c9b04c3744ab234e00266990d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1551796051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 321f19c0ed6722e4ba4bde059f16c41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1551796052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  mrk: {fileID: 0}
+--- !u!114 &1551796053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f318a99b66e884ca99cfcef4f36753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1551796054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266134758c27b1c458c62951fc7ad1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1551796055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551796048}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 340.5779, y: 254.13062, z: 1.7540412}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574685975
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,9 +1769,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1317188816}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ArwSpdUp, Assembly-CSharp
-        m_MethodName: AddSpdOrCancel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2091,9 +2152,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1317188817}
+      - m_Target: {fileID: 1317188812}
         m_TargetAssemblyTypeName: SecondHitMarker, Assembly-CSharp
-        m_MethodName: SecondHitOrCancel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2150,3 +2211,4 @@ SceneRoots:
   - {fileID: 839173765}
   - {fileID: 1284497760}
   - {fileID: 1317188814}
+  - {fileID: 1551796055}
