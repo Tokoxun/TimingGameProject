@@ -9,6 +9,7 @@ public class MarkerScript : MonoBehaviour
     void Start()
     {
         scdHitMark.SetActive(DifficultyManager.secondHit);
+        trdHitMark.SetActive(DifficultyManager.thirdHit);
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -32,5 +33,6 @@ public class MarkerScript : MonoBehaviour
     {
         gameObject.SetActive(true);
         scdHitMark.SetActive(DifficultyManager.secondHit);
+        trdHitMark.SetActive(DifficultyManager.thirdHit);
     }
 }
