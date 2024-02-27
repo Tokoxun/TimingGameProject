@@ -10,5 +10,5 @@ public static class DifficultyManager
     public static bool secondPivotPoint = false;
     public static bool thirdPivotPoint = false;
     public static bool ShortHitter = false;
-    public static bool LongHitter = false;
+    public static bool LongHitter = true;
 }
