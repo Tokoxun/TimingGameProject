@@ -10,6 +10,7 @@ public class LongHitScript : MonoBehaviour
     private float hitReset = 0.2f;
     private float resetTimer;
     public Collider2D hitPoint;
+    public PointSystem addingPoint;
     
     public void OnButtonPressLong()
     {
@@ -21,6 +22,7 @@ public class LongHitScript : MonoBehaviour
     {
         if(col.CompareTag("target"))
         {
+            addingPoint.AddPoint();
             missed = false;
         }
     }
