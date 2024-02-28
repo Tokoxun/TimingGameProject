@@ -6,6 +6,7 @@ TagManager:
   tags:
   - point
   - target
+  - ShowOnPause
   layers:
   - Default
   - TransparentFX

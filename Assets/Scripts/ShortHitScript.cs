@@ -2,26 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HitScript : MonoBehaviour
+public class ShortHitScript : MonoBehaviour
 {
     private bool hitted = false;
     private bool missed = true;
     public float numOfMissed;
     private float hitReset = 0.2f;
     private float resetTimer;
-    public BoxCollider2D hitPoint;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        hitPoint.enabled = false;
-    }
+    public Collider2D hitPoint;
 
-    public void OnButtonPress()
+    public void OnButtonPressShort()
     {
         hitPoint.enabled = true;
         hitted = true;
-        Debug.Log("activated");
     }
 
     public void OnTriggerEnter2D(Collider2D col)

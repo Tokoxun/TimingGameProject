@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArwSpdUp : MonoBehaviour
+public class SecondPivotPoint : MonoBehaviour
 {
-    private float SpdUp = 5f;
     private bool toggled = false;
 
-    public void AddSpdOrCancel()
+    public void SecondPivotPointOrCancel()
     {
-        if(toggled == false)
+        if(!toggled)
         {
-            DifficultyManager.addArwSpd += SpdUp;
+            DifficultyManager.secondPivotPoint = true;
             toggled = true;
             return;
         }
-        if(toggled == true)
+        if(toggled)
         {
-            DifficultyManager.addArwSpd -= SpdUp;
+            DifficultyManager.secondPivotPoint = false;
             toggled = false;
             return;
         }
