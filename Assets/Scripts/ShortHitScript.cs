@@ -10,6 +10,7 @@ public class ShortHitScript : MonoBehaviour
     private float hitReset = 0.2f;
     private float resetTimer;
     public Collider2D hitPoint;
+    public PointSystem addingPoint;
 
     public void OnButtonPressShort()
     {
@@ -21,6 +22,7 @@ public class ShortHitScript : MonoBehaviour
     {
         if(col.CompareTag("target"))
         {
+            addingPoint.AddPoint();
             missed = false;
         }
     }
