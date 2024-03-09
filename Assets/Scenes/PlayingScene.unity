@@ -496,7 +496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RisksChoice: {fileID: 1720234172}
   pointsCheck: {fileID: 1735361083}
-  chosenRisk: {fileID: 1104899234}
+  chosenRisk: {fileID: 0}
 --- !u!1 &206744157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1823,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  chosenOne: {fileID: 1104899234}
+  chosenOne: {fileID: 0}
 --- !u!1 &1104899231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,16 +1865,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104899231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd99bacf599026a4a87b675016656aa4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4176203f74e30724ca6d0f7da14e657d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  risksObjects:
-  - {fileID: 2127998534005226784, guid: e27affa5fbc50064cb58f91e31fe73b3, type: 3}
-  randomizedRisks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Risks: []
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
