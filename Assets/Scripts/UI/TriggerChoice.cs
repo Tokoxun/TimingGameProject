@@ -34,6 +34,7 @@ public class TriggerChoice : MonoBehaviour
             card1.LoadingCard();
             card2.LoadingCard();
             card3.LoadingCard();
+            card4.LoadingCard();
             signal = false;
             displayChoice += 5;
         }
