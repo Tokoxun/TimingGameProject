@@ -10,6 +10,7 @@ public class CardScripts : MonoBehaviour
     public RisksCompiler RisksList;
     public GameObject chosenR;
     private Image ImageR;
+    public bool selected = false;
 
     // Update is called once per frame
     void Update()
@@ -32,6 +33,20 @@ public class CardScripts : MonoBehaviour
         if(RisksList.Risks.Length < 1)
         {
             displayR.enabled = false;
+        }
+    }
+
+    public void SelectedCard()
+    {
+        if(!selected)
+        {
+            selected = true;
+            Debug.Log(selected);
+        }
+        else if(selected)
+        {
+            selected = false;
+            Debug.Log(selected);
         }
     }
 }
