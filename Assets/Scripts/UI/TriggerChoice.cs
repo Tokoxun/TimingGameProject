@@ -31,10 +31,10 @@ public class TriggerChoice : MonoBehaviour
 
         if(signal)
         {
-            card1.LoadingCard();
-            card2.LoadingCard();
-            card3.LoadingCard();
-            card4.LoadingCard();
+            // card1.LoadingCard();
+            // card2.LoadingCard();
+            // card3.LoadingCard();
+            // card4.LoadingCard();
             signal = false;
             displayChoice += 5;
         }
