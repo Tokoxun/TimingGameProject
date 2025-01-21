@@ -34,11 +34,7 @@
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.mathematics": "1.1.0",
         "com.unity.modules.animation": "1.0.0",
-<<<<<<< HEAD
         "com.unity.modules.uielements": "1.0.0"
-=======
-        "com.unity.burst": "1.8.4"
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
       },
       "url": "https://packages.unity.com"
     },
@@ -72,10 +68,6 @@
       "dependencies": {
         "com.unity.2d.common": "9.0.7",
         "com.unity.mathematics": "1.1.0",
-<<<<<<< HEAD
-=======
-        "com.unity.2d.common": "9.0.7",
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
         "com.unity.modules.physics2d": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -95,10 +87,7 @@
       "source": "registry",
       "dependencies": {
         "com.unity.2d.tilemap": "1.0.0",
-<<<<<<< HEAD
         "com.unity.modules.tilemap": "1.0.0",
-=======
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -126,13 +115,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.burst": "1.8.17",
-<<<<<<< HEAD
         "com.unity.test-framework": "1.4.5",
         "com.unity.nuget.mono-cecil": "1.11.4",
-=======
-        "com.unity.nuget.mono-cecil": "1.11.4",
-        "com.unity.test-framework": "1.4.5",
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
         "com.unity.test-framework.performance": "3.0.3"
       },
       "url": "https://packages.unity.com"
@@ -184,8 +168,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-=======
     "com.unity.multiplayer.center": {
       "version": "1.0.0",
       "depth": 0,
@@ -194,7 +176,6 @@
         "com.unity.modules.uielements": "1.0.0"
       }
     },
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
       "depth": 3,
@@ -204,11 +185,7 @@
     },
     "com.unity.test-framework": {
       "version": "1.4.5",
-<<<<<<< HEAD
-      "depth": 1,
-=======
       "depth": 0,
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
       "source": "registry",
       "dependencies": {
         "com.unity.ext.nunit": "2.0.3",
@@ -221,27 +198,11 @@
       "version": "3.0.3",
       "depth": 3,
       "source": "registry",
-<<<<<<< HEAD
       "dependencies": {
         "com.unity.test-framework": "1.1.31",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.textmeshpro": {
-      "version": "3.0.6",
-      "depth": 0,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.ugui": "2.0.0"
-      }
-=======
-      "dependencies": {
-        "com.unity.test-framework": "1.1.31",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
->>>>>>> b4a3efc162bd51d0e3b6537bddb6a280508ba8e9
     },
     "com.unity.timeline": {
       "version": "1.8.7",
