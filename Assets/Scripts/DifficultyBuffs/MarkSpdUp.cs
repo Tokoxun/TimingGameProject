@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class MarkSpdUp : MonoBehaviour
 {
-    private float SpdUp = 5f;
+    // private float SpdUp = 5f;
     public void markSpdUp()
     {
-        MarkerSpinScript spinningSpeed = FindObjectOfType<MarkerSpinScript>();
-        if(spinningSpeed != null)
-        {
-            spinningSpeed.buffedSpnSpd += spinningSpeed.spinSpeed - SpdUp;
-        }
     }
 }
