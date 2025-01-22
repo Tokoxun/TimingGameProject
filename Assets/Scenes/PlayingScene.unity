@@ -809,6 +809,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1416984227126596251, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+      propertyPath: calHealth
+      value: 
+      objectReference: {fileID: 395880772}
+    - target: {fileID: 1416984227126596251, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
       propertyPath: addingPoint
       value: 
       objectReference: {fileID: 1735361083}
@@ -878,6 +882,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97bad59b5c7ed7147a28807ef6d3dff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &357877044 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6506843648269834210, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+  m_PrefabInstance: {fileID: 357877040}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &371925865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,21 +1212,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 775822709}
-        m_TargetAssemblyTypeName: LongHitScript, Assembly-CSharp
-        m_MethodName: OnButtonPressLong
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 357877043}
-        m_TargetAssemblyTypeName: ShortHitScript, Assembly-CSharp
-        m_MethodName: OnButtonPressShort
+      - m_Target: {fileID: 1846374990}
+        m_TargetAssemblyTypeName: hitterChoice, Assembly-CSharp
+        m_MethodName: OnButtonHit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1322,6 +1319,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7452382045689765042, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
+      propertyPath: calHealth
+      value: 
+      objectReference: {fileID: 395880772}
+    - target: {fileID: 7452382045689765042, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
       propertyPath: addingPoint
       value: 
       objectReference: {fileID: 1735361083}
@@ -1351,6 +1352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ec277dcbe8bba40804d2840e3b6558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &775822710 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7244912363789079332, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
+  m_PrefabInstance: {fileID: 775822706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &776018579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,6 +2753,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enablShortHitter: {fileID: 357877042}
   enablLongHitter: {fileID: 775822708}
+  changeHit: 0
+  actvLong: 0
+  actvShort: 0
+  hitPointLong: {fileID: 775822710}
+  hitPointShort: {fileID: 357877044}
+  hitLong: {fileID: 775822709}
+  hitShort: {fileID: 357877043}
 --- !u!1 &1874955307
 GameObject:
   m_ObjectHideFlags: 0
