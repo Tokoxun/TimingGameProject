@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    GameObject[] pauseObjects;
+    public GameObject[] pauseObjects;
 
 
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
-		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+		// pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
 	}
 

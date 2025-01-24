@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class LongHitScript : MonoBehaviour
 {
-    private bool hitted = false;
+    public bool hitted = false;
     private bool missed = true;
     public float numOfMissed;
     private float hitReset = 0.2f;
     private float resetTimer;
     public Collider2D hitPoint;
     public PointSystem addingPoint;
+    public HealthScript calHealth;
     
-    public void OnButtonPressLong()
-    {
-        hitPoint.enabled = true;
-        hitted = true;
-    }
+    // public void OnButtonPressLong()
+    // {
+    //     hitPoint.enabled = true;
+    //     hitted = true;
+    // }
 
     public void OnTriggerEnter2D(Collider2D col)
     {
@@ -41,6 +42,7 @@ public class LongHitScript : MonoBehaviour
             }
             if(resetTimer >= hitReset && missed == true)
             {
+                calHealth.ReduceHealth();
                 numOfMissed += 1;
                 hitPoint.enabled = false;
                 resetTimer = 0;
