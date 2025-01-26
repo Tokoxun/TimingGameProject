@@ -573,13 +573,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac359698a430f34e912f3dc9baf6301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card1: {fileID: 0}
-  card2: {fileID: 0}
-  card3: {fileID: 0}
-  card4: {fileID: 0}
+  card: []
+  selected: {fileID: 0}
+  selectedFilter:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  rlist: {fileID: 1104899234}
   pointsCheck: {fileID: 1735361083}
   RisksChoice: {fileID: 1720234172}
-  displayChoice: 5
+  displayChoice: 1
   signal: 0
 --- !u!1 &206744157
 GameObject:
@@ -2115,8 +2119,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Risks:
-  - {fileID: 6823471090453343935, guid: be46f3abf68021f438c2ead18488ac2d, type: 3}
-  - {fileID: 2127998534005226784, guid: e27affa5fbc50064cb58f91e31fe73b3, type: 3}
+  - {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+  - {fileID: 3797712245645292706, guid: 90e2d741680a02a428e9dbb2b23ddda7, type: 3}
+  - {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  - {fileID: 125022957924839973, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
