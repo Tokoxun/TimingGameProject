@@ -54,9 +54,9 @@ public class TriggerChoice : MonoBehaviour
             selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
             for(int a = 0; a < selectedFilter.Length; a++)
             {
-                Debug.Log(a);
-                Debug.Log(selectedFilter[a]);
-                Debug.Log(selected);
+                // Debug.Log(a);
+                // Debug.Log(selectedFilter[a]);
+                // Debug.Log(selected);
                 if(selectedFilter[a] == selected)
                 {
                     i = 0;
