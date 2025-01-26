@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class TriggerChoice : MonoBehaviour
 {
-    public CardScripts card1;
-    public CardScripts card2;
-    public CardScripts card3;
-    public CardScripts card4;
+    public GameObject[] card;
+    public GameObject selected;
+    public GameObject[] selectedFilter;
+    public RisksCompiler rlist;
     public PointSystem pointsCheck;
     public GameObject RisksChoice;
     public int displayChoice = 5;
@@ -35,6 +35,7 @@ public class TriggerChoice : MonoBehaviour
             // card2.LoadingCard();
             // card3.LoadingCard();
             // card4.LoadingCard();
+            preLoadChoice();
             signal = false;
             displayChoice += 5;
         }
@@ -44,5 +45,28 @@ public class TriggerChoice : MonoBehaviour
     {
         RisksChoice.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    public void preLoadChoice()
+    {
+        for(int i = 0; i < selectedFilter.Length; i++)
+        {
+            selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
+            for(int a = 0; a < selectedFilter.Length; a++)
+            {
+                Debug.Log(a);
+                Debug.Log(selectedFilter[a]);
+                Debug.Log(selected);
+                if(selectedFilter[a] == selected)
+                {
+                    i = 0;
+                    a = selectedFilter.Length;
+                }
+                if(a >= selectedFilter.Length - 1)
+                {
+                    selectedFilter[i] = selected;
+                }
+            }
+        }
     }
 }
