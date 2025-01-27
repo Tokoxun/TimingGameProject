@@ -37,8 +37,7 @@ public class TriggerChoice : MonoBehaviour
             // card3.LoadingCard();
             // card4.LoadingCard();
             preLoadChoice();
-            card = selectedFilter;
-            // calculateCardPlacement();
+            calculateCardPlacement();
             signal = false;
             displayChoice += 5;
         }
@@ -59,9 +58,9 @@ public class TriggerChoice : MonoBehaviour
                 selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
                 for(int a = 0; a < selectedFilter.Length; a++)
                 {
-                    Debug.Log(a);
-                    Debug.Log(selectedFilter[a]);
-                    Debug.Log(selected);
+                    // Debug.Log(a);
+                    // Debug.Log(selectedFilter[a]);
+                    // Debug.Log(selected);
                     if(numCardLoaded == rlist.Risks.Length)
                     {
                         break;
@@ -84,5 +83,12 @@ public class TriggerChoice : MonoBehaviour
 
     public void calculateCardPlacement()
     {
+        if(numCardLoaded > 0)
+        {
+            for(int n = 0; n != numCardLoaded; n++)
+            {
+                card[n].SetActive(true);
+            }
+        }
     }
 }
