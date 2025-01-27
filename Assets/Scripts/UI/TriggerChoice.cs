@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TriggerChoice : MonoBehaviour
 {
     public GameObject[] card;
+    private int numCardLoaded;
     public GameObject selected;
     public GameObject[] selectedFilter;
     public RisksCompiler rlist;
@@ -36,6 +37,8 @@ public class TriggerChoice : MonoBehaviour
             // card3.LoadingCard();
             // card4.LoadingCard();
             preLoadChoice();
+            card = selectedFilter;
+            // calculateCardPlacement();
             signal = false;
             displayChoice += 5;
         }
@@ -51,22 +54,35 @@ public class TriggerChoice : MonoBehaviour
     {
         for(int i = 0; i < selectedFilter.Length; i++)
         {
-            selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
-            for(int a = 0; a < selectedFilter.Length; a++)
+            if(rlist.Risks.Length > 0)
             {
-                // Debug.Log(a);
-                // Debug.Log(selectedFilter[a]);
-                // Debug.Log(selected);
-                if(selectedFilter[a] == selected)
+                selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
+                for(int a = 0; a < selectedFilter.Length; a++)
                 {
-                    i = 0;
-                    a = selectedFilter.Length;
-                }
-                if(a >= selectedFilter.Length - 1)
-                {
-                    selectedFilter[i] = selected;
+                    Debug.Log(a);
+                    Debug.Log(selectedFilter[a]);
+                    Debug.Log(selected);
+                    if(numCardLoaded == rlist.Risks.Length)
+                    {
+                        break;
+                    }
+                    if(selectedFilter[a] == selected)
+                    {
+                        selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
+                        a = -1;
+                    }
+                    if(a >= selectedFilter.Length - 1)
+                    {
+                        selectedFilter[i] = selected;
+                        numCardLoaded += 1;
+                        // Debug.Log(numCardLoaded);
+                    }
                 }
             }
         }
+    }
+
+    public void calculateCardPlacement()
+    {
     }
 }
