@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Greencard_0: 7371293101456382613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
