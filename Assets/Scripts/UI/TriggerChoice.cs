@@ -9,6 +9,8 @@ public class TriggerChoice : MonoBehaviour
     private int numCardLoaded;
     public GameObject selected;
     public GameObject[] selectedFilter;
+    public Transform midPoint;
+    private float Distmove = 215.7f;
     public RisksCompiler rlist;
     public PointSystem pointsCheck;
     public GameObject RisksChoice;
@@ -85,9 +87,17 @@ public class TriggerChoice : MonoBehaviour
     {
         if(numCardLoaded > 0)
         {
+            float Distgap = 432f;
+            float CardDisplacementX = midPoint.transform.localPosition.x - Distmove * (numCardLoaded - 1);
             for(int n = 0; n != numCardLoaded; n++)
             {
+                // card[0].transform.position = new Vector2(CardDisplacementX, midPoint.transform.position.y);
                 card[n].SetActive(true);
+                card[n].transform.localPosition = new Vector2(CardDisplacementX, 0);
+            }
+            for(int m = 1; m != numCardLoaded; m++)
+            {
+                card[m].transform.localPosition = new Vector2(card[m-1].transform.localPosition.x + Distgap, 0);
             }
         }
     }
