@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TriggerEffects : MonoBehaviour
 {
-    public int numCardLoaded;
+    public int numcardListLoaded;
+    public GameObject RisksChoice;
+    public CardScripts[] cards;
     private GameObject selected;
     public GameObject[] selectedFilter;
     public RisksCompiler rlist;
@@ -19,11 +21,11 @@ public class TriggerEffects : MonoBehaviour
     {
         
     }
-    // public void ConfirmChoice()
-    // {
-    //     RisksChoice.SetActive(false);
-    //     Time.timeScale = 1;
-    // }
+    public void ConfirmChoice()
+    {
+        RisksChoice.SetActive(false);
+        Time.timeScale = 1;
+    }
 
     public void preLoadChoice()
     {
@@ -37,7 +39,7 @@ public class TriggerEffects : MonoBehaviour
                     // Debug.Log(a);
                     // Debug.Log(selectedFilter[a]);
                     // Debug.Log(selected);
-                    if(numCardLoaded == rlist.Risks.Length)
+                    if(numcardListLoaded == rlist.Risks.Length)
                     {
                         break;
                     }
@@ -49,11 +51,19 @@ public class TriggerEffects : MonoBehaviour
                     if(a >= selectedFilter.Length - 1)
                     {
                         selectedFilter[i] = selected;
-                        numCardLoaded += 1;
+                        numcardListLoaded += 1;
                         // Debug.Log(numCardLoaded);
                     }
                 }
             }
+        }
+    }
+
+    public void loadCard()
+    {
+        for(int c = 0; c < selectedFilter.Length; c++)
+        {
+            cards[c].chosenR = selectedFilter[c];
         }
     }
 }
