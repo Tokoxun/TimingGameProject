@@ -3464,17 +3464,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numcardListLoaded: 0
-  RisksChoice: {fileID: 0}
+  RisksChoice: {fileID: 1720234172}
   cards:
   - {fileID: 162708415}
   - {fileID: 1536561195}
   - {fileID: 830344879}
   - {fileID: 129673383}
-  selectedFilter:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  selectedFilter: []
   rlist: {fileID: 1104899234}
 --- !u!1 &1735361081
 GameObject:
