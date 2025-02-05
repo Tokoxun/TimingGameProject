@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TriggerChoice : MonoBehaviour
 {
-    public GameObject[] card;
+    public GameObject[] cardList;
     public Transform midPoint;
     private float Distmove = 215.7f;
     public PointSystem pointsCheck;
@@ -31,12 +31,13 @@ public class TriggerChoice : MonoBehaviour
 
         if(signal)
         {
-            // card1.LoadingCard();
-            // card2.LoadingCard();
-            // card3.LoadingCard();
-            // card4.LoadingCard();
+            // cardList1.LoadingcardList();
+            // cardList2.LoadingcardList();
+            // cardList3.LoadingcardList();
+            // cardList4.LoadingcardList();
             loadEffect.preLoadChoice();
-            calculateCardPlacement();
+            calculatecardListPlacement();
+            loadEffect.loadCard();
             signal = false;
             displayChoice += 5;
         }
@@ -44,21 +45,21 @@ public class TriggerChoice : MonoBehaviour
 
 
 
-    public void calculateCardPlacement()
+    public void calculatecardListPlacement()
     {
-        if(loadEffect.numCardLoaded > 0)
+        if(loadEffect.numcardListLoaded > 0)
         {
             float Distgap = 432f;
-            float CardDisplacementX = midPoint.transform.localPosition.x - Distmove * (loadEffect.numCardLoaded - 1);
-            for(int n = 0; n != loadEffect.numCardLoaded; n++)
+            float cardListDisplacementX = midPoint.transform.localPosition.x - Distmove * (loadEffect.numcardListLoaded - 1);
+            for(int n = 0; n != loadEffect.numcardListLoaded; n++)
             {
-                // card[0].transform.position = new Vector2(CardDisplacementX, midPoint.transform.position.y);
-                card[n].SetActive(true);
-                card[n].transform.localPosition = new Vector2(CardDisplacementX, 0);
+                // cardList[0].transform.position = new Vector2(cardListDisplacementX, midPoint.transform.position.y);
+                cardList[n].SetActive(true);
+                cardList[n].transform.localPosition = new Vector2(cardListDisplacementX, 0);
             }
-            for(int m = 1; m != loadEffect.numCardLoaded; m++)
+            for(int m = 1; m != loadEffect.numcardListLoaded; m++)
             {
-                card[m].transform.localPosition = new Vector2(card[m-1].transform.localPosition.x + Distgap, 0);
+                cardList[m].transform.localPosition = new Vector2(cardList[m-1].transform.localPosition.x + Distgap, 0);
             }
         }
     }
