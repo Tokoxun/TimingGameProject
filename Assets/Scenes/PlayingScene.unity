@@ -352,8 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7542cfd6270e744a439a0e86b2bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rlist: {fileID: 1104899234}
   chosenR: {fileID: 0}
-  selected: 0
+  Chosen: 0
+  choiceConfirm: 0
 --- !u!1 &136025681
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,8 +695,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7542cfd6270e744a439a0e86b2bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rlist: {fileID: 1104899234}
   chosenR: {fileID: 0}
-  selected: 0
+  Chosen: 0
+  choiceConfirm: 0
 --- !u!1 &198509426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1842,8 +1846,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7542cfd6270e744a439a0e86b2bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rlist: {fileID: 1104899234}
   chosenR: {fileID: 0}
-  selected: 0
+  Chosen: 0
+  choiceConfirm: 0
 --- !u!1 &853390947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,6 +1944,14 @@ PrefabInstance:
     - target: {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 129673383}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectedCard
       objectReference: {fileID: 0}
     - target: {fileID: 4206600145254649614, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_Pivot.x
@@ -2168,6 +2182,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 830344879}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectedCard
+      objectReference: {fileID: 0}
     - target: {fileID: 4206600145254649614, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2363,6 +2385,14 @@ PrefabInstance:
     - target: {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1536561195}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectedCard
       objectReference: {fileID: 0}
     - target: {fileID: 4206600145254649614, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_Pivot.x
@@ -2641,9 +2671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Risks:
   - {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  - {fileID: 756533491609154465, guid: 02b0fba19de54f84c86aeba481e3435e, type: 3}
+  - {fileID: 418036392531678951, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,6 +2752,14 @@ PrefabInstance:
     - target: {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 162708415}
+    - target: {fileID: 2551413136582868647, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectedCard
       objectReference: {fileID: 0}
     - target: {fileID: 4206600145254649614, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
       propertyPath: m_Pivot.x
@@ -3229,8 +3267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7542cfd6270e744a439a0e86b2bbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rlist: {fileID: 1104899234}
   chosenR: {fileID: 0}
-  selected: 0
+  Chosen: 0
+  choiceConfirm: 0
 --- !u!1 &1613376840
 GameObject:
   m_ObjectHideFlags: 0
