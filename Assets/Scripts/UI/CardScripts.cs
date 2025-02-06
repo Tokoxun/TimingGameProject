@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class CardScripts : MonoBehaviour
 {
-    // public Text Rnumber;
-    // public Image displayR;
+    public Text displayRnumber;
+    public Image displayR;
     // private Image ImageR;
     public RisksCompiler rlist;
     public GameObject chosenR;
@@ -16,10 +16,15 @@ public class CardScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if(chosenR != null)
-        // {
-        //     displayR.sprite = ImageR.sprite;
-        // }
+        if(chosenR != null)
+        {
+            InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+            if(rInfo != null)
+            {
+                displayR.sprite = rInfo.tagImage.sprite;
+                displayRnumber.text = rInfo.rNumber.ToString();
+            }
+        }
     }
 
     // public void LoadingCard()
@@ -59,12 +64,16 @@ public class CardScripts : MonoBehaviour
             rlist.Risks.Remove(chosenR);
             Chosen = false;
             choiceConfirm = false;
+            displayR = null;
+            displayRnumber = null;
             this.gameObject.SetActive(false);
         }
         if(!Chosen)
         {
             Chosen = false;
             choiceConfirm = false;
+            displayR = null;
+            displayRnumber = null;
             this.gameObject.SetActive(false);
         }
     }
