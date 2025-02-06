@@ -19,19 +19,12 @@ public class TriggerEffects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < cards.Length; i++)
-        {
-            if(cards[i].Chosen == true)
-            {
-                cards[i].choiceConfirm = true;
-            }
-        }
     }
     public void ConfirmChoice()
     {
         for(int i = 0; i < cards.Length; i++)
         {
-            cards[i].gameObject.SetActive(false);
+            cards[i].ActivateTag();
         }
         numcardListLoaded = 0;
         selectedFilter = new List<GameObject>();

@@ -20,14 +20,6 @@ public class CardScripts : MonoBehaviour
         // {
         //     displayR.sprite = ImageR.sprite;
         // }
-        if(Chosen && choiceConfirm)
-        {
-            Debug.Log("Activated");
-            Instantiate(chosenR, transform.position, transform.rotation);
-            rlist.Risks.Remove(chosenR);
-            Chosen = false;
-            choiceConfirm = false;
-        }
     }
 
     // public void LoadingCard()
@@ -55,6 +47,25 @@ public class CardScripts : MonoBehaviour
         {
             Chosen = false;
             Debug.Log(Chosen);
+        }
+    }
+
+    public void ActivateTag()
+    {
+        if(Chosen)
+        {
+            Debug.Log("Activated");
+            Instantiate(chosenR, transform.position, transform.rotation);
+            rlist.Risks.Remove(chosenR);
+            Chosen = false;
+            choiceConfirm = false;
+            this.gameObject.SetActive(false);
+        }
+        if(!Chosen)
+        {
+            Chosen = false;
+            choiceConfirm = false;
+            this.gameObject.SetActive(false);
         }
     }
 }
