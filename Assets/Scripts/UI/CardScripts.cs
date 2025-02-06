@@ -8,8 +8,10 @@ public class CardScripts : MonoBehaviour
     // public Text Rnumber;
     // public Image displayR;
     // private Image ImageR;
+    public RisksCompiler rlist;
     public GameObject chosenR;
-    public bool selected = false;
+    public bool Chosen = false;
+    public bool choiceConfirm = false;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +20,16 @@ public class CardScripts : MonoBehaviour
         // {
         //     displayR.sprite = ImageR.sprite;
         // }
+        if(Chosen && choiceConfirm)
+        {
+            Debug.Log(Chosen);
+            Debug.Log(choiceConfirm);
+            Debug.Log("Activated");
+            Instantiate(chosenR, transform.position, transform.rotation);
+            rlist.Risks.Remove(chosenR);
+            Chosen = false;
+            choiceConfirm = false;
+        }
     }
 
     // public void LoadingCard()
@@ -36,16 +48,15 @@ public class CardScripts : MonoBehaviour
 
     public void SelectedCard()
     {
-        if(!selected)
+        if(!Chosen)
         {
-            selected = true;
-            Instantiate(chosenR, transform.position, transform.rotation);
-            Debug.Log(selected);
+            Chosen = true;
+            Debug.Log(Chosen);
         }
-        else if(selected)
+        else if(Chosen)
         {
-            selected = false;
-            Debug.Log(selected);
+            Chosen = false;
+            Debug.Log(Chosen);
         }
     }
 }
