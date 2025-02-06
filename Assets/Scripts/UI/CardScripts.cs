@@ -22,8 +22,6 @@ public class CardScripts : MonoBehaviour
         // }
         if(Chosen && choiceConfirm)
         {
-            Debug.Log(Chosen);
-            Debug.Log(choiceConfirm);
             Debug.Log("Activated");
             Instantiate(chosenR, transform.position, transform.rotation);
             rlist.Risks.Remove(chosenR);
