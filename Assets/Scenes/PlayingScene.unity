@@ -772,7 +772,7 @@ MonoBehaviour:
   loadEffect: {fileID: 1720234176}
   RisksChoice: {fileID: 1720234172}
   displayChoice: 1
-  signal: 0
+  checkListLength: {fileID: 1104899234}
 --- !u!1 &206744157
 GameObject:
   m_ObjectHideFlags: 0
