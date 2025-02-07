@@ -27,20 +27,6 @@ public class CardScripts : MonoBehaviour
         }
     }
 
-    // public void LoadingCard()
-    // {
-    //     if(RisksList.Risks.Length >= 1)
-    //     {
-    //         displayR.enabled = true;
-    //         chosenR = RisksList.Risks[Random.Range(0, RisksList.Risks.Length)];
-    //         ImageR = chosenR.GetComponent<Image>();
-    //     }
-    //     if(RisksList.Risks.Length < 1)
-    //     {
-    //         displayR.enabled = false;
-    //     }
-    // }
-
     public void SelectedCard()
     {
         if(!Chosen)

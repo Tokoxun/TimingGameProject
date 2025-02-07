@@ -31,10 +31,6 @@ public class TriggerChoice : MonoBehaviour
 
         if(signal)
         {
-            // cardList1.LoadingcardList();
-            // cardList2.LoadingcardList();
-            // cardList3.LoadingcardList();
-            // cardList4.LoadingcardList();
             loadEffect.preLoadChoice();
             calculatecardListPlacement();
             loadEffect.loadCard();
