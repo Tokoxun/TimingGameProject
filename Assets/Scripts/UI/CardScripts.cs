@@ -64,16 +64,16 @@ public class CardScripts : MonoBehaviour
             rlist.Risks.Remove(chosenR);
             Chosen = false;
             choiceConfirm = false;
-            displayR = null;
-            displayRnumber = null;
+            displayR.sprite = null;
+            displayRnumber.text = null;
             this.gameObject.SetActive(false);
         }
         if(!Chosen)
         {
             Chosen = false;
             choiceConfirm = false;
-            displayR = null;
-            displayRnumber = null;
+            displayR.sprite = null;
+            displayRnumber.text = null;
             this.gameObject.SetActive(false);
         }
     }
