@@ -12,7 +12,9 @@ public class TriggerChoice : MonoBehaviour
     public TriggerEffects loadEffect;
     public GameObject RisksChoice;
     public int displayChoice = 5;
-    public bool signal = false;
+    public RisksCompiler checkListLength;
+    private bool targetListLength = false;
+    private bool signal = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +24,29 @@ public class TriggerChoice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(checkListLength.Risks.Count > 0)
+        {
+            targetListLength = true;
+        }
+        else if(checkListLength.Risks.Count == 0)
+        {
+            targetListLength = false;
+        }
+
         if(pointsCheck.points >= displayChoice)
         {
             signal = true;
-            RisksChoice.SetActive(true);
-            Time.timeScale = 0;
+            displayChoice += 5;
         }
 
-        if(signal)
+        if(signal && targetListLength)
         {
+            Time.timeScale = 0;
+            RisksChoice.SetActive(true);
             loadEffect.preLoadChoice();
             calculatecardListPlacement();
             loadEffect.loadCard();
             signal = false;
-            displayChoice += 5;
         }
     }
 
