@@ -5,48 +5,62 @@ using UnityEngine.UI;
 
 public class CardScripts : MonoBehaviour
 {
-    public Text Rnumber;
+    public Text displayRnumber;
     public Image displayR;
-    public RisksCompiler RisksList;
+    // private Image ImageR;
+    public RisksCompiler rlist;
     public GameObject chosenR;
-    private Image ImageR;
-    public bool selected = false;
+    public bool Chosen = false;
+    public bool choiceConfirm = false;
 
     // Update is called once per frame
     void Update()
     {
-
         if(chosenR != null)
         {
-            displayR.sprite = ImageR.sprite;
-        }
-    }
-
-    public void LoadingCard()
-    {
-        if(RisksList.Risks.Length >= 1)
-        {
-            displayR.enabled = true;
-            chosenR = RisksList.Risks[Random.Range(0, RisksList.Risks.Length)];
-            ImageR = chosenR.GetComponent<Image>();
-        }
-        if(RisksList.Risks.Length < 1)
-        {
-            displayR.enabled = false;
+            InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+            if(rInfo != null)
+            {
+                displayR.sprite = rInfo.tagImage.sprite;
+                displayRnumber.text = rInfo.rNumber.ToString();
+            }
         }
     }
 
     public void SelectedCard()
     {
-        if(!selected)
+        if(!Chosen)
         {
-            selected = true;
-            Debug.Log(selected);
+            Chosen = true;
+            Debug.Log(Chosen);
         }
-        else if(selected)
+        else if(Chosen)
         {
-            selected = false;
-            Debug.Log(selected);
+            Chosen = false;
+            Debug.Log(Chosen);
+        }
+    }
+
+    public void ActivateTag()
+    {
+        if(Chosen)
+        {
+            Debug.Log("Activated");
+            Instantiate(chosenR, transform.position, transform.rotation);
+            rlist.Risks.Remove(chosenR);
+            Chosen = false;
+            choiceConfirm = false;
+            displayR.sprite = null;
+            displayRnumber.text = null;
+            this.gameObject.SetActive(false);
+        }
+        if(!Chosen)
+        {
+            Chosen = false;
+            choiceConfirm = false;
+            displayR.sprite = null;
+            displayRnumber.text = null;
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class RisksCompiler : MonoBehaviour
 {
-    public GameObject[] Risks;
+    public List<GameObject> Risks = new List<GameObject>();
 }

@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class TriggerChoice : MonoBehaviour
 {
-    public GameObject[] card;
-    private int numCardLoaded;
-    public GameObject selected;
-    public GameObject[] selectedFilter;
+    public GameObject[] cardList;
     public Transform midPoint;
     private float Distmove = 215.7f;
-    public RisksCompiler rlist;
     public PointSystem pointsCheck;
+    public TriggerEffects loadEffect;
     public GameObject RisksChoice;
     public int displayChoice = 5;
-    public bool signal = false;
+    public RisksCompiler checkListLength;
+    private bool targetListLength = false;
+    private bool signal = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,79 +24,49 @@ public class TriggerChoice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(checkListLength.Risks.Count > 0)
+        {
+            targetListLength = true;
+        }
+        else if(checkListLength.Risks.Count == 0)
+        {
+            targetListLength = false;
+        }
+
         if(pointsCheck.points >= displayChoice)
         {
             signal = true;
-            RisksChoice.SetActive(true);
-            Time.timeScale = 0;
-        }
-
-        if(signal)
-        {
-            // card1.LoadingCard();
-            // card2.LoadingCard();
-            // card3.LoadingCard();
-            // card4.LoadingCard();
-            preLoadChoice();
-            calculateCardPlacement();
-            signal = false;
             displayChoice += 5;
         }
-    }
 
-    public void ConfirmChoice()
-    {
-        RisksChoice.SetActive(false);
-        Time.timeScale = 1;
-    }
-
-    public void preLoadChoice()
-    {
-        for(int i = 0; i < selectedFilter.Length; i++)
+        if(signal && targetListLength)
         {
-            if(rlist.Risks.Length > 0)
-            {
-                selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
-                for(int a = 0; a < selectedFilter.Length; a++)
-                {
-                    // Debug.Log(a);
-                    // Debug.Log(selectedFilter[a]);
-                    // Debug.Log(selected);
-                    if(numCardLoaded == rlist.Risks.Length)
-                    {
-                        break;
-                    }
-                    if(selectedFilter[a] == selected)
-                    {
-                        selected = rlist.Risks[Random.Range(0, rlist.Risks.Length)];
-                        a = -1;
-                    }
-                    if(a >= selectedFilter.Length - 1)
-                    {
-                        selectedFilter[i] = selected;
-                        numCardLoaded += 1;
-                        // Debug.Log(numCardLoaded);
-                    }
-                }
-            }
+            Time.timeScale = 0;
+            RisksChoice.SetActive(true);
+            loadEffect.preLoadChoice();
+            calculatecardListPlacement();
+            loadEffect.loadCard();
+            signal = false;
         }
     }
 
-    public void calculateCardPlacement()
+
+
+    public void calculatecardListPlacement()
     {
-        if(numCardLoaded > 0)
+        if(loadEffect.numcardListLoaded > 0)
         {
             float Distgap = 432f;
-            float CardDisplacementX = midPoint.transform.localPosition.x - Distmove * (numCardLoaded - 1);
-            for(int n = 0; n != numCardLoaded; n++)
+            float cardListDisplacementX = midPoint.transform.localPosition.x - Distmove * (loadEffect.numcardListLoaded - 1);
+            for(int n = 0; n != loadEffect.numcardListLoaded; n++)
             {
-                // card[0].transform.position = new Vector2(CardDisplacementX, midPoint.transform.position.y);
-                card[n].SetActive(true);
-                card[n].transform.localPosition = new Vector2(CardDisplacementX, 0);
+                // cardList[0].transform.position = new Vector2(cardListDisplacementX, midPoint.transform.position.y);
+                cardList[n].SetActive(true);
+                cardList[n].transform.localPosition = new Vector2(cardListDisplacementX, 0);
             }
-            for(int m = 1; m != numCardLoaded; m++)
+            for(int m = 1; m != loadEffect.numcardListLoaded; m++)
             {
-                card[m].transform.localPosition = new Vector2(card[m-1].transform.localPosition.x + Distgap, 0);
+                cardList[m].transform.localPosition = new Vector2(cardList[m-1].transform.localPosition.x + Distgap, 0);
             }
         }
     }
