@@ -10,6 +10,7 @@ public class ShortHitScript : MonoBehaviour
     private float hitReset = 0.2f;
     private float resetTimer;
     public Collider2D hitPoint;
+    public DisplayCombo calCombo;
     public PointSystem addingPoint;
     public HealthScript calHealth;
 
@@ -35,6 +36,7 @@ public class ShortHitScript : MonoBehaviour
             resetTimer += Time.deltaTime;
             if(resetTimer >= hitReset && missed == false)
             {
+                calCombo.AddCombo();
                 hitPoint.enabled = false;
                 resetTimer = 0;
                 hitted = false;
@@ -42,6 +44,7 @@ public class ShortHitScript : MonoBehaviour
             }
             if(resetTimer >= hitReset && missed == true)
             {
+                calCombo.ResetCombo();
                 calHealth.ReduceHealth();
                 numOfMissed += 1;
                 hitPoint.enabled = false;
