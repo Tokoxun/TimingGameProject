@@ -1346,6 +1346,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1416984227126596251, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+      propertyPath: calCombo
+      value: 
+      objectReference: {fileID: 1117311331}
+    - target: {fileID: 1416984227126596251, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
       propertyPath: calHealth
       value: 
       objectReference: {fileID: 79842836}
@@ -1784,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7452382045689765042, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
+      propertyPath: calCombo
+      value: 
+      objectReference: {fileID: 1117311331}
     - target: {fileID: 7452382045689765042, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
       propertyPath: calHealth
       value: 
@@ -2968,6 +2976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117311330}
+  - component: {fileID: 1117311331}
   m_Layer: 5
   m_Name: ComboDisplay
   m_TagString: Untagged
@@ -2996,6 +3005,19 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000091553, y: -322}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1117311331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117311329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce27d36a270aaa749ab416e94d0d24dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboNumber: {fileID: 2051988346}
 --- !u!1001 &1151771158
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3126,7 +3148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1156348923
 RectTransform:
   m_ObjectHideFlags: 0
