@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LongHitScript : MonoBehaviour
+public class hittingScript : MonoBehaviour
 {
     public bool hitted = false;
     private bool missed = true;
@@ -31,7 +29,7 @@ public class LongHitScript : MonoBehaviour
 
     void Update()
     {
-        if(hitted)
+        if(hitPoint.enabled == true)
         {
             resetTimer += Time.deltaTime;
             if(resetTimer >= hitReset && missed == false)
@@ -53,5 +51,10 @@ public class LongHitScript : MonoBehaviour
                 Debug.Log(numOfMissed);
             }
         }
+    }
+
+    public void ActivateCollider()
+    {
+        hitPoint.enabled = true;
     }
 }

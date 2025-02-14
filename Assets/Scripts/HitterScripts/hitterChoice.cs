@@ -11,8 +11,6 @@ public class hitterChoice : MonoBehaviour
     public bool actvShort = false;
     public Collider2D hitPointLong;
     public Collider2D hitPointShort;
-    public LongHitScript hitLong;
-    public ShortHitScript hitShort;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,12 +23,10 @@ public class hitterChoice : MonoBehaviour
         if(actvLong == true)
         {
             hitPointLong.enabled = true;
-            hitLong.hitted = true;
         }
         else if(actvShort == true)
         {
             hitPointShort.enabled = true;
-            hitShort.hitted = true;
         }
     }
 
