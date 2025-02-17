@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class ChoosingHitter : MonoBehaviour
 {
-    private bool choseShort = false;
-    public void ShortChoice()
+    void Start()
     {
-        if(!choseShort)
-        {
-            DifficultyManager.LongHitter = false;
-            DifficultyManager.ShortHitter = true;
-            choseShort = true;
-            return;
-        }
-        if(choseShort)
-        {
-            DifficultyManager.LongHitter = true;
-            DifficultyManager.ShortHitter = false;
-            choseShort = false;
-            return;
-        }
+        DifficultyManager.LongHitter = false;
+        DifficultyManager.ShortHitter = true;
     }
+
 }
