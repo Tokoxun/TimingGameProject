@@ -5,6 +5,7 @@ using UnityEngine;
 public static class DifficultyManager
 {
     public static float addArwSpd;
+    public static float addMrkSpd;
     public static bool secondHit = false;
     public static bool thirdHit = false;
     public static bool secondPivotPoint = false;
