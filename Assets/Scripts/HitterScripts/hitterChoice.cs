@@ -6,9 +6,6 @@ public class hitterChoice : MonoBehaviour
 {
     public GameObject enablShortHitter;
     public GameObject enablLongHitter;
-    public bool changeHit = false;
-    public bool actvLong = false;
-    public bool actvShort = false;
     public Collider2D hitPointLong;
     public Collider2D hitPointShort;
     // Start is called before the first frame update
@@ -20,11 +17,11 @@ public class hitterChoice : MonoBehaviour
 
     public void OnButtonHit()
     {
-        if(actvLong == true)
+        if(enablLongHitter.activeSelf)
         {
             hitPointLong.enabled = true;
         }
-        else if(actvShort == true)
+        else if(enablShortHitter.activeSelf)
         {
             hitPointShort.enabled = true;
         }
@@ -32,19 +29,7 @@ public class hitterChoice : MonoBehaviour
 
     void Update()
     {
-        if(changeHit == false)
-        {
-            actvLong = true;
-            actvShort = false;
-            enablLongHitter.SetActive(true);
-            enablShortHitter.SetActive(false);
-        }
-        else if(changeHit == true)
-        {
-            actvLong = false;
-            actvShort = true;
-            enablLongHitter.SetActive(false);
-            enablShortHitter.SetActive(true);
-        }
+        enablLongHitter.SetActive(DifficultyManager.LongHitter);
+        enablShortHitter.SetActive(DifficultyManager.ShortHitter);
     }
 }
