@@ -10,9 +10,10 @@ public class MarkerSpinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        buffedSpnSpd = DifficultyManager.addMrkSpd;
         if(buffedSpnSpd != 0)
         {
-            transform.Rotate(Vector3.forward * buffedSpnSpd * Time.deltaTime);
+            transform.Rotate(Vector3.forward * (spinSpeed * buffedSpnSpd) * Time.deltaTime);
         }
         if( buffedSpnSpd == 0)
         {
