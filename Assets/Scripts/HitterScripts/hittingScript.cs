@@ -22,6 +22,7 @@ public class hittingScript : MonoBehaviour
     {
         if(col.CompareTag("target"))
         {
+            calCombo.AddCombo();
             addingPoint.AddPoint();
             missed = false;
         }
@@ -34,7 +35,6 @@ public class hittingScript : MonoBehaviour
             resetTimer += Time.deltaTime;
             if(resetTimer >= hitReset && missed == false)
             {
-                calCombo.AddCombo();
                 hitPoint.enabled = false;
                 resetTimer = 0;
                 hitted = false;
