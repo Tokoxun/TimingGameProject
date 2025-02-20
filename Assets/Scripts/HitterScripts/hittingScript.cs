@@ -6,6 +6,7 @@ public class hittingScript : MonoBehaviour
     private bool actvCooldown = false;
     private float cooldown;
     private float hitterCooldown = 1f;
+    private float totalCooldown;
     private float hitReset = 0.2f;
     private float Resettimer;
     public Collider2D hitPoint;
@@ -37,16 +38,17 @@ public class hittingScript : MonoBehaviour
 
     void Update()
     {
+        totalCooldown = hitterCooldown + DifficultyManager.addButtonCooldown;
         if(actvCooldown && tagSprite != null)
         {
             cooldown += Time.deltaTime;
-            if(cooldown > hitterCooldown)
+            if(cooldown > totalCooldown)
             {
                 tagSprite.enabled = true;
                 cooldown = 0;
                 actvCooldown = false;
             }
-            else if(cooldown < hitterCooldown)
+            else if(cooldown < totalCooldown)
             {
                 tagSprite.enabled = false;
                 hitPoint.enabled = false;
