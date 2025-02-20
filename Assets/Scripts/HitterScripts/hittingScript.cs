@@ -37,7 +37,6 @@ public class hittingScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(cooldown);
         if(actvCooldown && tagSprite != null)
         {
             cooldown += Time.deltaTime;
