@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class hittingScript : MonoBehaviour
 {
-    public bool hitted = false;
-    private bool missed = true;
+    private SpriteRenderer tagSprite;
+    private bool actvCooldown = false;
+    private float cooldown;
+    private float hitterCooldown = 1f;
     private float hitReset = 0.2f;
-    private float resetTimer;
+    private float Resettimer;
     public Collider2D hitPoint;
     public DisplayCombo calCombo;
     public PointSystem addingPoint;
@@ -17,33 +19,50 @@ public class hittingScript : MonoBehaviour
     //     hitted = true;
     // }
 
+    void Start()
+    {
+        tagSprite = gameObject.GetComponent<SpriteRenderer>();
+    }
     public void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("target"))
         {
             calCombo.AddCombo();
             addingPoint.AddPoint();
-            missed = false;
+            hitPoint.enabled = false;
+            Resettimer = 0;
+            actvCooldown = true;
         }
     }
 
     void Update()
     {
+        Debug.Log(cooldown);
+        if(actvCooldown && tagSprite != null)
+        {
+            cooldown += Time.deltaTime;
+            if(cooldown > hitterCooldown)
+            {
+                tagSprite.enabled = true;
+                cooldown = 0;
+                actvCooldown = false;
+            }
+            else if(cooldown < hitterCooldown)
+            {
+                tagSprite.enabled = false;
+                hitPoint.enabled = false;
+            }
+        }
         if(hitPoint.enabled == true)
         {
-            resetTimer += Time.deltaTime;
-            if(resetTimer >= hitReset && missed == false)
-            {
-                hitPoint.enabled = false;
-                resetTimer = 0;
-                missed = true;
-            }
-            if(resetTimer >= hitReset && missed == true)
+            Resettimer += Time.deltaTime;
+            if(Resettimer >= hitReset)
             {
                 calCombo.ResetCombo();
                 calHealth.ReduceHealth();
                 hitPoint.enabled = false;
-                resetTimer = 0;
+                Resettimer = 0;
+                actvCooldown = true;
             }
         }
     }
