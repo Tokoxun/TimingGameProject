@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class DifficultyManager
 {
+    public static float addButtonCooldown;
     public static float addArwSpd;
     public static float addMrkSpd;
     public static bool secondHit = false;
