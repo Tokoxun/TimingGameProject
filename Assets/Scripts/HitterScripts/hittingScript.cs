@@ -4,7 +4,6 @@ public class hittingScript : MonoBehaviour
 {
     public bool hitted = false;
     private bool missed = true;
-    public float numOfMissed;
     private float hitReset = 0.2f;
     private float resetTimer;
     public Collider2D hitPoint;
@@ -37,24 +36,15 @@ public class hittingScript : MonoBehaviour
             {
                 hitPoint.enabled = false;
                 resetTimer = 0;
-                hitted = false;
                 missed = true;
             }
             if(resetTimer >= hitReset && missed == true)
             {
                 calCombo.ResetCombo();
                 calHealth.ReduceHealth();
-                numOfMissed += 1;
                 hitPoint.enabled = false;
                 resetTimer = 0;
-                hitted = false;
-                Debug.Log(numOfMissed);
             }
         }
-    }
-
-    public void ActivateCollider()
-    {
-        hitPoint.enabled = true;
     }
 }
