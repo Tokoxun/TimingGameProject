@@ -6,16 +6,16 @@ public class SpinScript : MonoBehaviour
 {
     private float dirChangeTime = 1f;
     public float changeTime;
-    public float spinSpeed = -50f;
-    private float[] changeOrNot;
+    public static float spinSpeed = -100f;
+    private static float[] changeOrNot;
 
     void Start()
     {
-        spinSpeed -= DifficultyManager.addArwSpd;
-        changeOrNot = new float[3];
-        changeOrNot[0] = spinSpeed;
-        changeOrNot[1] = -spinSpeed;
-        changeOrNot[2] = spinSpeed;
+        // spinSpeed -= DifficultyManager.addArwSpd;
+        // changeOrNot = new float[3];
+        // changeOrNot[0] = spinSpeed;
+        // changeOrNot[1] = -spinSpeed;
+        // changeOrNot[2] = spinSpeed;
     }
     // Update is called once per frame
     void Update()
@@ -28,11 +28,26 @@ public class SpinScript : MonoBehaviour
         // // Output the rotation angle
         // Debug.Log("Z-axis rotation: " + zRotation);
         transform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
-        changeTime += Time.deltaTime;
-        if(changeTime >= dirChangeTime)
+        if(changeOrNot != null)
         {
-            spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
-            changeTime = 0;
+            changeTime += Time.deltaTime;
+            if(changeTime >= dirChangeTime)
+            {
+                spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
+                changeTime = 0;
+            }
         }
+    }
+
+    public static void EnableSwitchDirection()
+    {
+        changeOrNot = new float[2];
+        changeOrNot[0] = spinSpeed;
+        changeOrNot[1] = -spinSpeed;
+    }
+
+    public static void DisableSwitchDirection()
+    {
+        changeOrNot = null;
     }  
 }
