@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class hittingScript : MonoBehaviour
 {
-    private SpriteRenderer tagSprite;
+    private SpriteRenderer hitterSprite;
     private bool actvCooldown = false;
     private float cooldown;
     private float hitterCooldown = 1f;
@@ -22,7 +22,7 @@ public class hittingScript : MonoBehaviour
 
     void Start()
     {
-        tagSprite = gameObject.GetComponent<SpriteRenderer>();
+        hitterSprite = gameObject.GetComponent<SpriteRenderer>();
     }
     public void OnTriggerEnter2D(Collider2D col)
     {
@@ -39,18 +39,18 @@ public class hittingScript : MonoBehaviour
     void Update()
     {
         totalCooldown = hitterCooldown + DifficultyManager.addButtonCooldown;
-        if(actvCooldown && tagSprite != null)
+        if(actvCooldown && hitterSprite != null)
         {
             cooldown += Time.deltaTime;
             if(cooldown > totalCooldown)
             {
-                tagSprite.enabled = true;
+                hitterSprite.enabled = true;
                 cooldown = 0;
                 actvCooldown = false;
             }
             else if(cooldown < totalCooldown)
             {
-                tagSprite.enabled = false;
+                hitterSprite.enabled = false;
                 hitPoint.enabled = false;
             }
         }
