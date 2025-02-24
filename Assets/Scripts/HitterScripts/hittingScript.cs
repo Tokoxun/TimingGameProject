@@ -38,6 +38,10 @@ public class hittingScript : MonoBehaviour
 
     void Update()
     {
+        if(DifficultyManager.displayHitterSprite)
+        {
+            hitterSprite.enabled = false;
+        }
         totalCooldown = hitterCooldown + DifficultyManager.addButtonCooldown;
         if(actvCooldown && hitterSprite != null)
         {
