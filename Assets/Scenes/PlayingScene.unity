@@ -1380,6 +1380,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 79842836}
     - target: {fileID: 2637605953575992268, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2637605953575992268, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
       propertyPath: addingPoint
       value: 
       objectReference: {fileID: 1735361083}
@@ -2916,10 +2920,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Risks:
-  - {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
-  - {fileID: 175650656508704787, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+  - {fileID: 6373493067371596416, guid: 9e334b63caee4424e907bc2742824b91, type: 3}
+  - {fileID: 8004759667917735655, guid: f1f8fca7c9238bc45af3708259304df6, type: 3}
   - {fileID: 756533491609154465, guid: 02b0fba19de54f84c86aeba481e3435e, type: 3}
-  - {fileID: 418036392531678951, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+  - {fileID: 8051604705072827170, guid: 872910735a02f90449c1bac927ccaeb7, type: 3}
+  - {fileID: 5260663741378192561, guid: 698a56033f57e6f43833d213e7b40202, type: 3}
+  - {fileID: 25307076993321622, guid: 254853620cb078947b9c58dce90df9d4, type: 3}
+  - {fileID: 8879321899378151458, guid: ffa05a6568e03ce46a4a0b438ffc863d, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,7 +3980,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 0
-  spinSpeed: -100
 --- !u!4 &1690234461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6850703985077009709, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
@@ -4299,9 +4305,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enablShortHitter: {fileID: 357877042}
   enablLongHitter: {fileID: 775822708}
-  changeHit: 0
-  actvLong: 0
-  actvShort: 0
   hitPointLong: {fileID: 775822710}
   hitPointShort: {fileID: 357877044}
 --- !u!114 &1846919206 stripped
