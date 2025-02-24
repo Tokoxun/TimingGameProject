@@ -5,11 +5,15 @@ using UnityEngine;
 public class MarkSpdUp : MonoBehaviour
 {
     private float SpdUp = 5f;
-    void Start()
+    void OnEnable()
     {
         DifficultyManager.addMrkSpd += SpdUp;
     }
 
+    void OnDisable()
+    {
+        DifficultyManager.addArwSpd -= SpdUp;
+    }
     // public void markSpdUp()
     // {
     //     MarkerSpinScript spinningSpeed = Object.FindFirstObjectByType<MarkerSpinScript>();

@@ -6,8 +6,13 @@ public class ArwSpdUp : MonoBehaviour
 {
     private float SpdUp = 5f;
 
-    void Start()
+    void OnEnable()
     {
         DifficultyManager.addArwSpd += SpdUp;
+    }
+
+    void OnDisable()
+    {
+        DifficultyManager.addArwSpd -= SpdUp;
     }
 }
