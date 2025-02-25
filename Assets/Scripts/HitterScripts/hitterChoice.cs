@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class hitterChoice : MonoBehaviour
 {
-    public InputAction currentInput;
+    public InputAction changeInput;
     public GameObject enablShortHitter;
     public GameObject enablLongHitter;
     public Collider2D hitPointLong;
@@ -33,5 +33,11 @@ public class hitterChoice : MonoBehaviour
     {
         enablLongHitter.SetActive(DifficultyManager.LongHitter);
         enablShortHitter.SetActive(DifficultyManager.ShortHitter);
+        changeInput.ChangeBinding(0).WithPath(DifficultyManager.currentInput);
+        changeInput.Enable();
+        if(changeInput.triggered)
+        {
+            Debug.Log("Triggered");
+        }
     }
 }
