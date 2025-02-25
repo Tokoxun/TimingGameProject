@@ -40,6 +40,14 @@ public class hitterChoice : MonoBehaviour
         if(changeInput.triggered)
         {
             Debug.Log("Triggered");
+            if(enablLongHitter.activeSelf)
+            {
+                hitPointLong.enabled = true;
+            }
+            else if(enablShortHitter.activeSelf)
+            {
+                hitPointShort.enabled = true;
+            }
         }
         if(currentButton != DifficultyManager.currentInput)
         {
