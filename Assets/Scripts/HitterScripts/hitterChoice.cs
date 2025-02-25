@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class hitterChoice : MonoBehaviour
 {
+    public InputAction currentInput;
     public GameObject enablShortHitter;
     public GameObject enablLongHitter;
     public Collider2D hitPointLong;
