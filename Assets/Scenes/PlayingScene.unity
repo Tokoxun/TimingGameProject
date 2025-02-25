@@ -2927,6 +2927,7 @@ MonoBehaviour:
   - {fileID: 5260663741378192561, guid: 698a56033f57e6f43833d213e7b40202, type: 3}
   - {fileID: 25307076993321622, guid: 254853620cb078947b9c58dce90df9d4, type: 3}
   - {fileID: 8879321899378151458, guid: ffa05a6568e03ce46a4a0b438ffc863d, type: 3}
+  - {fileID: 9187221607823835401, guid: 72ca042d9ab0c3541a01122cb269de96, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +4304,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2f5ebea512a6b47a2527fa3cbabc7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeInput:
+    m_Name: Change Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d516ed2a-ad52-45ff-beb2-5bc08a374351
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c9d0b972-5913-4b49-ad25-62ad92953c1b
+      m_Path: 
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Change Input
+      m_Flags: 0
+    m_Flags: 0
   enablShortHitter: {fileID: 357877042}
   enablLongHitter: {fileID: 775822708}
   hitPointLong: {fileID: 775822710}
