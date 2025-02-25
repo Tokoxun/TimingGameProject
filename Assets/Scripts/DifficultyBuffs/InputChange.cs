@@ -10,12 +10,12 @@ public class InputChange : MonoBehaviour
     void Start()
     {
         totalInput = new string[27] 
-        {"<Keyboard>/a", "<Keyboard>/b", "<Keyboard>/c", "<Keyboard>/d", "<Keyboard>/e", 
-        "<Keyboard>/f", "<Keyboard>/g", "<Keyboard>/h", "<Keyboard>/i", "<Keyboard>/j", 
-        "<Keyboard>/k", "<Keyboard>/l", "<Keyboard>/m", "<Keyboard>/n", "<Keyboard>/o", 
-        "<Keyboard>/p", "<Keyboard>/q", "<Keyboard>/r", "<Keyboard>/s", "<Keyboard>/t", 
-        "<Keyboard>/u", "<Keyboard>/v", "<Keyboard>/w", "<Keyboard>/x", "<Keyboard>/y", 
-        "<Keyboard>/z", "<Keyboard>/space"};
+        {"a", "b", "c", "d", "e", 
+        "f", "g", "h", "i", "j", 
+        "k", "l", "m", "n", "o", 
+        "p", "q", "r", "s", "t", 
+        "u", "v", "w", "x", "y", 
+        "z", "space"};
     }
 
     // Update is called once per frame
@@ -33,6 +33,6 @@ public class InputChange : MonoBehaviour
     void OnDisable()
     {
         chosenInput = null;
-        DifficultyManager.currentInput = "<Keyboard>/space";
+        DifficultyManager.currentInput = "space";
     }
 }

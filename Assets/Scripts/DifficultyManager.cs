@@ -6,7 +6,7 @@ public static class DifficultyManager
 {
     public static float decreaseArwSpd;
     public static bool displayHitterSprite;
-    public static string currentInput = "<Keyboard>/space";
+    public static string currentInput = "space";
     public static float addButtonCooldown;
     public static float addArwSpd;
     public static float addMrkSpd;
