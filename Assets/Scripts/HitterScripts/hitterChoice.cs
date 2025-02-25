@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class hitterChoice : MonoBehaviour
 {
     public InputAction changeInput;
+    private string currentButton;
     public GameObject enablShortHitter;
     public GameObject enablLongHitter;
     public Collider2D hitPointLong;
@@ -13,6 +14,7 @@ public class hitterChoice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentButton = DifficultyManager.currentInput;
         enablShortHitter.SetActive(false);
         enablLongHitter.SetActive(true);
     }
@@ -38,6 +40,11 @@ public class hitterChoice : MonoBehaviour
         if(changeInput.triggered)
         {
             Debug.Log("Triggered");
+        }
+        if(currentButton != DifficultyManager.currentInput)
+        {
+            currentButton = DifficultyManager.currentInput;
+            Debug.Log(currentButton);
         }
     }
 }
