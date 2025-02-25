@@ -53,6 +53,5 @@ public class hitterChoice : MonoBehaviour
             currentButton = DifficultyManager.currentInput;
             Debug.Log(currentButton);
         }
-        Debug.Log(changeInput.ToString());
     }
 }
