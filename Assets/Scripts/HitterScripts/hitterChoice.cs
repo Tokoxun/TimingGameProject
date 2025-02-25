@@ -39,7 +39,6 @@ public class hitterChoice : MonoBehaviour
         changeInput.Enable();
         if(changeInput.triggered)
         {
-            Debug.Log("Triggered");
             if(enablLongHitter.activeSelf)
             {
                 hitPointLong.enabled = true;
