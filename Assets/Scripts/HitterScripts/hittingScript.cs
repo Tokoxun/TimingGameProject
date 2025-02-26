@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class hittingScript : MonoBehaviour
 {
-    private SpriteRenderer hitterSprite;
+    public SpriteRenderer hitterSprite;
+    public CooldownSlider displaySliderCooldown;
     private bool actvCooldown = false;
     private float cooldown;
     private float hitterCooldown = 1f;
@@ -28,6 +29,7 @@ public class hittingScript : MonoBehaviour
     {
         if(col.CompareTag("target"))
         {
+            displaySliderCooldown.TriggerSliderCooldown(totalCooldown);
             calCombo.AddCombo();
             addingPoint.AddPoint();
             hitPoint.enabled = false;
@@ -63,6 +65,7 @@ public class hittingScript : MonoBehaviour
             Resettimer += Time.deltaTime;
             if(Resettimer >= hitReset)
             {
+                displaySliderCooldown.TriggerSliderCooldown(totalCooldown);
                 calCombo.ResetCombo();
                 calHealth.ReduceHealth();
                 hitPoint.enabled = false;
