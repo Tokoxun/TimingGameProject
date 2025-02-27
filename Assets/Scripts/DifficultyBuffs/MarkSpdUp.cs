@@ -12,7 +12,7 @@ public class MarkSpdUp : MonoBehaviour
 
     void OnDisable()
     {
-        DifficultyManager.addArwSpd -= SpdUp;
+        DifficultyManager.addMrkSpd -= SpdUp;
     }
     // public void markSpdUp()
     // {
