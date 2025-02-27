@@ -5,11 +5,11 @@ public class DirectionChangeHitter : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnEnable()
     {
-        SpinScript.EnableSwitchDirection();
+        DifficultyManager.rotateMarker = true;
     }
 
     private void OnDisable()
     {
-        SpinScript.DisableSwitchDirection();
+        DifficultyManager.rotateMarker = false;
     }
 }
