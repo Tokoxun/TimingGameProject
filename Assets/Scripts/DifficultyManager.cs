@@ -12,6 +12,7 @@ public static class DifficultyManager
     public static float addArwSpd;
     public static float decreaseArwSpd;
     public static float addMrkSpd;
+    public static float decreaseMrkSpd;
     public static bool secondHit = false;
     public static bool thirdHit = false;
     public static bool secondPivotPoint = false;
