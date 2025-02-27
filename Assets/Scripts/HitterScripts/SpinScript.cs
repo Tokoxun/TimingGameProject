@@ -9,14 +9,6 @@ public class SpinScript : MonoBehaviour
     public static float spinSpeed = -100f;
     private static float[] changeOrNot;
 
-    void Start()
-    {
-        // spinSpeed -= DifficultyManager.addArwSpd;
-        // changeOrNot = new float[3];
-        // changeOrNot[0] = spinSpeed;
-        // changeOrNot[1] = -spinSpeed;
-        // changeOrNot[2] = spinSpeed;
-    }
     // Update is called once per frame
     void Update()
     {
