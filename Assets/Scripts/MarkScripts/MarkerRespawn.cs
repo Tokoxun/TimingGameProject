@@ -5,7 +5,8 @@ using UnityEngine;
 public class MarkerRespawn : MonoBehaviour
 {
     public GameObject mrk;
-    public float respawnTime = 0.5f;
+    public float totalRespawnTime;
+    private float respawnTime = 0.5f;
     private float respawnTimer;
     public MarkerScript markRes;
     
@@ -13,13 +14,14 @@ public class MarkerRespawn : MonoBehaviour
     {
         if(!mrk.activeSelf)
         {
+            totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
             DisappearingScript resetDisap = GetComponent<DisappearingScript>();
             if(resetDisap != null)
             {
                 resetDisap.AppearTime = 0;
             }
             respawnTimer += Time.deltaTime;
-            if(respawnTimer >= respawnTime)
+            if(respawnTimer >= totalRespawnTime)
             {
                 markRes.Respawn();
                 mrk.SetActive(true);
