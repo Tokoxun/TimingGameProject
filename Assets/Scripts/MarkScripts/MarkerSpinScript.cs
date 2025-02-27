@@ -2,10 +2,17 @@ using UnityEngine;
 
 public class MarkerSpinScript : MonoBehaviour
 {
+    private float dirChangeTime = 1f;
+    public float changeTime;
+    private float[] changeOrNot;
     public float spinSpeed = -35f;
     public float buffedSpnSpd;
     public float totalBuffedSpnSpd;
 
+    void Start()
+    {
+        changeOrNot = new float[2];
+    }
     // Update is called once per frame
     void Update()
     {
@@ -13,5 +20,16 @@ public class MarkerSpinScript : MonoBehaviour
         totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
         Debug.Log(spinSpeed + totalBuffedSpnSpd);
         transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd) * Time.deltaTime);
+        if(changeOrNot != null && DifficultyManager.rotateMarker)
+        {
+            changeOrNot[0] = spinSpeed;
+            changeOrNot[1] = -spinSpeed;
+            changeTime += Time.deltaTime;
+            if(changeTime >= dirChangeTime)
+            {
+                spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
+                changeTime = 0;
+            }
+        }
     }
 }
