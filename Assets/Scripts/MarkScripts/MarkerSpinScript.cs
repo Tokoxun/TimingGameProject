@@ -11,13 +11,7 @@ public class MarkerSpinScript : MonoBehaviour
     {
         buffedSpnSpd = (DifficultyManager.addMrkSpd - DifficultyManager.decreaseMrkSpd) / 100;
         totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
-        if(buffedSpnSpd != 0)
-        {
-            transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd) * Time.deltaTime);
-        }
-        if(buffedSpnSpd == 0)
-        {
-            transform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
-        }
+        Debug.Log(spinSpeed + totalBuffedSpnSpd);
+        transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd) * Time.deltaTime);
     }
 }
