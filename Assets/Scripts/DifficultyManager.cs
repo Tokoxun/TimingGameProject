@@ -4,6 +4,8 @@ using UnityEngine;
 
 public static class DifficultyManager
 {
+    public static bool rotateMarker = false;
+    public static bool rotateHitter = false;
     public static bool displayHitterSprite;
     public static bool disablePause = false;
     public static string currentInput = "Space";
