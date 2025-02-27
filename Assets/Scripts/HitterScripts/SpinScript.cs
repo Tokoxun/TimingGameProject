@@ -8,6 +8,8 @@ public class SpinScript : MonoBehaviour
     public float changeTime;
     public float spinSpeed = -100f;
     private float[] changeOrNot;
+    public float buffedSpnSpd;
+    public float totalBuffedSpnSpd;
 
     void Start()
     {
@@ -23,8 +25,10 @@ public class SpinScript : MonoBehaviour
 
         // // Output the rotation angle
         // Debug.Log("Z-axis rotation: " + zRotation);
-        transform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
-        if(changeOrNot != null  && DifficultyManager.rotateMarker)
+        buffedSpnSpd = (DifficultyManager.addArwSpd - DifficultyManager.decreaseArwSpd) / 100;
+        totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
+        transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd) * Time.deltaTime);
+        if(changeOrNot != null  && DifficultyManager.rotateHitter)
         {
             changeOrNot[0] = spinSpeed;
             changeOrNot[1] = -spinSpeed;
