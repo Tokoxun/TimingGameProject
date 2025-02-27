@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2017114801899824929}
   - component: {fileID: 2147767543873903975}
   - component: {fileID: 4790243115041679674}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RespawnMarkTimeDownTag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
