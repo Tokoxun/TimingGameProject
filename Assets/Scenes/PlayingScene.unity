@@ -2023,8 +2023,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776018580}
-  - component: {fileID: 776018581}
   - component: {fileID: 776018582}
+  - component: {fileID: 776018583}
   m_Layer: 0
   m_Name: markPivotPoint4
   m_TagString: Untagged
@@ -2048,21 +2048,6 @@ Transform:
   - {fileID: 443199841}
   m_Father: {fileID: 371925866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &776018581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 776018579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1fa60afc51f3f64db869a9c8e3b7905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: -35
-  buffedSpnSpd: 0
-  totalBuffedSpnSpd: 0
 --- !u!114 &776018582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +2063,22 @@ MonoBehaviour:
   mrk: {fileID: 2025327486}
   totalRespawnTime: 0
   markRes: {fileID: 2025327489}
+--- !u!114 &776018583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776018579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293272e821317d8499ee427dbfd8ba1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 0
+  spinSpeed: -35
+  buffedSpnSpd: 0
+  totalBuffedSpnSpd: 0
 --- !u!1 &795049865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,8 +2088,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 795049866}
-  - component: {fileID: 795049867}
   - component: {fileID: 795049868}
+  - component: {fileID: 795049869}
   m_Layer: 0
   m_Name: markPivotPoint5
   m_TagString: Untagged
@@ -2112,21 +2113,6 @@ Transform:
   - {fileID: 1391260966}
   m_Father: {fileID: 371925866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &795049867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795049865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1fa60afc51f3f64db869a9c8e3b7905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: -35
-  buffedSpnSpd: 0
-  totalBuffedSpnSpd: 0
 --- !u!114 &795049868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2142,6 +2128,22 @@ MonoBehaviour:
   mrk: {fileID: 952653829}
   totalRespawnTime: 0
   markRes: {fileID: 1391260969}
+--- !u!114 &795049869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795049865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f2a72f92e3c23409a270e0c57002de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 0
+  spinSpeed: -35
+  buffedSpnSpd: 0
+  totalBuffedSpnSpd: 0
 --- !u!1001 &810847461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2516,8 +2518,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 983624670}
-  - component: {fileID: 983624671}
   - component: {fileID: 983624672}
+  - component: {fileID: 983624673}
   m_Layer: 0
   m_Name: markPivotPoint2
   m_TagString: Untagged
@@ -2541,21 +2543,6 @@ Transform:
   - {fileID: 388923352}
   m_Father: {fileID: 371925866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &983624671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 983624669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1fa60afc51f3f64db869a9c8e3b7905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: -35
-  buffedSpnSpd: 0
-  totalBuffedSpnSpd: 0
 --- !u!114 &983624672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,6 +2558,22 @@ MonoBehaviour:
   mrk: {fileID: 810847462}
   totalRespawnTime: 0
   markRes: {fileID: 810847465}
+--- !u!114 &983624673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983624669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52a0aa3336bc83146a268982258d0a57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 0
+  spinSpeed: -35
+  buffedSpnSpd: 0
+  totalBuffedSpnSpd: 0
 --- !u!114 &1033651748 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2439849043843386263, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
@@ -2944,6 +2947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1fa60afc51f3f64db869a9c8e3b7905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeTime: 0
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
@@ -3099,6 +3103,7 @@ MonoBehaviour:
   - {fileID: 1941071176523935806, guid: baeaebd017bcaf047b2936c288fb6f9a, type: 3}
   - {fileID: 751329543939582614, guid: bb641edb50eaf1346be6172f430c85de, type: 3}
   - {fileID: 5876941296993807818, guid: 018e1b3a78656294db27cfc2883b758a, type: 3}
+  - {fileID: 5281647335727187315, guid: 3209b8355df58544aa1b6d74c5deb0d8, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,8 +3113,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1116595675}
-  - component: {fileID: 1116595676}
   - component: {fileID: 1116595677}
+  - component: {fileID: 1116595678}
   m_Layer: 0
   m_Name: markPivotPoint3
   m_TagString: Untagged
@@ -3133,21 +3138,6 @@ Transform:
   - {fileID: 1690234461}
   m_Father: {fileID: 371925866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1116595676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116595674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1fa60afc51f3f64db869a9c8e3b7905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: -35
-  buffedSpnSpd: 0
-  totalBuffedSpnSpd: 0
 --- !u!114 &1116595677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3163,6 +3153,22 @@ MonoBehaviour:
   mrk: {fileID: 1328510383}
   totalRespawnTime: 0
   markRes: {fileID: 1690234464}
+--- !u!114 &1116595678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116595674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fe122ed56898041bdebfb09ea64db2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 0
+  spinSpeed: -35
+  buffedSpnSpd: 0
+  totalBuffedSpnSpd: 0
 --- !u!1 &1117311329
 GameObject:
   m_ObjectHideFlags: 0
@@ -4228,6 +4234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 0
+  spinSpeed: -100
+  buffedSpnSpd: 0
+  totalBuffedSpnSpd: 0
 --- !u!4 &1690234461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6850703985077009709, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
