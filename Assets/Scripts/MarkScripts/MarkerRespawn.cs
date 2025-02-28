@@ -9,6 +9,7 @@ public class MarkerRespawn : MonoBehaviour
     private float respawnTime = 0.5f;
     private float respawnTimer;
     public MarkerScript markRes;
+    public MarkerSpinScript markRotation;
     
     void Update()
     {
@@ -23,6 +24,7 @@ public class MarkerRespawn : MonoBehaviour
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= totalRespawnTime)
             {
+                markRotation.randomCurrentMarkPosition();
                 markRes.Respawn();
                 mrk.SetActive(true);
                 respawnTimer = 0;
