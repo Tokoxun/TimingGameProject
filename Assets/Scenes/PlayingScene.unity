@@ -2031,7 +2031,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &776018580
 Transform:
   m_ObjectHideFlags: 0
@@ -2040,14 +2040,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776018579}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.13052624, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 443199841}
   m_Father: {fileID: 371925866}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
 --- !u!114 &776018582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2063,6 +2063,7 @@ MonoBehaviour:
   mrk: {fileID: 2025327486}
   totalRespawnTime: 0
   markRes: {fileID: 2025327489}
+  markRotation: {fileID: 776018583}
 --- !u!114 &776018583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2079,6 +2080,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  currentRotation: 0
 --- !u!1 &795049865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2096,7 +2098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &795049866
 Transform:
   m_ObjectHideFlags: 0
@@ -2105,14 +2107,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795049865}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9659258, w: 0.2588191}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1391260966}
   m_Father: {fileID: 371925866}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -150}
 --- !u!114 &795049868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2128,6 +2130,7 @@ MonoBehaviour:
   mrk: {fileID: 952653829}
   totalRespawnTime: 0
   markRes: {fileID: 1391260969}
+  markRotation: {fileID: 795049869}
 --- !u!114 &795049869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2144,6 +2147,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  currentRotation: 0
 --- !u!1001 &810847461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2535,14 +2539,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983624669}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.13052616, w: 0.9914449}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 388923352}
   m_Father: {fileID: 371925866}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
 --- !u!114 &983624672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2558,6 +2562,7 @@ MonoBehaviour:
   mrk: {fileID: 810847462}
   totalRespawnTime: 0
   markRes: {fileID: 810847465}
+  markRotation: {fileID: 983624673}
 --- !u!114 &983624673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2574,6 +2579,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  currentRotation: 0
 --- !u!114 &1033651748 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2439849043843386263, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
@@ -2951,6 +2957,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  currentRotation: 0
 --- !u!114 &1096768356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2966,6 +2973,7 @@ MonoBehaviour:
   mrk: {fileID: 1244068500}
   totalRespawnTime: 0
   markRes: {fileID: 2090641712}
+  markRotation: {fileID: 1096768355}
 --- !u!1 &1100627759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,14 +3138,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116595674}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.258819, w: 0.9659259}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1690234461}
   m_Father: {fileID: 371925866}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30}
 --- !u!114 &1116595677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3153,6 +3161,7 @@ MonoBehaviour:
   mrk: {fileID: 1328510383}
   totalRespawnTime: 0
   markRes: {fileID: 1690234464}
+  markRotation: {fileID: 1116595678}
 --- !u!114 &1116595678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3169,6 +3178,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  currentRotation: 0
 --- !u!1 &1117311329
 GameObject:
   m_ObjectHideFlags: 0
