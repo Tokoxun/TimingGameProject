@@ -8,10 +8,13 @@ public class MarkerSpinScript : MonoBehaviour
     public float spinSpeed = -35f;
     public float buffedSpnSpd;
     public float totalBuffedSpnSpd;
+    public float currentRotation;
 
     void Start()
     {
         changeOrNot = new float[2];
+        changeOrNot[0] = spinSpeed;
+        changeOrNot[1] = -spinSpeed;
     }
     // Update is called once per frame
     void Update()
@@ -31,5 +34,12 @@ public class MarkerSpinScript : MonoBehaviour
                 changeTime = 0;
             }
         }
+    }
+
+    public void randomCurrentMarkPosition()
+    {
+        spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
+        currentRotation = Random.Range(0, 361);
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, currentRotation);
     }
 }
