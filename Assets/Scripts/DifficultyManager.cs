@@ -17,8 +17,8 @@ public static class DifficultyManager
     public static float decreaseMrkSpd;
     public static bool secondHit = false;
     public static bool thirdHit = false;
-    public static bool secondPivotPoint = false;
-    public static bool thirdPivotPoint = false;
+    public static bool secondPivotPoint = true;
+    public static bool thirdPivotPoint = true;
     public static bool ShortHitter = false;
     public static bool LongHitter = true;
 }
