@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class MarkerRespawn : MonoBehaviour
 {
-    public GameObject mrk;
-    public GameObject mrkShort;
     public float totalRespawnTime;
     private float respawnTime = 0.5f;
     private float respawnTimer;
@@ -16,7 +14,7 @@ public class MarkerRespawn : MonoBehaviour
     void Update()
     {
         totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
-        if(!mrk.activeSelf && DifficultyManager.ShortMarker == false)
+        if(markRes.fstHitMark.enabled == false && DifficultyManager.ShortMarker == false)
         {
             // DisappearingScript resetDisap = GetComponent<DisappearingScript>();
             // if(resetDisap != null)
@@ -31,7 +29,7 @@ public class MarkerRespawn : MonoBehaviour
                 respawnTimer = 0;
             }
         }
-        else if(!mrkShort.activeSelf && DifficultyManager.ShortMarker == true)
+        else if(markResShort.fstHitMark.enabled == false && DifficultyManager.ShortMarker == true)
         {
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= totalRespawnTime)
