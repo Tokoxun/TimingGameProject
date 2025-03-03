@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MarkerScript : MonoBehaviour
 {
+    public SpriteRenderer fstHitMark;
+    public Collider2D markCol;
     public GameObject scdHitMark;
     public GameObject trdHitMark;
     void Start()
@@ -25,13 +27,15 @@ public class MarkerScript : MonoBehaviour
                 scdHitMark.SetActive(false);
                 return;
             }
-            gameObject.SetActive(false);
+            fstHitMark.enabled = false;
+            markCol.enabled = false;
         }
     }
 
     public void Respawn()
     {
-        gameObject.SetActive(true);
+        fstHitMark.enabled = true;
+        markCol.enabled = true;
         scdHitMark.SetActive(DifficultyManager.secondHit);
         trdHitMark.SetActive(DifficultyManager.thirdHit);
     }
