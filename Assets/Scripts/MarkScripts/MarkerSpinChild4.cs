@@ -4,7 +4,7 @@ public class MarkerSpinChild4 : MarkerSpinScript
 {
     public static GameObject trdPivotPoint;
 
-    void Start()
+    void Awake()
     {
         trdPivotPoint = this.gameObject;
     }
