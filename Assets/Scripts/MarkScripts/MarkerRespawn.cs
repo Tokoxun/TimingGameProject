@@ -15,28 +15,30 @@ public class MarkerRespawn : MonoBehaviour
     
     void Update()
     {
-        if(!mrk.activeSelf)
+        totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
+        if(!mrk.activeSelf && DifficultyManager.ShortMarker == false)
         {
-            totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
-            DisappearingScript resetDisap = GetComponent<DisappearingScript>();
-            if(resetDisap != null)
-            {
-                resetDisap.AppearTime = 0;
-            }
+            // DisappearingScript resetDisap = GetComponent<DisappearingScript>();
+            // if(resetDisap != null)
+            // {
+            //     resetDisap.AppearTime = 0;
+            // }
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= totalRespawnTime)
             {
                 markRotation.randomCurrentMarkPosition();
-                if(!mrk.activeSelf)
-                {
-                    markRes.Respawn();
-                    respawnTimer = 0;
-                }
-                else if(!mrkShort.activeSelf)
-                {
-                    markResShort.Respawn();
-                    respawnTimer = 0;
-                }
+                markRes.Respawn();
+                respawnTimer = 0;
+            }
+        }
+        else if(!mrkShort.activeSelf && DifficultyManager.ShortMarker == true)
+        {
+            respawnTimer += Time.deltaTime;
+            if(respawnTimer >= totalRespawnTime)
+            {
+                markRotation.randomCurrentMarkPosition();
+                markResShort.Respawn();
+                respawnTimer = 0;
             }
         }
     }
