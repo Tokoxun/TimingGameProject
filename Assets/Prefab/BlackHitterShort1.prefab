@@ -284,6 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fstHitMark: {fileID: 3585252064368855318}
+  markCol: {fileID: 2328249614733329225}
   scdHitMark: {fileID: 5516884602839452677}
   trdHitMark: {fileID: 6759652021220422548}
 --- !u!1 &6759652021220422548
