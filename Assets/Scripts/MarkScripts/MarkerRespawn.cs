@@ -5,10 +5,12 @@ using UnityEngine;
 public class MarkerRespawn : MonoBehaviour
 {
     public GameObject mrk;
+    public GameObject mrkShort;
     public float totalRespawnTime;
     private float respawnTime = 0.5f;
     private float respawnTimer;
     public MarkerScript markRes;
+    public MarkerScript markResShort;
     public MarkerSpinScript markRotation;
     
     void Update()
@@ -25,9 +27,16 @@ public class MarkerRespawn : MonoBehaviour
             if(respawnTimer >= totalRespawnTime)
             {
                 markRotation.randomCurrentMarkPosition();
-                markRes.Respawn();
-                mrk.SetActive(true);
-                respawnTimer = 0;
+                if(!mrk.activeSelf)
+                {
+                    markRes.Respawn();
+                    respawnTimer = 0;
+                }
+                else if(!mrkShort.activeSelf)
+                {
+                    markResShort.Respawn();
+                    respawnTimer = 0;
+                }
             }
         }
     }
