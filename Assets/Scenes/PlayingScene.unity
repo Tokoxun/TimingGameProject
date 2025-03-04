@@ -1141,16 +1141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &291248171 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2328249614733329225, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 2139728757}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &291248173 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3585252064368855318, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 2139728757}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &296061809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2093,7 @@ GameObject:
   - component: {fileID: 776018582}
   - component: {fileID: 776018583}
   - component: {fileID: 776018584}
+  - component: {fileID: 776018585}
   m_Layer: 0
   m_Name: markPivotPoint4
   m_TagString: Untagged
@@ -2139,8 +2130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mrk: {fileID: 2025327486}
-  mrkShort: {fileID: 818487653}
   totalRespawnTime: 0
   markRes: {fileID: 2025327489}
   markResShort: {fileID: 818487655}
@@ -2174,11 +2163,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc1d4bb4c731e4448e3924fc11ba50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longMarker: {fileID: 2025327492}
-  longCol: {fileID: 2025327491}
-  shortMarker: {fileID: 818487658}
-  shortCol: {fileID: 818487656}
-  changeTo: 0
+  longMarker: {fileID: 2025327486}
+  shortMarker: {fileID: 818487653}
+--- !u!114 &776018585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776018579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  markAnim: {fileID: 2025327493}
 --- !u!1 &795049865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2193,7 @@ GameObject:
   - component: {fileID: 795049868}
   - component: {fileID: 795049869}
   - component: {fileID: 795049870}
+  - component: {fileID: 795049871}
   m_Layer: 0
   m_Name: markPivotPoint5
   m_TagString: Untagged
@@ -2227,8 +2230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mrk: {fileID: 952653829}
-  mrkShort: {fileID: 2018125716}
   totalRespawnTime: 0
   markRes: {fileID: 1391260969}
   markResShort: {fileID: 2018125718}
@@ -2262,11 +2263,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc1d4bb4c731e4448e3924fc11ba50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longMarker: {fileID: 1391260972}
-  longCol: {fileID: 1391260971}
-  shortMarker: {fileID: 2018125721}
-  shortCol: {fileID: 2018125719}
-  changeTo: 0
+  longMarker: {fileID: 952653829}
+  shortMarker: {fileID: 2018125716}
+--- !u!114 &795049871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795049865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  markAnim: {fileID: 1391260973}
 --- !u!1001 &810847461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2340,14 +2354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &810847467 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3662753936209247579, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
-  m_PrefabInstance: {fileID: 810847461}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &810847468 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5901611826479879679, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!95 &810847469 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2194954959405453602, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
   m_PrefabInstance: {fileID: 810847461}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &818487653 stripped
@@ -2371,16 +2380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &818487656 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2328249614733329225, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 1270286855}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &818487658 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3585252064368855318, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 1270286855}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &828847764 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2439849043843386263, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
@@ -2685,6 +2684,7 @@ GameObject:
   - component: {fileID: 983624672}
   - component: {fileID: 983624673}
   - component: {fileID: 983624674}
+  - component: {fileID: 983624675}
   m_Layer: 0
   m_Name: markPivotPoint2
   m_TagString: Untagged
@@ -2721,8 +2721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mrk: {fileID: 810847462}
-  mrkShort: {fileID: 291248168}
   totalRespawnTime: 0
   markRes: {fileID: 810847465}
   markResShort: {fileID: 291248170}
@@ -2756,11 +2754,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc1d4bb4c731e4448e3924fc11ba50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longMarker: {fileID: 810847468}
-  longCol: {fileID: 810847467}
-  shortMarker: {fileID: 291248173}
-  shortCol: {fileID: 291248171}
-  changeTo: 0
+  longMarker: {fileID: 810847462}
+  shortMarker: {fileID: 291248168}
+--- !u!114 &983624675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983624669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  markAnim: {fileID: 810847469}
 --- !u!114 &1033651748 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2439849043843386263, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
@@ -3100,6 +3111,7 @@ GameObject:
   - component: {fileID: 1096768355}
   - component: {fileID: 1096768356}
   - component: {fileID: 1096768357}
+  - component: {fileID: 1096768358}
   m_Layer: 0
   m_Name: markPivotPoint1
   m_TagString: Untagged
@@ -3153,8 +3165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mrk: {fileID: 1244068500}
-  mrkShort: {fileID: 1862876777}
   totalRespawnTime: 0
   markRes: {fileID: 2090641712}
   markResShort: {fileID: 1862876779}
@@ -3171,11 +3181,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc1d4bb4c731e4448e3924fc11ba50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longMarker: {fileID: 2090641715}
-  longCol: {fileID: 2090641714}
-  shortMarker: {fileID: 1862876782}
-  shortCol: {fileID: 1862876780}
-  changeTo: 0
+  longMarker: {fileID: 1244068500}
+  shortMarker: {fileID: 1862876777}
+--- !u!114 &1096768358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096768353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  markAnim: {fileID: 2090641716}
 --- !u!1 &1100627759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3338,7 @@ MonoBehaviour:
   - {fileID: 5876941296993807818, guid: 018e1b3a78656294db27cfc2883b758a, type: 3}
   - {fileID: 5281647335727187315, guid: 3209b8355df58544aa1b6d74c5deb0d8, type: 3}
   - {fileID: 9072708599339498537, guid: 910dce5252a78fc48aefced7e641cfa5, type: 3}
+  - {fileID: 8335028593377927481, guid: 65df30ac1d160ef4ea00407593e43836, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3351,7 @@ GameObject:
   - component: {fileID: 1116595677}
   - component: {fileID: 1116595678}
   - component: {fileID: 1116595679}
+  - component: {fileID: 1116595680}
   m_Layer: 0
   m_Name: markPivotPoint3
   m_TagString: Untagged
@@ -3363,8 +3388,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mrk: {fileID: 1328510383}
-  mrkShort: {fileID: 1203298088}
   totalRespawnTime: 0
   markRes: {fileID: 1690234464}
   markResShort: {fileID: 1203298090}
@@ -3398,11 +3421,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bc1d4bb4c731e4448e3924fc11ba50f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longMarker: {fileID: 1690234467}
-  longCol: {fileID: 1690234466}
-  shortMarker: {fileID: 1203298093}
-  shortCol: {fileID: 1203298091}
-  changeTo: 0
+  longMarker: {fileID: 1328510383}
+  shortMarker: {fileID: 1203298088}
+--- !u!114 &1116595680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116595674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  markAnim: {fileID: 1690234468}
 --- !u!1 &1117311329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3665,16 +3701,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &1203298091 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2328249614733329225, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 1980615460}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1203298093 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3585252064368855318, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 1980615460}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1220973583 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2439849043843386263, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
@@ -3898,14 +3924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &1391260971 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3662753936209247579, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
-  m_PrefabInstance: {fileID: 952653828}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1391260972 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5901611826479879679, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!95 &1391260973 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2194954959405453602, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
   m_PrefabInstance: {fileID: 952653828}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1449619548
@@ -4589,14 +4610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &1690234466 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3662753936209247579, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
-  m_PrefabInstance: {fileID: 1328510382}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1690234467 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5901611826479879679, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!95 &1690234468 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2194954959405453602, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
   m_PrefabInstance: {fileID: 1328510382}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720234172
@@ -5034,16 +5050,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &1862876780 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2328249614733329225, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 561158975}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &1862876782 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3585252064368855318, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 561158975}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1874955307
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,16 +5255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &2018125719 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2328249614733329225, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 2050265633}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &2018125721 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 3585252064368855318, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
-  m_PrefabInstance: {fileID: 2050265633}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2025327485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5332,14 +5328,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &2025327491 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3662753936209247579, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
-  m_PrefabInstance: {fileID: 2025327485}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &2025327492 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5901611826479879679, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!95 &2025327493 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2194954959405453602, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
   m_PrefabInstance: {fileID: 2025327485}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2050265633
@@ -5498,14 +5489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58be5d7115efe64dbe378830c5e7c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &2090641714 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 3662753936209247579, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
-  m_PrefabInstance: {fileID: 1244068499}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &2090641715 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 5901611826479879679, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+--- !u!95 &2090641716 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2194954959405453602, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
   m_PrefabInstance: {fileID: 1244068499}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2130560479
