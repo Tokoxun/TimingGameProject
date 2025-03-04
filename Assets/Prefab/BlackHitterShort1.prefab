@@ -124,13 +124,14 @@ GameObject:
   - component: {fileID: 2328249614733329225}
   - component: {fileID: 4400669081940640962}
   - component: {fileID: 7677362887769812718}
+  - component: {fileID: 893197362844903618}
   m_Layer: 0
   m_Name: BlackHitterShort1
   m_TagString: target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2401655673309947168
 Transform:
   m_ObjectHideFlags: 0
@@ -335,6 +336,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &893197362844903618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130694993455882096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6664091c80971b241b0ff098b8872cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAppear: 2
+  AppearTime: 0
+  DurOfDisap: 2
+  markAnim: {fileID: 7677362887769812718}
+  orangeMarkAnim: {fileID: 6595051402870053973}
+  purpleMarkAnim: {fileID: 4503064110659940300}
 --- !u!1 &6759652021220422548
 GameObject:
   m_ObjectHideFlags: 0
