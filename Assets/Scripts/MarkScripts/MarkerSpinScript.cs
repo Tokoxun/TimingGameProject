@@ -21,7 +21,6 @@ public class MarkerSpinScript : MonoBehaviour
     {
         buffedSpnSpd = (DifficultyManager.addMrkSpd - DifficultyManager.decreaseMrkSpd) / 100;
         totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
-        Debug.Log(spinSpeed + totalBuffedSpnSpd);
         transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd) * Time.deltaTime);
         if(changeOrNot != null && DifficultyManager.rotateMarker)
         {
