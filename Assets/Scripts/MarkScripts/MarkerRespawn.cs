@@ -14,7 +14,7 @@ public class MarkerRespawn : MonoBehaviour
     void Update()
     {
         totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
-        if(markRes.fstHitMark.enabled == false && DifficultyManager.ShortMarker == false)
+        if(markRes.onHitted == true && DifficultyManager.ShortMarker == false)
         {
             // DisappearingScript resetDisap = GetComponent<DisappearingScript>();
             // if(resetDisap != null)
@@ -29,7 +29,7 @@ public class MarkerRespawn : MonoBehaviour
                 respawnTimer = 0;
             }
         }
-        else if(markResShort.fstHitMark.enabled == false && DifficultyManager.ShortMarker == true)
+        else if(markResShort.onHitted == true && DifficultyManager.ShortMarker == true)
         {
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= totalRespawnTime)
