@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3464717207343866716}
   - component: {fileID: 5016035479434069091}
+  - component: {fileID: 6595051402870053973}
   m_Layer: 0
   m_Name: OrangeHitterShort1
   m_TagString: Untagged
@@ -87,6 +88,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6595051402870053973
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516884602839452677}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bfed7a584adf5494bb020e2712ac55c5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6130694993455882096
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,6 +123,7 @@ GameObject:
   - component: {fileID: 7056459269033522940}
   - component: {fileID: 2328249614733329225}
   - component: {fileID: 4400669081940640962}
+  - component: {fileID: 7677362887769812718}
   m_Layer: 0
   m_Name: BlackHitterShort1
   m_TagString: target
@@ -285,9 +309,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fstHitMark: {fileID: 3585252064368855318}
+  onHitted: 0
   markCol: {fileID: 2328249614733329225}
   scdHitMark: {fileID: 5516884602839452677}
   trdHitMark: {fileID: 6759652021220422548}
+--- !u!95 &7677362887769812718
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130694993455882096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 59ea70644496e60449b7146a15748f23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6759652021220422548
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,6 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6622820775580087525}
   - component: {fileID: 6787121091955371629}
+  - component: {fileID: 4503064110659940300}
   m_Layer: 0
   m_Name: PurpleMarkShort1
   m_TagString: Untagged
@@ -375,3 +423,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4503064110659940300
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6759652021220422548}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca528f408865ea5408c50b5f56f8c498, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
