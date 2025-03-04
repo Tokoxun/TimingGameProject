@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1159945965427983123}
   - component: {fileID: 3662753936209247579}
   - component: {fileID: 7585585486084332417}
+  - component: {fileID: 2194954959405453602}
   m_Layer: 0
   m_Name: BlackMark
   m_TagString: target
@@ -105,6 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fstHitMark: {fileID: 5901611826479879679}
+  onHitted: 0
   markCol: {fileID: 3662753936209247579}
   scdHitMark: {fileID: 7817460267446984006}
   trdHitMark: {fileID: 5435780499871757750}
@@ -209,6 +211,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &2194954959405453602
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175650656508704787}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7902202d7e6933c4688db41d2977d680, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5435780499871757750
 GameObject:
   m_ObjectHideFlags: 0
