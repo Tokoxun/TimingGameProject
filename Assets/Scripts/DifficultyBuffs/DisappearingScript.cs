@@ -8,7 +8,7 @@ public class DisappearingScript : MonoBehaviour
     public float AppearTime;
     public float DurOfDisap = 2f;
     private float DisapTimer;
-    public SpriteRenderer mrk;
+    public Animator markAnim;
 
     // Update is called once per frame
     void Update()
@@ -16,11 +16,11 @@ public class DisappearingScript : MonoBehaviour
         AppearTime += Time.deltaTime;
         if(AppearTime >= timeToAppear)
         {
-            mrk.enabled = false;
+            markAnim.SetBool("Fade", true);
             DisapTimer += Time.deltaTime;
             if(DisapTimer >= DurOfDisap)
             {
-                mrk.enabled = true;
+                markAnim.SetBool("Fade", false);
                 AppearTime = 0;
                 DisapTimer = 0;
             } 
