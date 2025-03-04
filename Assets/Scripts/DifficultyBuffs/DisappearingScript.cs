@@ -13,17 +13,20 @@ public class DisappearingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AppearTime += Time.deltaTime;
-        if(AppearTime >= timeToAppear)
+        if(DifficultyManager.mrkDisap)
         {
-            markAnim.SetBool("Fade", true);
-            DisapTimer += Time.deltaTime;
-            if(DisapTimer >= DurOfDisap)
+            AppearTime += Time.deltaTime;
+            if(AppearTime >= timeToAppear)
             {
-                markAnim.SetBool("Fade", false);
-                AppearTime = 0;
-                DisapTimer = 0;
-            } 
+                markAnim.SetBool("Fade", true);
+                DisapTimer += Time.deltaTime;
+                if(DisapTimer >= DurOfDisap)
+                {
+                    markAnim.SetBool("Fade", false);
+                    AppearTime = 0;
+                    DisapTimer = 0;
+                } 
+            }
         }
     }
 }
