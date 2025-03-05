@@ -14,16 +14,24 @@ public class SwitchingMarkerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        changeTo = DifficultyManager.ShortMarker;
-        if(!changeTo)
+        if(changeTo != DifficultyManager.ShortMarker)
         {
-            longMarker.SetActive(true);
-            shortMarker.SetActive(false);
+            if(!DifficultyManager.ShortMarker)
+            {
+                longMarker.SetActive(true);
+                shortMarker.SetActive(false);
+                changeTo = DifficultyManager.ShortMarker;
+            }
+            else if(DifficultyManager.ShortMarker)
+            {
+                longMarker.SetActive(false);
+                shortMarker.SetActive(true);
+                changeTo = DifficultyManager.ShortMarker;
+            }
         }
-        else if(changeTo)
+        if(changeTo == DifficultyManager.ShortMarker)
         {
-            longMarker.SetActive(false);
-            shortMarker.SetActive(true);
+            return;
         }
     }
 }
