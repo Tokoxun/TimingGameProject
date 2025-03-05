@@ -7,14 +7,17 @@ public class MarkerRespawn : MonoBehaviour
     public float totalRespawnTime;
     private float respawnTime = 0.5f;
     private float respawnTimer;
-    public MarkerScript markRes;
-    public MarkerScript markResShort;
+    private MarkerScript currentMarkRes;
     public MarkerSpinScript markRotation;
-    
+
+    void Start()
+    {
+        currentMarkRes = this.gameObject.GetComponent<MarkerScript>();
+    }
     void Update()
     {
         totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
-        if(markRes.onHitted == true && DifficultyManager.ShortMarker == false)
+        if(currentMarkRes.onHitted == true)
         {
             // DisappearingScript resetDisap = GetComponent<DisappearingScript>();
             // if(resetDisap != null)
@@ -25,17 +28,7 @@ public class MarkerRespawn : MonoBehaviour
             if(respawnTimer >= totalRespawnTime)
             {
                 markRotation.randomCurrentMarkPosition();
-                markRes.Respawn();
-                respawnTimer = 0;
-            }
-        }
-        else if(markResShort.onHitted == true && DifficultyManager.ShortMarker == true)
-        {
-            respawnTimer += Time.deltaTime;
-            if(respawnTimer >= totalRespawnTime)
-            {
-                markRotation.randomCurrentMarkPosition();
-                markResShort.Respawn();
+                currentMarkRes.Respawn();
                 respawnTimer = 0;
             }
         }
