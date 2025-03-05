@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7585585486084332417}
   - component: {fileID: 2194954959405453602}
   - component: {fileID: 9017531760579973858}
+  - component: {fileID: 8687548882350960311}
   m_Layer: 0
   m_Name: BlackMark
   m_TagString: target
@@ -252,6 +253,20 @@ MonoBehaviour:
   markAnim: {fileID: 2194954959405453602}
   orangeMarkAnim: {fileID: 3455710759189469773}
   purpleMarkAnim: {fileID: 4363795257820890910}
+--- !u!114 &8687548882350960311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175650656508704787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalRespawnTime: 0
+  markRotation: {fileID: 0}
 --- !u!1 &5435780499871757750
 GameObject:
   m_ObjectHideFlags: 0

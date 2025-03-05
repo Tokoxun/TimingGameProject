@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 4400669081940640962}
   - component: {fileID: 7677362887769812718}
   - component: {fileID: 893197362844903618}
+  - component: {fileID: 9108903536815246738}
   m_Layer: 0
   m_Name: BlackHitterShort1
   m_TagString: target
@@ -354,6 +355,20 @@ MonoBehaviour:
   markAnim: {fileID: 7677362887769812718}
   orangeMarkAnim: {fileID: 6595051402870053973}
   purpleMarkAnim: {fileID: 4503064110659940300}
+--- !u!114 &9108903536815246738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130694993455882096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40a6b80be9c71b540a1e42b64c5fa8f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalRespawnTime: 0
+  markRotation: {fileID: 0}
 --- !u!1 &6759652021220422548
 GameObject:
   m_ObjectHideFlags: 0

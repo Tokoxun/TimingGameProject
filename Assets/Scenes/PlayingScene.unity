@@ -1751,6 +1751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackHitterShort1
       objectReference: {fileID: 0}
+    - target: {fileID: 9108903536815246738, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 1096768355}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2250,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270
       objectReference: {fileID: 0}
+    - target: {fileID: 8687548882350960311, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 983624673}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2552,6 +2560,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8687548882350960311, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 795049869}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3529,6 +3541,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8687548882350960311, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 1096768355}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3595,6 +3611,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9108903536815246738, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 776018583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3652,6 +3672,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 8687548882350960311, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 1116595678}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4916,6 +4940,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9108903536815246738, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 1116595678}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5018,6 +5046,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 8687548882350960311, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 776018583}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5084,6 +5116,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9108903536815246738, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 795049869}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5308,6 +5344,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9108903536815246738, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: markRotation
+      value: 
+      objectReference: {fileID: 983624673}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
