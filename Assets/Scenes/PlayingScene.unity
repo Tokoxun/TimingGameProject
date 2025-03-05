@@ -2978,6 +2978,7 @@ GameObject:
   - component: {fileID: 1096768354}
   - component: {fileID: 1096768355}
   - component: {fileID: 1096768357}
+  - component: {fileID: 1096768358}
   m_Layer: 0
   m_Name: markPivotPoint1
   m_TagString: Untagged
@@ -3033,6 +3034,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longMarker: {fileID: 1244068500}
   shortMarker: {fileID: 1862876777}
+--- !u!114 &1096768358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096768353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2a29cc75710f14686a6b64a4a1a4c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeMarker:
+  - {fileID: 1244068500}
+  - {fileID: 1862876777}
+  blinkingTimer: 0.6
+  blinkingTime: 0
+  disappearTimer: 0.6
+  disappearTime: 0
 --- !u!1 &1100627759
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,6 +3181,7 @@ MonoBehaviour:
   - {fileID: 756533491609154465, guid: 02b0fba19de54f84c86aeba481e3435e, type: 3}
   - {fileID: 4567005102611774020, guid: dc82eee1be336394c82a486a7bdb73c4, type: 3}
   - {fileID: 8335028593377927481, guid: 65df30ac1d160ef4ea00407593e43836, type: 3}
+  - {fileID: 5317342263332538949, guid: 2f6d5818b03a6d64e8b41786723ff56c, type: 3}
 --- !u!1 &1116595674
 GameObject:
   m_ObjectHideFlags: 0
