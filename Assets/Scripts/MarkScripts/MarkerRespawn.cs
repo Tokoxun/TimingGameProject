@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MarkerRespawn : MonoBehaviour
 {
+    delegate void RespawnItem();
+    RespawnItem triggerRespawn;
     public float totalRespawnTime;
     private float respawnTime = 0.5f;
     private float respawnTimer;
@@ -13,6 +15,9 @@ public class MarkerRespawn : MonoBehaviour
     void Start()
     {
         currentMarkRes = this.gameObject.GetComponent<MarkerScript>();
+        triggerRespawn += currentMarkRes.Respawn;
+        triggerRespawn += markRotation.randomCurrentMarkPosition;
+        triggerRespawn += VariableHit.randomVariable;
     }
     void Update()
     {
@@ -27,8 +32,7 @@ public class MarkerRespawn : MonoBehaviour
             respawnTimer += Time.deltaTime;
             if(respawnTimer >= totalRespawnTime)
             {
-                markRotation.randomCurrentMarkPosition();
-                currentMarkRes.Respawn();
+                triggerRespawn();
                 respawnTimer = 0;
             }
         }
