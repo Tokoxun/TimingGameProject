@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class DifficultyManager
 {
+    public static bool displayVariableNum = false;
     public static bool rotateMarker = false;
     public static bool rotateHitter = false;
     public static bool displayHitterSprite;
