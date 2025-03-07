@@ -8,22 +8,31 @@ public class DisappearingScript : MonoBehaviour
     public float AppearTime;
     public float DurOfDisap = 2f;
     private float DisapTimer;
-    public GameObject mrk;
+    public Animator markAnim;
+    public Animator orangeMarkAnim;
+    public Animator purpleMarkAnim;
 
     // Update is called once per frame
     void Update()
     {
-        AppearTime += Time.deltaTime;
-        if(AppearTime >= timeToAppear)
+        if(DifficultyManager.mrkDisap)
         {
-            mrk.SetActive(false);
-            DisapTimer += Time.deltaTime;
-            if(DisapTimer >= DurOfDisap)
+            AppearTime += Time.deltaTime;
+            if(AppearTime >= timeToAppear)
             {
-                mrk.SetActive(true);
-                AppearTime = 0;
-                DisapTimer = 0;
-            } 
+                purpleMarkAnim.SetBool("Fade", true);
+                orangeMarkAnim.SetBool("Fade", true);
+                markAnim.SetBool("Fade", true);
+                DisapTimer += Time.deltaTime;
+                if(DisapTimer >= DurOfDisap)
+                {
+                    purpleMarkAnim.SetBool("Fade", false);
+                    orangeMarkAnim.SetBool("Fade", false);
+                    markAnim.SetBool("Fade", false);
+                    AppearTime = 0;
+                    DisapTimer = 0;
+                } 
+            }
         }
     }
 }

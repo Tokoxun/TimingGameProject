@@ -37,7 +37,7 @@ public class TriggerEffects : MonoBehaviour
         if(rlist.Risks.Count > 0)
         {
             selected = rlist.Risks[Random.Range(0, rlist.Risks.Count)];
-            for(int a = 0; a != 4; a++)
+            for(int a = 0; a < 3; a++)
             {
                 // Debug.Log(a);
                 // Debug.Log(selectedFilter[a]);

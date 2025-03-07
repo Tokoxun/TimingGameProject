@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class MarkerScript : MonoBehaviour
 {
+    public SpriteRenderer fstHitMark;
+    public bool onHitted;
+    public Collider2D markCol;
     public GameObject scdHitMark;
     public GameObject trdHitMark;
     void Start()
     {
+        onHitted = false;
         scdHitMark.SetActive(DifficultyManager.secondHit);
         trdHitMark.SetActive(DifficultyManager.thirdHit);
     }
@@ -25,13 +29,17 @@ public class MarkerScript : MonoBehaviour
                 scdHitMark.SetActive(false);
                 return;
             }
-            gameObject.SetActive(false);
+            onHitted = true;
+            fstHitMark.enabled = false;
+            markCol.enabled = false;
         }
     }
 
     public void Respawn()
     {
-        gameObject.SetActive(true);
+        onHitted = false;
+        fstHitMark.enabled = true;
+        markCol.enabled = true;
         scdHitMark.SetActive(DifficultyManager.secondHit);
         trdHitMark.SetActive(DifficultyManager.thirdHit);
     }

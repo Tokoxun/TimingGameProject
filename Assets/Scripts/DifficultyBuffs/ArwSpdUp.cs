@@ -5,21 +5,14 @@ using UnityEngine;
 public class ArwSpdUp : MonoBehaviour
 {
     private float SpdUp = 5f;
-    private bool toggled = false;
 
-    public void AddSpdOrCancel()
+    void OnEnable()
     {
-        if(toggled == false)
-        {
-            DifficultyManager.addArwSpd += SpdUp;
-            toggled = true;
-            return;
-        }
-        if(toggled == true)
-        {
-            DifficultyManager.addArwSpd -= SpdUp;
-            toggled = false;
-            return;
-        }
+        DifficultyManager.addArwSpd += SpdUp;
+    }
+
+    void OnDisable()
+    {
+        DifficultyManager.addArwSpd -= SpdUp;
     }
 }

@@ -1,30 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class hitterChoice : MonoBehaviour
 {
+    public InputAction changeInput;
+    private string currentButton;
     public GameObject enablShortHitter;
     public GameObject enablLongHitter;
-    public bool changeHit = false;
-    public bool actvLong = false;
-    public bool actvShort = false;
     public Collider2D hitPointLong;
     public Collider2D hitPointShort;
     // Start is called before the first frame update
     void Start()
     {
+        currentButton = DifficultyManager.currentInput;
         enablShortHitter.SetActive(false);
         enablLongHitter.SetActive(true);
     }
 
     public void OnButtonHit()
     {
-        if(actvLong == true)
+        if(enablLongHitter.activeSelf)
         {
             hitPointLong.enabled = true;
         }
-        else if(actvShort == true)
+        else if(enablShortHitter.activeSelf)
         {
             hitPointShort.enabled = true;
         }
@@ -32,19 +33,25 @@ public class hitterChoice : MonoBehaviour
 
     void Update()
     {
-        if(changeHit == false)
+        enablLongHitter.SetActive(DifficultyManager.LongHitter);
+        enablShortHitter.SetActive(DifficultyManager.ShortHitter);
+        changeInput.ChangeBinding(0).WithPath($"<Keyboard>/{DifficultyManager.currentInput}");
+        changeInput.Enable();
+        if(changeInput.triggered)
         {
-            actvLong = true;
-            actvShort = false;
-            enablLongHitter.SetActive(true);
-            enablShortHitter.SetActive(false);
+            if(enablLongHitter.activeSelf)
+            {
+                hitPointLong.enabled = true;
+            }
+            else if(enablShortHitter.activeSelf)
+            {
+                hitPointShort.enabled = true;
+            }
         }
-        else if(changeHit == true)
+        if(currentButton != DifficultyManager.currentInput)
         {
-            actvLong = false;
-            actvShort = true;
-            enablLongHitter.SetActive(false);
-            enablShortHitter.SetActive(true);
+            currentButton = DifficultyManager.currentInput;
+            Debug.Log(currentButton);
         }
     }
 }

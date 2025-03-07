@@ -1,22 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MarkerSpinScript : MonoBehaviour
 {
+    private float dirChangeTime = 1f;
+    public float changeTime;
+    private float[] changeOrNot;
     public float spinSpeed = -35f;
     public float buffedSpnSpd;
+    public float totalBuffedSpnSpd;
+    public float currentRotation;
 
+    void Start()
+    {
+        changeOrNot = new float[2];
+        changeOrNot[0] = spinSpeed;
+        changeOrNot[1] = -spinSpeed;
+    }
     // Update is called once per frame
     void Update()
     {
-        if(buffedSpnSpd != 0)
+        buffedSpnSpd = (DifficultyManager.addMrkSpd - DifficultyManager.decreaseMrkSpd) / 100;
+        totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
+        transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd) * Time.deltaTime);
+        if(changeOrNot != null && DifficultyManager.rotateMarker)
         {
-            transform.Rotate(Vector3.forward * buffedSpnSpd * Time.deltaTime);
+            changeOrNot[0] = spinSpeed;
+            changeOrNot[1] = -spinSpeed;
+            changeTime += Time.deltaTime;
+            if(changeTime >= dirChangeTime)
+            {
+                spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
+                changeTime = 0;
+            }
         }
-        if( buffedSpnSpd == 0)
-        {
-            transform.Rotate(Vector3.forward * spinSpeed * Time.deltaTime);
-        }
+    }
+
+    public void randomCurrentMarkPosition()
+    {
+        spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
+        currentRotation = Random.Range(0, 361);
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, currentRotation);
     }
 }

@@ -5,33 +5,15 @@ using UnityEngine.UI;
 
 public class ThreeHitMarker : MonoBehaviour
 {
-    private bool toggled = true;
-
-    void Update()
+    void OnEnable()
     {
-        if(toggled)
-        {
-            DifficultyManager.secondHit = true;
-            DifficultyManager.thirdHit = true;
-        }
+        DifficultyManager.secondHit = true;
+        DifficultyManager.thirdHit = true;
     }
-    // public void ThreeHitSelect()
-    // {
-    //     if(!toggled)
-    //     {
-    //         DifficultyManager.secondHit = true;
-    //         DifficultyManager.thirdHit = true;
-    //         DispR.sprite = TargetImg;
-    //         toggled = true;
-    //         return;
-    //     }
-    //     if(toggled)
-    //     {
-    //         DifficultyManager.secondHit = false;
-    //         DifficultyManager.thirdHit = false;
-    //         DispR.sprite = null;
-    //         toggled = false;
-    //         return;
-    //     }
-    // }
+
+    void OnDisable()
+    {
+        DifficultyManager.secondHit = false;
+        DifficultyManager.thirdHit = false;
+    }
 }

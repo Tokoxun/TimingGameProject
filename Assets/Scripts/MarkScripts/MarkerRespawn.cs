@@ -4,25 +4,35 @@ using UnityEngine;
 
 public class MarkerRespawn : MonoBehaviour
 {
-    public GameObject mrk;
-    public float respawnTime = 0.5f;
+    delegate void RespawnItem();
+    RespawnItem triggerRespawn;
+    public float totalRespawnTime;
+    private float respawnTime = 0.5f;
     private float respawnTimer;
-    public MarkerScript markRes;
-    
+    private MarkerScript currentMarkRes;
+    public MarkerSpinScript markRotation;
+
+    void Start()
+    {
+        currentMarkRes = this.gameObject.GetComponent<MarkerScript>();
+        triggerRespawn += currentMarkRes.Respawn;
+        triggerRespawn += markRotation.randomCurrentMarkPosition;
+        triggerRespawn += VariableHit.randomVariable;
+    }
     void Update()
     {
-        if(!mrk.activeSelf)
+        totalRespawnTime = respawnTime + DifficultyManager.addMrkRespawn;
+        if(currentMarkRes.onHitted == true)
         {
-            DisappearingScript resetDisap = GetComponent<DisappearingScript>();
-            if(resetDisap != null)
-            {
-                resetDisap.AppearTime = 0;
-            }
+            // DisappearingScript resetDisap = GetComponent<DisappearingScript>();
+            // if(resetDisap != null)
+            // {
+            //     resetDisap.AppearTime = 0;
+            // }
             respawnTimer += Time.deltaTime;
-            if(respawnTimer >= respawnTime)
+            if(respawnTimer >= totalRespawnTime)
             {
-                markRes.Respawn();
-                mrk.SetActive(true);
+                triggerRespawn();
                 respawnTimer = 0;
             }
         }

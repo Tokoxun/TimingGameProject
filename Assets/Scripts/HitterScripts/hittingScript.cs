@@ -2,11 +2,14 @@ using UnityEngine;
 
 public class hittingScript : MonoBehaviour
 {
-    public bool hitted = false;
-    private bool missed = true;
-    public float numOfMissed;
+    public SpriteRenderer hitterSprite;
+    public CooldownSlider displaySliderCooldown;
+    private bool actvCooldown = false;
+    private float cooldown;
+    private float hitterCooldown = 1f;
+    private float totalCooldown;
     private float hitReset = 0.2f;
-    private float resetTimer;
+    private float Resettimer;
     public Collider2D hitPoint;
     public DisplayCombo calCombo;
     public PointSystem addingPoint;
@@ -18,43 +21,57 @@ public class hittingScript : MonoBehaviour
     //     hitted = true;
     // }
 
+    void Start()
+    {
+        hitterSprite = gameObject.GetComponent<SpriteRenderer>();
+    }
     public void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("target"))
         {
+            displaySliderCooldown.TriggerSliderCooldown(totalCooldown);
+            calCombo.AddCombo();
             addingPoint.AddPoint();
-            missed = false;
+            hitPoint.enabled = false;
+            Resettimer = 0;
+            actvCooldown = true;
         }
     }
 
     void Update()
     {
-        if(hitPoint.enabled == true)
+        if(DifficultyManager.displayHitterSprite)
         {
-            resetTimer += Time.deltaTime;
-            if(resetTimer >= hitReset && missed == false)
+            hitterSprite.enabled = false;
+        }
+        totalCooldown = hitterCooldown + DifficultyManager.addButtonCooldown;
+        if(actvCooldown && hitterSprite != null)
+        {
+            cooldown += Time.deltaTime;
+            if(cooldown > totalCooldown)
             {
-                calCombo.AddCombo();
-                hitPoint.enabled = false;
-                resetTimer = 0;
-                hitted = false;
-                missed = true;
+                hitterSprite.enabled = true;
+                cooldown = 0;
+                actvCooldown = false;
             }
-            if(resetTimer >= hitReset && missed == true)
+            else if(cooldown < totalCooldown)
             {
-                calCombo.ResetCombo();
-                calHealth.ReduceHealth();
-                numOfMissed += 1;
+                hitterSprite.enabled = false;
                 hitPoint.enabled = false;
-                resetTimer = 0;
-                hitted = false;
-                Debug.Log(numOfMissed);
             }
         }
-    }
-
-    public void ActivateCollider()
-    {
-        hitPoint.enabled = true;
+        if(hitPoint.enabled == true)
+        {
+            Resettimer += Time.deltaTime;
+            if(Resettimer >= hitReset)
+            {
+                displaySliderCooldown.TriggerSliderCooldown(totalCooldown);
+                calCombo.ResetCombo();
+                calHealth.ReduceHealth();
+                hitPoint.enabled = false;
+                Resettimer = 0;
+                actvCooldown = true;
+            }
+        }
     }
 }

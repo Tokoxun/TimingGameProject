@@ -5,4 +5,5 @@ public class InfoTag : MonoBehaviour
 {
     public int rNumber;
     public Image tagImage;
+    public string Description;
 }

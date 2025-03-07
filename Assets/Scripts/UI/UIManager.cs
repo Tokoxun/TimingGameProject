@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 		//uses the p button to pause and unpause the game
 		if(Input.GetKeyDown(KeyCode.Escape))
 		{
-			if(Time.timeScale == 1)
+			if(Time.timeScale == 1 && DifficultyManager.disablePause == false)
 			{
 				Time.timeScale = 0;
 				showPaused();
@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
 
 	//controls the pausing of the scene
 	public void pauseControl(){
-			if(Time.timeScale == 1)
+			if(Time.timeScale == 1 && DifficultyManager.disablePause == false)
 			{
 				Time.timeScale = 0;
 				showPaused();
