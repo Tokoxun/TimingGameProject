@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DisapearingTag(Frequent)++_0: 447574829346247270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
