@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class TriggerEffects : MonoBehaviour
 {
+    public RisksCompiler rlist;
     public int numcardListLoaded;
-    public GameObject RisksChoice;
     public CardScripts[] cards;
     private GameObject selected;
     public List<GameObject> selectedFilter = new List<GameObject>();
-    public RisksCompiler rlist;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
+    public GameObject RisksChoice;
     public void ConfirmChoice()
     {
         for(int i = 0; i < cards.Length; i++)
@@ -32,6 +22,7 @@ public class TriggerEffects : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    //Section for loading tag into the cards
     public void preLoadChoice()
     {
         if(rlist.Risks.Count > 0)
@@ -73,6 +64,29 @@ public class TriggerEffects : MonoBehaviour
         for(int c = 0; c < selectedFilter.Count; c++)
         {
             cards[c].chosenR = selectedFilter[c];
+        }
+    }
+
+    //Section for calculating distance between cards
+    public Transform midPoint;
+    public GameObject[] cardList;
+    private float Distmove = 215.7f;
+    public void calculatecardListPlacement()
+    {
+        if(numcardListLoaded > 0)
+        {
+            float Distgap = 432f;
+            float cardListDisplacementX = midPoint.transform.localPosition.x - Distmove * (numcardListLoaded - 1);
+            for(int n = 0; n != numcardListLoaded; n++)
+            {
+                // cardList[0].transform.position = new Vector2(cardListDisplacementX, midPoint.transform.position.y);
+                cardList[n].SetActive(true);
+                cardList[n].transform.localPosition = new Vector2(cardListDisplacementX, 0);
+            }
+            for(int m = 1; m != numcardListLoaded; m++)
+            {
+                cardList[m].transform.localPosition = new Vector2(cardList[m-1].transform.localPosition.x + Distgap, 0);
+            }
         }
     }
 }
