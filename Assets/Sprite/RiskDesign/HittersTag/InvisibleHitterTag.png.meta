@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      InvisibleHitterTag_0: 1124090992084720948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

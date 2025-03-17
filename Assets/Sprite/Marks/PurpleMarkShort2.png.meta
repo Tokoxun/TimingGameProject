@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9fad04020104bc54ea8133520906cf4e
+guid: 3bed83dc3e9e7ba4784812a703c31e4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3438081392123714704
-    second: SecondHit1(Unselected)_0
+      213: 8129392490011603325
+    second: PurpleMarkShort2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SecondHit1(Unselected)_0
+      name: PurpleMarkShort2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 734
-        height: 734
+        width: 155
+        height: 146
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 073e599803b7940d0800000000000000
-      internalID: -3438081392123714704
+      spriteID: d71bed6f56761d070800000000000000
+      internalID: 8129392490011603325
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SecondHit1(Unselected)_0: -3438081392123714704
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
