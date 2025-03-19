@@ -11,7 +11,6 @@ public class CardScripts : MonoBehaviour
     public RisksCompiler rlist;
     public GameObject chosenR;
     public bool Chosen = false;
-    public bool choiceConfirm = false;
 
     // Update is called once per frame
     void Update()
@@ -32,35 +31,19 @@ public class CardScripts : MonoBehaviour
         if(!Chosen)
         {
             Chosen = true;
-            Debug.Log(Chosen);
+            EffectChoice.chosenTag += ActivateTag;
         }
         else if(Chosen)
         {
             Chosen = false;
-            Debug.Log(Chosen);
+            EffectChoice.chosenTag -= ActivateTag;
         }
     }
 
     public void ActivateTag()
     {
-        if(Chosen)
-        {
-            Debug.Log("Activated");
-            Instantiate(chosenR, transform.position, transform.rotation);
-            rlist.Risks.Remove(chosenR);
-            Chosen = false;
-            choiceConfirm = false;
-            displayR.sprite = null;
-            displayRnumber.text = null;
-            this.gameObject.SetActive(false);
-        }
-        if(!Chosen)
-        {
-            Chosen = false;
-            choiceConfirm = false;
-            displayR.sprite = null;
-            displayRnumber.text = null;
-            this.gameObject.SetActive(false);
-        }
+        Chosen = false;
+        Instantiate(chosenR, transform.position, transform.rotation);
+        rlist.Risks.Remove(chosenR);
     }
 }
