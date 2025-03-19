@@ -71,10 +71,20 @@ public class TriggerEffects : MonoBehaviour
         {
             float Distgap = 432f;
             float cardListDisplacementX = midPoint.transform.localPosition.x - Distmove * (numcardListLoaded - 1);
+            for(int l = 0; l < cardList.Length; l++)
+            {
+                if(l < numcardListLoaded)
+                {
+                    cardList[l].SetActive(true);
+                }
+                else if(l + 1 > numcardListLoaded)
+                {
+                    cardList[l].SetActive(false);
+                }
+            }
             for(int n = 0; n != numcardListLoaded; n++)
             {
                 // cardList[0].transform.position = new Vector2(cardListDisplacementX, midPoint.transform.position.y);
-                cardList[n].SetActive(true);
                 cardList[n].transform.localPosition = new Vector2(cardListDisplacementX, 0);
             }
             for(int m = 1; m != numcardListLoaded; m++)
