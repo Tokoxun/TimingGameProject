@@ -9,6 +9,7 @@ public class CardScripts : MonoBehaviour
     public Image displayR;
     // private Image ImageR;
     public RisksCompiler rlist;
+    public TagInventory playerInventory;
     public GameObject chosenR;
     public bool Chosen = false;
 
@@ -44,6 +45,7 @@ public class CardScripts : MonoBehaviour
     {
         Chosen = false;
         Instantiate(chosenR, transform.position, transform.rotation);
+        playerInventory.selectedTags.Add(chosenR);
         rlist.Risks.Remove(chosenR);
     }
 }
