@@ -10,16 +10,10 @@ public class TriggerEffects : MonoBehaviour
     private GameObject selected;
     public List<GameObject> selectedFilter = new List<GameObject>();
     public GameObject RisksChoice;
-    public void ConfirmChoice()
+    public void ResetList()
     {
-        for(int i = 0; i < cards.Length; i++)
-        {
-            cards[i].ActivateTag();
-        }
         numcardListLoaded = 0;
         selectedFilter = new List<GameObject>();
-        RisksChoice.SetActive(false);
-        Time.timeScale = 1;
     }
 
     //Section for loading tag into the cards
