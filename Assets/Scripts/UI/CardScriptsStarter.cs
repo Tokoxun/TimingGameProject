@@ -3,6 +3,7 @@ using UnityEngine;
 public class CardScriptsStarter : CardScripts
 {
     public EffectChoiceStarter choosing;
+    public EffectTag tagEffect;
 
     public new void SelectedCard()
     {
@@ -21,5 +22,6 @@ public class CardScriptsStarter : CardScripts
     public new void ActivateTag()
     {
         playerInventory.selectedTags.Add(chosenR);
+        tagEffect.ActivateEffect();
     }
 }
