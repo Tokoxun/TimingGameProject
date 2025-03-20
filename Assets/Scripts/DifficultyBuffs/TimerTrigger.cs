@@ -5,11 +5,7 @@ public class TimerTrigger : EffectTag
     public static bool startTimer = false;
     public override void ActivateEffect()
     {
-        if(!activatedEffect)
-        {
-            startTimer = true;
-            activatedEffect = true;
-        }
+        startTimer = true;
     }
 
     public override void RemoveEffect()
