@@ -15,16 +15,19 @@ public class TagInventory : MonoBehaviour
     {
         if(selectedTags.Count != currentTag && tagSlot != null)
         {
-            for(int t = 0; t < selectedTags.Count; t++)
+            Debug.Log("Changed");
+            for(int t = 0; t < tagSlot.Length; t++)
             {
-                InfoTag tagInfo = selectedTags[t].GetComponent<InfoTag>();
-                if(tagInfo != null)
+                if(t < selectedTags.Count)
                 {
-                    tagSlot[t].tagImage = tagInfo.tagImage;
-                    tagSlot[t].tagNumber.text = tagInfo.rNumber.ToString();
-                    currentTag = selectedTags.Count;
+                    tagSlot[t].tags = selectedTags[t];
+                }
+                else
+                {
+                    tagSlot[t].tags = null;
                 }
             }
+            currentTag = selectedTags.Count;
         }
     }
 }
