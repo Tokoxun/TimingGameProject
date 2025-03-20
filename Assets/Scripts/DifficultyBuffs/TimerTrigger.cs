@@ -10,6 +10,6 @@ public class TimerTrigger : EffectTag
 
     public override void RemoveEffect()
     {
-        throw new System.NotImplementedException();
+        startTimer = false;
     }
 }
