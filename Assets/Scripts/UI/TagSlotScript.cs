@@ -3,20 +3,43 @@ using UnityEngine.UI;
 
 public class TagSlotScript : MonoBehaviour
 {
-    private Image slotImage;
-    public Image tagImage;
-    public Image emptySlotImage;
+    private TagInventory tagStash;
+    public GameObject tags;
+    private Image currentTagImage;
+    private Image tagImageToChange;
+    private Sprite emptySlotImage;
     public Text tagNumber;
 
     void Start()
     {
-        slotImage = this.gameObject.GetComponent<Image>();
+        currentTagImage = this.gameObject.GetComponent<Image>();
+        emptySlotImage = currentTagImage.sprite;
+        tagStash = GetComponentInParent<TagInventory>();
     }
     void Update()
     {
-        if(tagImage != null)
+        if(tags != null)
         {
-            slotImage.sprite = tagImage.sprite;
+            InfoTag tagInfo = tags.GetComponent<InfoTag>();
+            tagImageToChange = tagInfo.tagImage;
+            tagNumber.text = tagInfo.rNumber.ToString();
+            currentTagImage.sprite = tagImageToChange.sprite;
         }
+        else if(tags == null)
+        {
+            currentTagImage.sprite = emptySlotImage;
+            tagImageToChange = null;
+            tagNumber.text = null;
+        }
+    }
+
+    public void RemoveTag()
+    {
+        tagStash.selectedTags.Remove(tags);
+        tags = null;
+        currentTagImage.sprite = emptySlotImage;
+        tagImageToChange = null;
+        tagNumber.text = null;
+
     }
 }
