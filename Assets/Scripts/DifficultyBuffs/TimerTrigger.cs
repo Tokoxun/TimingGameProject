@@ -1,13 +1,19 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class TimerTrigger : EffectTag
 {
     public static bool startTimer = false;
-
     public override void ActivateEffect()
     {
-        startTimer = true;
-        Debug.Log("Timer");
+        if(!activatedEffect)
+        {
+            startTimer = true;
+            activatedEffect = true;
+        }
+    }
+
+    public override void RemoveEffect()
+    {
+        throw new System.NotImplementedException();
     }
 }
