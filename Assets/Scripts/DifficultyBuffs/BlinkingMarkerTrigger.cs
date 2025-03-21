@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class BlinkingMarkerTrigger : MonoBehaviour
+public class BlinkingMarkerTrigger : EffectTag
 {
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.mrkBlink = true;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.mrkBlink = false;
     }

@@ -1,15 +1,13 @@
 using UnityEngine;
 
-public class SlowDownArw : MonoBehaviour
+public class SlowDownArw : EffectTag
 {
     private float SpdDwn = 5f;
-
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.decreaseArwSpd += SpdDwn;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.decreaseArwSpd -= SpdDwn;
     }

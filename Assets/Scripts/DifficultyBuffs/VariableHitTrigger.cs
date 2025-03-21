@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class VariableHitTrigger : MonoBehaviour
+public class VariableHitTrigger : EffectTag
 {
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.displayVariableNum = true;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.displayVariableNum = false;
     }

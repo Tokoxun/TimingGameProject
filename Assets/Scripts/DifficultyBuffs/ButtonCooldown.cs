@@ -1,22 +1,14 @@
 using UnityEngine;
 
-public class ButtonCooldown : MonoBehaviour
+public class ButtonCooldown : EffectTag
 {
     private float frstCooldown = 2f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.addButtonCooldown += frstCooldown;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.addButtonCooldown -= frstCooldown;
     }
-
-    // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
 }

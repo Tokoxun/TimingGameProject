@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class DirectionChangeMark : MonoBehaviour
+public class DirectionChangeMark : EffectTag
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.rotateMarker = true;
     }
-
-    private void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.rotateMarker = false;
     }

@@ -1,15 +1,13 @@
 using UnityEngine;
 
-public class SlowDownMrk : MonoBehaviour
+public class SlowDownMrk : EffectTag
 {
     private float SpdDownMrk = 5f;
-
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.decreaseMrkSpd += SpdDownMrk;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.decreaseMrkSpd -= SpdDownMrk;
     }

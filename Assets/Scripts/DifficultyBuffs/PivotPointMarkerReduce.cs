@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class PivotPointMarkerReduce : MonoBehaviour
+public class PivotPointMarkerReduce : EffectTag
 {
-    void OnEnable()
+    public override void ActivateEffect()
     {
         MarkerSpinChild3.scdPivotPoint.SetActive(false);
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         MarkerSpinChild3.scdPivotPoint.SetActive(true);
     }

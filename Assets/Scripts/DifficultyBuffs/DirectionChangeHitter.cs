@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class DirectionChangeHitter : MonoBehaviour
+public class DirectionChangeHitter : EffectTag
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.rotateHitter = true;
     }
-
-    private void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.rotateHitter = false;
     }

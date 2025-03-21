@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class InvisibleScript : MonoBehaviour
+public class InvisibleScript : EffectTag
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.displayHitterSprite = true;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.displayHitterSprite = false;
     }

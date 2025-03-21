@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArwSpdUp : MonoBehaviour
+public class ArwSpdUp : EffectTag
 {
     private float SpdUp = 5f;
-
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.addArwSpd += SpdUp;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.addArwSpd -= SpdUp;
     }

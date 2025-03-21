@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class ThreeHitMarker : MonoBehaviour
+public class ThreeHitMarker : EffectTag
 {
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.secondHit = true;
         DifficultyManager.thirdHit = true;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.secondHit = false;
         DifficultyManager.thirdHit = false;

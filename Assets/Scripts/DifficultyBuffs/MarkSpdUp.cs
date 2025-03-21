@@ -1,25 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MarkSpdUp : MonoBehaviour
+public class MarkSpdUp : EffectTag
 {
     private float SpdUp = 5f;
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.addMrkSpd += SpdUp;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.addMrkSpd -= SpdUp;
     }
-    // public void markSpdUp()
-    // {
-    //     MarkerSpinScript spinningSpeed = Object.FindFirstObjectByType<MarkerSpinScript>();
-    //     if(spinningSpeed != null)
-    //     {
-    //         spinningSpeed.buffedSpnSpd += spinningSpeed.spinSpeed - SpdUp;
-    //     }
-    // }
 }

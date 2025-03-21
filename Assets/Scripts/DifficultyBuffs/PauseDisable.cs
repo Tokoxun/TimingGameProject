@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class PauseDisable : MonoBehaviour
+public class PauseDisable : EffectTag
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.disablePause = true;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.disablePause = false;
     }

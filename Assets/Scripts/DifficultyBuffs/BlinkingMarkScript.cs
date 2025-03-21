@@ -44,5 +44,11 @@ public class BlinkingMarkScript : MonoBehaviour
                 }
             }
         }
+        else if(!DifficultyManager.mrkBlink)
+        {
+            currentMarker.SetActive(true);
+            blinkingTime = 0;
+            disappearTime = 0;
+        }
     }
 }
