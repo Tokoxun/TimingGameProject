@@ -5,6 +5,10 @@ public class CardScriptsStarter : CardScripts
     public EffectChoiceStarter choosing;
     public EffectTag tagEffect;
 
+    void Start()
+    {
+        RefreshCard();
+    }
     public new void SelectedCard()
     {
         if(!Chosen)
