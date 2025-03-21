@@ -3122,7 +3122,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 588764190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a910f9a6d96951341afa5cac523434c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 71cf5a1ef25b59c448984b585f984108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentButtonText: {fileID: 2130560481}
@@ -3817,7 +3817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &802531707
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5304,11 +5304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Risks:
-  - {fileID: 376045094390362790, guid: 46979b94a0d3035458ee2a56b48d95df, type: 3}
-  - {fileID: 5317342263332538949, guid: 2f6d5818b03a6d64e8b41786723ff56c, type: 3}
-  - {fileID: 4567005102611774020, guid: dc82eee1be336394c82a486a7bdb73c4, type: 3}
-  - {fileID: 756533491609154465, guid: 02b0fba19de54f84c86aeba481e3435e, type: 3}
-  - {fileID: 8335028593377927481, guid: 65df30ac1d160ef4ea00407593e43836, type: 3}
+  - {fileID: 9187221607823835401, guid: 72ca042d9ab0c3541a01122cb269de96, type: 3}
 --- !u!1 &1117311329
 GameObject:
   m_ObjectHideFlags: 0
@@ -7848,11 +7844,11 @@ MonoBehaviour:
   displayRnumber: {fileID: 1816474008}
   displayR: {fileID: 1728391540}
   rlist: {fileID: 0}
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 8943624635737165218, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
   Chosen: 0
   choosing: {fileID: 802531708}
-  chosenStarter: {fileID: 8509053573378700823, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
+  tagEffect: {fileID: 8509053573378700823, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
 --- !u!1 &1720234172
 GameObject:
   m_ObjectHideFlags: 0
@@ -9106,11 +9102,11 @@ MonoBehaviour:
   displayRnumber: {fileID: 1505386020}
   displayR: {fileID: 2089802363}
   rlist: {fileID: 0}
-  playerInventory: {fileID: 0}
+  playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 6076506906674750341, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
   Chosen: 0
   choosing: {fileID: 802531708}
-  chosenStarter: {fileID: 7927692570975078643, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
+  tagEffect: {fileID: 7927692570975078643, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
 --- !u!224 &2085353520 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3395698129404665766, guid: 9d3de9c1739df1245817b54e30ccf781, type: 3}
