@@ -35,8 +35,8 @@ public class TagSlotScript : MonoBehaviour
 
     public void RemoveTag()
     {
-        EffectTag tagEffect = tags.GetComponent<EffectTag>();
-        tagEffect.RemoveEffect();
+        EffectTag removeTagEffect = tags.GetComponent<EffectTag>();
+        removeTagEffect.RemoveEffect();
         tagStash.selectedTags.Remove(tags);
         tags = null;
         currentTagImage.sprite = emptySlotImage;
