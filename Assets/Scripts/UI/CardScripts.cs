@@ -11,20 +11,28 @@ public class CardScripts : MonoBehaviour
     public RisksCompiler rlist;
     public TagInventory playerInventory;
     public GameObject chosenR;
+    private EffectTag activateCurrentEffect;
     public bool Chosen = false;
 
-    // Update is called once per frame
-    void Update()
+    // void Update()
+    // {
+    //     if(chosenR != null)
+    //     {
+    //         tagEffect = chosenR.GetComponent<EffectTag>();
+    //         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+    //         if(rInfo != null)
+    //         {
+    //             displayR.sprite = rInfo.tagImage.sprite;
+    //             displayRnumber.text = rInfo.rNumber.ToString();
+    //         }
+    //     }
+    // }
+    public void RefreshCard()
     {
-        if(chosenR != null)
-        {
-            InfoTag rInfo = chosenR.GetComponent<InfoTag>();
-            if(rInfo != null)
-            {
-                displayR.sprite = rInfo.tagImage.sprite;
-                displayRnumber.text = rInfo.rNumber.ToString();
-            }
-        }
+        activateCurrentEffect = chosenR.GetComponent<EffectTag>();
+        InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+        displayR.sprite = rInfo.tagImage.sprite;
+        displayRnumber.text = rInfo.rNumber.ToString();
     }
 
     public void SelectedCard()
@@ -44,7 +52,8 @@ public class CardScripts : MonoBehaviour
     public void ActivateTag()
     {
         Chosen = false;
-        Instantiate(chosenR, transform.position, transform.rotation);
+        // Instantiate(chosenR, transform.position, transform.rotation);
+        activateCurrentEffect.ActivateEffect();
         playerInventory.selectedTags.Add(chosenR);
         rlist.Risks.Remove(chosenR);
     }
