@@ -58,6 +58,7 @@ public class TriggerEffects : MonoBehaviour
         for(int c = 0; c < selectedFilter.Count; c++)
         {
             cards[c].chosenR = selectedFilter[c];
+            cards[c].RefreshCard();
         }
     }
 
