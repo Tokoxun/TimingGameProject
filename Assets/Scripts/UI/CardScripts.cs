@@ -31,7 +31,7 @@ public class CardScripts : MonoBehaviour
     {
         activateCurrentEffect = chosenR.GetComponent<EffectTag>();
         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
-        displayR.sprite = rInfo.tagImage.sprite;
+        displayR.sprite = rInfo.baseImage.sprite;
         displayRnumber.text = rInfo.rNumber.ToString();
     }
 
