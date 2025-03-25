@@ -21,6 +21,7 @@ public class TagInventory : MonoBehaviour
                 if(t < selectedTags.Count)
                 {
                     tagSlot[t].tags = selectedTags[t];
+                    tagSlot[t].RefreshSlotImage();
                 }
                 else
                 {

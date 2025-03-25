@@ -18,19 +18,20 @@ public class TagSlotScript : MonoBehaviour
     }
     void Update()
     {
-        if(tags != null)
-        {
-            InfoTag tagInfo = tags.GetComponent<InfoTag>();
-            tagImageToChange = tagInfo.tagImage;
-            tagNumber.text = tagInfo.rNumber.ToString();
-            currentTagImage.sprite = tagImageToChange.sprite;
-        }
-        else if(tags == null)
+        if(tags == null)
         {
             currentTagImage.sprite = emptySlotImage;
             tagImageToChange = null;
             tagNumber.text = null;
         }
+    }
+
+    public void RefreshSlotImage()
+    {
+        InfoTag tagInfo = tags.GetComponent<InfoTag>();
+        tagImageToChange = tagInfo.tagImage;
+        tagNumber.text = tagInfo.rNumber.ToString();
+        currentTagImage.sprite = tagImageToChange.sprite;
     }
 
     public void RemoveTag()
