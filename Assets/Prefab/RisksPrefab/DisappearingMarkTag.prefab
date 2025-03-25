@@ -90,7 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rNumber: 1
-  tagImage: {fileID: 7335347505660836525}
+  baseImage: {fileID: 7335347505660836525}
+  Level_I: {fileID: -8454405783906398238, guid: 006d1d61412926b498d0dcbc605ad980, type: 3}
+  Level_II: {fileID: 5663135162032127775, guid: 8e3daadf26e2c3c4eb6337df93aa3f1e, type: 3}
+  Level_III: {fileID: 9091648982200845045, guid: 4573c64b03010814082e3d62b0608a58, type: 3}
   Description: 
 --- !u!114 &5443454428607897720
 MonoBehaviour:
@@ -104,3 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 275006f440b901d498aee500ab4a9be4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phase: 0
+  currentLevel: 0
+  maxLevel: 0
+  enchanceTimer: 0
+  enchanceTime: 0
