@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class TagSlotScript : MonoBehaviour
 {
     private TagInventory tagStash;
+    private EffectTag tagEnchance;
     public GameObject tags;
     private Image currentTagImage;
     private Image tagImageToChange;
@@ -18,6 +19,21 @@ public class TagSlotScript : MonoBehaviour
     }
     void Update()
     {
+        if(tagEnchance != null)
+        {
+            // Debug.Log(tagEnchance.maxLevel);
+            // Debug.Log(tagEnchance.phase);
+            if(tagEnchance.currentLevel < tagEnchance.maxLevel && tagEnchance.phase)
+            {
+                tagEnchance.enchanceTimer += Time.deltaTime;
+                if(tagEnchance.enchanceTimer >= tagEnchance.enchanceTime)
+                {
+                    tagEnchance.currentLevel += 1;
+                    tagEnchance.EnchanceEffect();
+                    tagEnchance.enchanceTimer = 0;
+                }
+            }
+        }
         if(tags == null)
         {
             currentTagImage.sprite = emptySlotImage;
@@ -28,6 +44,7 @@ public class TagSlotScript : MonoBehaviour
 
     public void RefreshSlotImage()
     {
+        tagEnchance = tags.GetComponent<EffectTag>();
         InfoTag tagInfo = tags.GetComponent<InfoTag>();
         tagImageToChange = tagInfo.tagImage;
         tagNumber.text = tagInfo.rNumber.ToString();
