@@ -5,12 +5,14 @@ public class ThreeHitMarker : EffectTag
     public override void ActivateEffect()
     {
         currentLevel = 0;
+        enchanceTimer = 0;
         DifficultyManager.secondHit = true;
         // DifficultyManager.thirdHit = true;
     }
     public override void RemoveEffect()
     {
         currentLevel = 0;
+        enchanceTimer = 0;
         DifficultyManager.secondHit = false;
         DifficultyManager.thirdHit = false;
     }
