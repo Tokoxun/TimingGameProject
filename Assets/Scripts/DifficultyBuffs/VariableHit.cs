@@ -42,6 +42,5 @@ public class VariableHit : MonoBehaviour
     public static void randomVariable()
     {
         variableNum = Random.Range(1, 11);
-        Debug.Log(variableNum);
     } 
 }
