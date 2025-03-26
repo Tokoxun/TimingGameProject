@@ -43,6 +43,7 @@ public class TagSlotScript : MonoBehaviour
             // Debug.Log(tagEnchance.phase);
             if(tagEnchance.currentLevel < tagEnchance.maxLevel && tagEnchance.phase)
             {
+                tagEnchance.enchanceTimer = 0;
                 tagEnchance.enchanceTimer += Time.deltaTime;
                 if(tagEnchance.enchanceTimer >= tagEnchance.enchanceTime)
                 {
