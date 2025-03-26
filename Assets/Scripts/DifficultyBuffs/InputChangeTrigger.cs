@@ -10,4 +10,8 @@ public class InputChangeTrigger : EffectTag
     {
         DifficultyManager.initInputChange = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

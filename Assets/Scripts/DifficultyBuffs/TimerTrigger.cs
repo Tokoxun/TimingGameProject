@@ -12,4 +12,8 @@ public class TimerTrigger : EffectTag
     {
         startTimer = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

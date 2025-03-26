@@ -10,4 +10,8 @@ public class DirectionChangeHitter : EffectTag
     {
         DifficultyManager.rotateHitter = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

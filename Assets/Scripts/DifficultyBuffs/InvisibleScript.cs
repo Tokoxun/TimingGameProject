@@ -10,4 +10,8 @@ public class InvisibleScript : EffectTag
     {
         DifficultyManager.displayHitterSprite = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

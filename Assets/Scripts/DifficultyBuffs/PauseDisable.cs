@@ -10,4 +10,8 @@ public class PauseDisable : EffectTag
     {
         DifficultyManager.disablePause = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

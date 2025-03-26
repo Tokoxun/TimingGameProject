@@ -14,4 +14,8 @@ public class ChoosingHitter : EffectTag
         DifficultyManager.LongHitter = true;
         DifficultyManager.ShortHitter = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

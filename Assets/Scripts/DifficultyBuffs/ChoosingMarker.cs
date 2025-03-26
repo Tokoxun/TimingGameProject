@@ -10,4 +10,8 @@ public class ChoosingMarker : EffectTag
     {
         DifficultyManager.ShortMarker = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

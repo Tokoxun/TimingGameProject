@@ -12,4 +12,8 @@ public class HealthScriptTrigger : EffectTag
     {
         startHealth = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }
