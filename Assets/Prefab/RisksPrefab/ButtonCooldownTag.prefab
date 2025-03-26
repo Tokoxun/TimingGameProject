@@ -89,11 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e80bb182c0f6f148a5e66f2b33436c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phase: 0
+  phase: 1
   currentLevel: 0
-  maxLevel: 0
+  maxLevel: 2
   enchanceTimer: 0
-  enchanceTime: 0
+  enchanceTime: 20
 --- !u!114 &2554862725944876455
 MonoBehaviour:
   m_ObjectHideFlags: 0
