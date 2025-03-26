@@ -5,9 +5,9 @@ public class TagSlotScript : MonoBehaviour
 {
     private TagInventory tagStash;
     private EffectTag tagEnchance;
+    private InfoTag tagInfo;
     public GameObject tags;
     private Image currentTagImage;
-    private Image tagImageToChange;
     private Sprite emptySlotImage;
     public Text tagNumber;
 
@@ -19,6 +19,24 @@ public class TagSlotScript : MonoBehaviour
     }
     void Update()
     {
+        if(tagInfo != null)
+        {
+            switch(tagEnchance.currentLevel)
+            {
+                case 0:
+                    currentTagImage.sprite = tagInfo.baseImage.sprite;
+                    tagNumber.text = tagInfo.rNumber.ToString();
+                    break;
+                case 1:
+                    currentTagImage.sprite = tagInfo.Level_II;
+                    tagNumber.text = tagInfo.rNumber.ToString();
+                    break;
+                case 2:
+                    currentTagImage.sprite = tagInfo.Level_III;
+                    tagNumber.text = tagInfo.rNumber.ToString();
+                    break;
+            }
+        }
         if(tagEnchance != null)
         {
             // Debug.Log(tagEnchance.maxLevel);
@@ -37,18 +55,16 @@ public class TagSlotScript : MonoBehaviour
         if(tags == null)
         {
             currentTagImage.sprite = emptySlotImage;
-            tagImageToChange = null;
             tagNumber.text = null;
+            tagInfo = null;
+            tagEnchance = null;
         }
     }
 
     public void RefreshSlotImage()
     {
         tagEnchance = tags.GetComponent<EffectTag>();
-        InfoTag tagInfo = tags.GetComponent<InfoTag>();
-        tagImageToChange = tagInfo.tagImage;
-        tagNumber.text = tagInfo.rNumber.ToString();
-        currentTagImage.sprite = tagImageToChange.sprite;
+        tagInfo = tags.GetComponent<InfoTag>();
     }
 
     public void RemoveTag()
@@ -56,9 +72,10 @@ public class TagSlotScript : MonoBehaviour
         EffectTag removeTagEffect = tags.GetComponent<EffectTag>();
         removeTagEffect.RemoveEffect();
         tagStash.selectedTags.Remove(tags);
+        tagInfo = null;
+        tagEnchance = null;
         tags = null;
         currentTagImage.sprite = emptySlotImage;
-        tagImageToChange = null;
         tagNumber.text = null;
 
     }
