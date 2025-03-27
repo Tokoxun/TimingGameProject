@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b2fcfbc49dc1e428e62004e560411e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phase: 0
+  phase: 1
   currentLevel: 0
-  maxLevel: 0
+  maxLevel: 1
   enchanceTimer: 0
-  enchanceTime: 0
+  enchanceTime: 20
