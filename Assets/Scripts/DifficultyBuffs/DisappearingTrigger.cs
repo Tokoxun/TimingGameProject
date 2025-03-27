@@ -10,13 +10,8 @@ public class DisappearingTrigger : EffectTag
     {
         DifficultyManager.mrkDisap = false;
     }
-    void OnEnable()
+    public override void EnchanceEffect()
     {
-        DifficultyManager.mrkDisap = true;
-    }
-
-    void OnDisable()
-    {
-        DifficultyManager.mrkDisap = false;
+        throw new System.NotImplementedException();
     }
 }
