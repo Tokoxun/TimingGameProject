@@ -10,4 +10,8 @@ public class VariableHitTrigger : EffectTag
     {
         DifficultyManager.displayVariableNum = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }

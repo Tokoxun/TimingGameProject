@@ -10,4 +10,8 @@ public class DirectionChangeMark : EffectTag
     {
         DifficultyManager.rotateMarker = false;
     }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
+    }
 }
