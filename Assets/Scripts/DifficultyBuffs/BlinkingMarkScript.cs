@@ -5,9 +5,9 @@ public class BlinkingMarkScript : MonoBehaviour
 {
     public GameObject[] activeMarker;
     private GameObject currentMarker;
-    public float blinkingTimer = 0.6f;
+    public static float blinkingTimer = 0.6f;
     public float blinkingTime;
-    public float disappearTimer = 0.6f;
+    public static float disappearTimer = 0.6f;
     public float disappearTime;
 
     // Update is called once per frame
@@ -50,5 +50,17 @@ public class BlinkingMarkScript : MonoBehaviour
             blinkingTime = 0;
             disappearTime = 0;
         }
+    }
+
+    public static void IncreaseBlinking(float totalEffect)
+    {
+        blinkingTimer -= totalEffect;
+        disappearTimer -= totalEffect;
+    }
+
+    public static void DecreaseBlinking(float totalEffect)
+    {
+        blinkingTimer += totalEffect;
+        disappearTimer += totalEffect;
     }
 }
