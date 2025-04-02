@@ -27,14 +27,9 @@ public class TriggerChoice : MonoBehaviour
             targetListLength = false;
         }
 
-        if(pointsCheck.points >= displayChoice)
+        if(PlayerLevel.choiceTrigger && targetListLength)
         {
-            signal = true;
-            displayChoice += 5;
-        }
-
-        if(signal && targetListLength)
-        {
+            PlayerLevel.choiceTrigger = false;
             Time.timeScale = 0;
             RisksChoice.SetActive(true);
             loadEffect.preLoadChoice();
