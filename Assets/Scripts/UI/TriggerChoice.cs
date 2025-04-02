@@ -8,7 +8,6 @@ public class TriggerChoice : MonoBehaviour
     public int displayChoice = 5;
     public RisksCompiler checkListLength;
     private bool targetListLength = false;
-    private bool signal = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +34,6 @@ public class TriggerChoice : MonoBehaviour
             loadEffect.preLoadChoice();
             loadEffect.calculatecardListPlacement();
             loadEffect.loadCard();
-            signal = false;
         }
     }
 }
