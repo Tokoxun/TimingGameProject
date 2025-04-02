@@ -7,6 +7,7 @@ public class PlayerLevel : MonoBehaviour
     public Text levelNum;
     public int playerLevel;
     public float increaseSpeed;
+    public static bool choiceTrigger = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,6 +25,7 @@ public class PlayerLevel : MonoBehaviour
         }
         else if(levelSlider.value >= levelSlider.maxValue)
         {
+            choiceTrigger = true;
             playerLevel += 1;
             levelNum.text = playerLevel.ToString();
             levelSlider.value = 0;
