@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InfoTag : MonoBehaviour
 {
+    public tagType currentType;
     public int rNumber;
     public Image baseImage;
     public Sprite Level_I;
@@ -12,3 +13,5 @@ public class InfoTag : MonoBehaviour
     public Sprite Level_III;
     public string Description;
 }
+
+public enum tagType {Permanent, Temporary};
