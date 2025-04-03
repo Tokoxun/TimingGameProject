@@ -31,7 +31,7 @@ public class TriggerChoice : MonoBehaviour
             PlayerLevel.choiceTrigger = false;
             Time.timeScale = 0;
             RisksChoice.SetActive(true);
-            loadEffect.preLoadChoice();
+            loadEffect.preLoadChoice(checkListLength);
             loadEffect.calculatecardListPlacement();
             loadEffect.loadCard();
         }
