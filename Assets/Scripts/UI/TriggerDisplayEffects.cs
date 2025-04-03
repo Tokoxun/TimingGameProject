@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TriggerEffects : MonoBehaviour
 {
-    public RisksCompiler rlist;
     public int numcardListLoaded;
     public CardScripts[] cards;
     private GameObject selected;
@@ -17,7 +16,7 @@ public class TriggerEffects : MonoBehaviour
     }
 
     //Section for loading tag into the cards
-    public void preLoadChoice()
+    public void preLoadChoice(RisksCompiler rlist)
     {
         if(rlist.Risks.Count > 0)
         {
