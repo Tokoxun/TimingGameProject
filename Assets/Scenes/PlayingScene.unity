@@ -2918,7 +2918,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 540642380}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 615ebe658293c7b458f10f186a885c66, type: 3}
+  m_Script: {fileID: 11500000, guid: ba3488864d42c714386106d3e704f1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelNum: {fileID: 1197735908}
@@ -2976,6 +2976,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  levelbuffedSpnSpd: 0
   currentRotation: 0
 --- !u!114 &552902915
 MonoBehaviour:
@@ -4857,6 +4858,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  levelbuffedSpnSpd: 0
   currentRotation: 0
 --- !u!114 &1092024818
 MonoBehaviour:
@@ -5053,6 +5055,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  levelbuffedSpnSpd: 0
   currentRotation: 0
 --- !u!114 &1096768357
 MonoBehaviour:
@@ -7442,6 +7445,7 @@ MonoBehaviour:
   spinSpeed: -100
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  levelbuffedSpnSpd: 0
 --- !u!1 &1708882937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1354876549445199014, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
@@ -7809,6 +7813,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  levelbuffedSpnSpd: 0
   currentRotation: 0
 --- !u!114 &1737278153
 MonoBehaviour:
@@ -8014,6 +8019,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1835567983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1835567985}
+  - component: {fileID: 1835567984}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1835567984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835567983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3896bcccc2547f1459fa198777fc7413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 540642383}
+--- !u!4 &1835567985
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835567983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846374988
 GameObject:
   m_ObjectHideFlags: 0
@@ -8633,6 +8683,7 @@ MonoBehaviour:
   spinSpeed: -35
   buffedSpnSpd: 0
   totalBuffedSpnSpd: 0
+  levelbuffedSpnSpd: 0
   currentRotation: 0
 --- !u!114 &2005976974
 MonoBehaviour:
@@ -8978,3 +9029,4 @@ SceneRoots:
   - {fileID: 1798927768}
   - {fileID: 394593319}
   - {fileID: 1104899233}
+  - {fileID: 1835567985}
