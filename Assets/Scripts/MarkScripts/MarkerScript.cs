@@ -9,6 +9,7 @@ public class MarkerScript : MonoBehaviour
     public Collider2D markCol;
     public GameObject scdHitMark;
     public GameObject trdHitMark;
+    public PointSystem addPoints;
     void Start()
     {
         onHitted = false;
@@ -32,6 +33,7 @@ public class MarkerScript : MonoBehaviour
             onHitted = true;
             fstHitMark.enabled = false;
             markCol.enabled = false;
+            addPoints.AddPoint();
         }
     }
 
