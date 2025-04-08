@@ -12,7 +12,6 @@ public class hittingScript : MonoBehaviour
     private float Resettimer;
     public Collider2D hitPoint;
     public DisplayCombo calCombo;
-    public PointSystem addingPoint;
     public HealthScript calHealth;
     
     // public void OnButtonPressLong()
@@ -31,7 +30,6 @@ public class hittingScript : MonoBehaviour
         {
             displaySliderCooldown.TriggerSliderCooldown(totalCooldown);
             calCombo.AddCombo();
-            addingPoint.AddPoint();
             hitPoint.enabled = false;
             Resettimer = 0;
             actvCooldown = true;
