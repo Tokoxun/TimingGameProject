@@ -5,7 +5,7 @@ public class DisplayCombo : MonoBehaviour
 {
     public GameObject ComboDisplay;
     public Text comboNumber;
-    private int currentCombo;
+    public int currentCombo;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
