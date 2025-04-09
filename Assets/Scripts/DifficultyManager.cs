@@ -9,6 +9,7 @@ public static class DifficultyManager
     public static bool rotateHitter = false;
     public static bool displayHitterSprite;
     public static bool disablePause = false;
+    public static bool initInputChange = false;
     public static string currentInput = "Space";
     public static bool mrkDisap = false;
     public static bool mrkBlink = false;

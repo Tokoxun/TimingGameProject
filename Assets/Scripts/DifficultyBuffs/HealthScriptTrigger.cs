@@ -6,6 +6,14 @@ public class HealthScriptTrigger : EffectTag
     public override void ActivateEffect()
     {
         startHealth = true;
-        Debug.Log("Health");
+    }
+
+    public override void RemoveEffect()
+    {
+        startHealth = false;
+    }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
     }
 }

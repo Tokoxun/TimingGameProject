@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3697123170493641926}
   - component: {fileID: 2470301008695955991}
   - component: {fileID: 1880500934421050275}
-  - component: {fileID: 1437111577790026014}
+  - component: {fileID: 798333465949940422}
   m_Layer: 0
   m_Name: InputChangeTag
   m_TagString: Untagged
@@ -90,9 +90,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rNumber: 4
-  tagImage: {fileID: 2470301008695955991}
+  baseImage: {fileID: 2470301008695955991}
+  Level_I: {fileID: 2159436849217188541, guid: ca835564ddbcc0644a44d8a799069dab, type: 3}
+  Level_II: {fileID: 0}
+  Level_III: {fileID: 0}
   Description: 
---- !u!114 &1437111577790026014
+--- !u!114 &798333465949940422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,6 +104,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 9187221607823835401}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71cf5a1ef25b59c448984b585f984108, type: 3}
+  m_Script: {fileID: 11500000, guid: df7dc351ea052ba41b91be6a50e8f2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phase: 0
+  currentLevel: 0
+  maxLevel: 0
+  enchanceTimer: 0
+  enchanceTime: 0

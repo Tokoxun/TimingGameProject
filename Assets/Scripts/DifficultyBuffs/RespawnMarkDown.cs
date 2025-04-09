@@ -1,16 +1,30 @@
 using UnityEngine;
 
-public class RespawnMarkDown : MonoBehaviour
+public class RespawnMarkDown : EffectTag
 {
-    private float decreaseMrkRespawn = 1f;
-
-    void OnEnable()
+    private float actualDecrease;
+    private float decreaseMrkRespawn_I = 5f;
+    private float decreaseMrkRespawn_II = 10f;
+    public override void ActivateEffect()
     {
-        DifficultyManager.addMrkRespawn += decreaseMrkRespawn;
+        currentLevel = 0;
+        enchanceTimer = 0;
+        actualDecrease = decreaseMrkRespawn_I;
+        DifficultyManager.addMrkRespawn += actualDecrease;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
-        DifficultyManager.addMrkRespawn -= decreaseMrkRespawn;
+        currentLevel = 0;
+        enchanceTimer = 0;
+        DifficultyManager.addMrkRespawn -= actualDecrease;
+    }
+    public override void EnchanceEffect()
+    {
+        if(currentLevel == 1)
+        {
+            actualDecrease = decreaseMrkRespawn_II;
+            DifficultyManager.addMrkRespawn -= decreaseMrkRespawn_I;
+            DifficultyManager.addMrkRespawn += actualDecrease;
+        }
     }
 }

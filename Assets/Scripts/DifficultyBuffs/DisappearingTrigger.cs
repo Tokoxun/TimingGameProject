@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class DisappearingTrigger : MonoBehaviour
+public class DisappearingTrigger : EffectTag
 {
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.mrkDisap = true;
     }
-
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.mrkDisap = false;
+    }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
     }
 }

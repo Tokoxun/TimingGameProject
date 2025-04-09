@@ -9,22 +9,30 @@ public class CardScripts : MonoBehaviour
     public Image displayR;
     // private Image ImageR;
     public RisksCompiler rlist;
+    public TagInventory playerInventory;
     public GameObject chosenR;
+    private EffectTag activateCurrentEffect;
     public bool Chosen = false;
-    public bool choiceConfirm = false;
 
-    // Update is called once per frame
-    void Update()
+    // void Update()
+    // {
+    //     if(chosenR != null)
+    //     {
+    //         tagEffect = chosenR.GetComponent<EffectTag>();
+    //         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+    //         if(rInfo != null)
+    //         {
+    //             displayR.sprite = rInfo.tagImage.sprite;
+    //             displayRnumber.text = rInfo.rNumber.ToString();
+    //         }
+    //     }
+    // }
+    public void RefreshCard()
     {
-        if(chosenR != null)
-        {
-            InfoTag rInfo = chosenR.GetComponent<InfoTag>();
-            if(rInfo != null)
-            {
-                displayR.sprite = rInfo.tagImage.sprite;
-                displayRnumber.text = rInfo.rNumber.ToString();
-            }
-        }
+        activateCurrentEffect = chosenR.GetComponent<EffectTag>();
+        InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+        displayR.sprite = rInfo.baseImage.sprite;
+        displayRnumber.text = rInfo.rNumber.ToString();
     }
 
     public void SelectedCard()
@@ -32,35 +40,21 @@ public class CardScripts : MonoBehaviour
         if(!Chosen)
         {
             Chosen = true;
-            Debug.Log(Chosen);
+            EffectChoice.chosenTag += ActivateTag;
         }
         else if(Chosen)
         {
             Chosen = false;
-            Debug.Log(Chosen);
+            EffectChoice.chosenTag -= ActivateTag;
         }
     }
 
     public void ActivateTag()
     {
-        if(Chosen)
-        {
-            Debug.Log("Activated");
-            Instantiate(chosenR, transform.position, transform.rotation);
-            rlist.Risks.Remove(chosenR);
-            Chosen = false;
-            choiceConfirm = false;
-            displayR.sprite = null;
-            displayRnumber.text = null;
-            this.gameObject.SetActive(false);
-        }
-        if(!Chosen)
-        {
-            Chosen = false;
-            choiceConfirm = false;
-            displayR.sprite = null;
-            displayRnumber.text = null;
-            this.gameObject.SetActive(false);
-        }
+        Chosen = false;
+        // Instantiate(chosenR, transform.position, transform.rotation);
+        activateCurrentEffect.ActivateEffect();
+        playerInventory.selectedTags.Add(chosenR);
+        rlist.Risks.Remove(chosenR);
     }
 }

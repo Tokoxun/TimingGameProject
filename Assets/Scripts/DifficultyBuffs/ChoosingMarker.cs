@@ -1,16 +1,17 @@
 using UnityEngine;
 
-public class ChoosingMarker : MonoBehaviour
+public class ChoosingMarker : EffectTag
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
+    public override void ActivateEffect()
     {
         DifficultyManager.ShortMarker = true;
     }
-
-    // Update is called once per frame
-    void OnDisable()
+    public override void RemoveEffect()
     {
         DifficultyManager.ShortMarker = false;
+    }
+    public override void EnchanceEffect()
+    {
+        throw new System.NotImplementedException();
     }
 }

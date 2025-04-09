@@ -7,7 +7,7 @@ public class ScalerResolution : MonoBehaviour
     {
         Debug.Log(Screen.height);
         Debug.Log(Screen.width);
-        Screen.SetResolution(1024, 455, false);
+        Screen.SetResolution(941, 701, false);
         // Screen.SetResolution(1280, 720, false);
     }
 

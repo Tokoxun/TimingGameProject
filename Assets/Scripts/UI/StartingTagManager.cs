@@ -19,6 +19,11 @@ public class StartingTagManager : MonoBehaviour
         if(currentEquip != null)
         {
             currentEquip.SetActive(true);
+            if(!HealthScriptTrigger.startHealth && !TimerTrigger.startTimer)
+            {
+                currentEquip.SetActive(false);
+                currentEquip = null;
+            }
         }
     }
 }
