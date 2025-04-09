@@ -4,6 +4,11 @@ public class ConditionTag : MonoBehaviour
 {
     public TempGroupScript tempGroupScript;
     public EffectTag linkingTag;
+    void OnEnable()
+    {
+        linkingTag.ActivateEffect();
+        tempGroupScript.resetAllTemp += ConditionExpire;
+    }
     public void SetLink(EffectTag effectLink, TempGroupScript groupScript)
     {
         linkingTag = effectLink;
@@ -12,6 +17,7 @@ public class ConditionTag : MonoBehaviour
     public void ConditionExpire()
     {
         linkingTag.RemoveEffect();
+        tempGroupScript.resetAllTemp -= ConditionExpire;
         Destroy(this.gameObject);
     }
 }
