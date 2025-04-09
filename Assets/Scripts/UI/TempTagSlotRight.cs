@@ -6,17 +6,12 @@ public class TempTagSlotRight : MonoBehaviour
 {
     private Image slotImage;
     private Sprite defaultSlotImage;
-    public TempGroupScript linkGroup;
-    public TempTagSlot leftTagSlot;
-    private EffectTag leftEffectTag;
     public RisksCompiler conditionCompiler;
     public ConditionTag selectedCondition;
-    private bool deployed;
     private InfoTag infoTag;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        deployed = false;
         slotImage = gameObject.GetComponent<Image>();
         defaultSlotImage = slotImage.sprite;
     }
@@ -32,17 +27,6 @@ public class TempTagSlotRight : MonoBehaviour
         {
             slotImage.sprite = defaultSlotImage;
         }
-        if(selectedCondition != null && leftTagSlot.selectedTag != null)
-        {
-            if(!deployed)
-            {
-                leftEffectTag = leftTagSlot.selectedTag.GetComponent<EffectTag>();
-                selectedCondition.SetLink(leftEffectTag, linkGroup);
-                linkGroup.resetAllTemp += RemoveCondition;
-                Instantiate(selectedCondition);
-                deployed = true;
-            }
-        }
     }
 
     public void GetCondition()
@@ -54,7 +38,6 @@ public class TempTagSlotRight : MonoBehaviour
 
     public void RemoveCondition()
     {
-        deployed = false;
         selectedCondition = null;
         infoTag = null;
     }
