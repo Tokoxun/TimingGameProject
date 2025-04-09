@@ -6,7 +6,6 @@ public class TempTagSlot : MonoBehaviour
     private Image slotImage;
     private Sprite defaultSlotImage;
     public RisksCompiler tempCompiler;
-    public TempGroupScript linkTemp;
     public GameObject selectedTag;
     private InfoTag infoTag;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +20,6 @@ public class TempTagSlot : MonoBehaviour
     {
         if(selectedTag != null)
         {
-            linkTemp.resetAllTemp += RemoveTag;
             slotImage.sprite = infoTag.baseImage.sprite;
         }
         else if(selectedTag == null)
