@@ -1,15 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+	public InputAction pauseButton;
     public GameObject[] pauseObjects;
 
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
+		pauseButton.ChangeBinding(0).WithPath("<Keyboard>/Escape");
+		pauseButton.Enable();
 		Time.timeScale = 1;
 		// pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
@@ -19,7 +22,7 @@ public class UIManager : MonoBehaviour
 	void Update () 
     {
 		//uses the p button to pause and unpause the game
-		if(Input.GetKeyDown(KeyCode.Escape))
+		if(pauseButton.triggered)
 		{
 			if(Time.timeScale == 1 && DifficultyManager.disablePause == false)
 			{
@@ -28,7 +31,6 @@ public class UIManager : MonoBehaviour
 			} 
             else if (Time.timeScale == 0)
             {
-				Debug.Log ("high");
 				Time.timeScale = 1;
 				hidePaused();
 			}
