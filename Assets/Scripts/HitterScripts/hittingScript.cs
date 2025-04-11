@@ -31,6 +31,7 @@ public class hittingScript : MonoBehaviour
         {
             displaySliderCooldown.TriggerSliderCooldown(totalCooldown);
             resetComboTimer.ResetTimer();
+            calHealth.RecoverHealth(calCombo.currentCombo);
             calCombo.AddCombo();
             hitPoint.enabled = false;
             Resettimer = 0;
