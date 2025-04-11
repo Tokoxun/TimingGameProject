@@ -453,10 +453,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41b0e9d3c51370043a67750f9ee01aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max_health: 3
   health: 3
   HpRedc: 1
   HealthDisplay: {fileID: 1512050163}
+  recoveryBar: {fileID: 1564380960}
 --- !u!1 &81574613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,7 +4120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &802531707
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8130,7 +8130,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 100
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
