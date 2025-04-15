@@ -1,0 +1,84 @@
+using System.Collections;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class GameOverScreen : MonoBehaviour
+{
+    public GameObject resultScreen;
+    public PointSystem calPoint;
+    public TagInventory tagRNum;
+    private int pointGotten;
+    private int totalRisk;
+    private int totalPoints;
+    public Text pointText;
+    public Text riskText;
+    public Text totalPointsText;
+    public Text highScoreText;
+    private bool doneCalculatePoint;
+    private bool doneCalculateRisk;
+
+    void Start()
+    {
+        resultScreen.SetActive(false);
+        doneCalculatePoint = false;
+        doneCalculateRisk = false;
+        highScoreText.text = PlayerPrefs.GetInt("playerHighScore", 0).ToString();
+    }
+    public void DisplayResult()
+    {
+        resultScreen.SetActive(true);
+        StartCoroutine(CalculatePoints());
+    }
+
+    IEnumerator CalculatePoints()
+    {
+        if(calPoint != null && tagRNum != null)
+        {
+            if(calPoint.points > 0 && !doneCalculatePoint)
+            {
+                pointGotten = calPoint.points;
+                doneCalculatePoint = true;
+            }
+            else if(calPoint.points <= 0 && !doneCalculatePoint)
+            {
+                pointGotten = calPoint.points;
+                doneCalculatePoint = true;
+            }
+            if(tagRNum.selectedTags.Count > 0 && !doneCalculateRisk)
+            {
+                foreach(GameObject r in tagRNum.selectedTags)
+                {
+                    InfoTag getRNumber = r.GetComponent<InfoTag>();
+                    totalRisk += getRNumber.rNumber;
+                }
+                totalPoints = pointGotten * totalRisk;
+                doneCalculateRisk = true;
+            }
+            else if(tagRNum.selectedTags.Count <= 0 && !doneCalculateRisk)
+            {
+                totalRisk = 0;
+                totalPoints = pointGotten;
+                doneCalculateRisk = true;
+            }
+        }
+        if(doneCalculatePoint && doneCalculateRisk)
+        {
+            pointText.text = pointGotten.ToString();
+            yield return new WaitForSeconds(2f);
+            riskText.text = totalRisk.ToString();
+            if(totalPoints > PlayerPrefs.GetInt("playerHighScore", 0))
+            {
+                yield return new WaitForSeconds(4f);
+                totalPointsText.text = totalPoints.ToString();
+                PlayerPrefs.SetInt("playerHighScore", totalPoints);
+                StopCoroutine(CalculatePoints());
+            }
+            else if(totalPoints < PlayerPrefs.GetInt("playerHighScore", 0))
+            {
+                yield return new WaitForSeconds(2f);
+                totalPointsText.text = totalPoints.ToString();
+                StopCoroutine(CalculatePoints());
+            }
+        }
+    }
+}

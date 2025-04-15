@@ -1,20 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-
+using UnityEngine.Events;
 public class UIManager : MonoBehaviour
 {
 	public InputAction pauseButton;
     public GameObject[] pauseObjects;
-
+	public GameObject startingTag;
+	public UnityEvent gameOverEvent;
 
 	// Use this for initialization
 	void Start () 
 	{
-		pauseButton.ChangeBinding(0).WithPath("<Keyboard>/Escape");
+		startingTag.SetActive(true);
 		pauseButton.Enable();
 		Time.timeScale = 1;
-		// pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
 		hidePaused();
 	}
 
@@ -76,4 +75,8 @@ public class UIManager : MonoBehaviour
     {
         Application.Quit();
     }
+	public void TriggerGameOver()
+	{
+		gameOverEvent.Invoke();
+	}
 }

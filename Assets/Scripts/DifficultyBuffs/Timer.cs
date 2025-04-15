@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class Timer : MonoBehaviour
 {
+    public UIManager triggerGameOver;
     public Text TimerDisplay;
     public float timer = 60;
     public float timeSpeed = 1;
@@ -21,8 +20,7 @@ public class Timer : MonoBehaviour
         if(timer <= 0)
         {
             timer = 0;
-            Time.timeScale = 0;
-            Debug.Log("Times up");
+            triggerGameOver.TriggerGameOver();
         }
         else if(timer > 0)
         {

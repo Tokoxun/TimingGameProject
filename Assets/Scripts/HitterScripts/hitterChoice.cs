@@ -15,6 +15,7 @@ public class hitterChoice : MonoBehaviour
     void Start()
     {
         currentButton = DifficultyManager.currentInput;
+        changeInput.Enable();
         enablShortHitter.SetActive(false);
         enablLongHitter.SetActive(true);
     }
@@ -36,7 +37,6 @@ public class hitterChoice : MonoBehaviour
         enablLongHitter.SetActive(DifficultyManager.LongHitter);
         enablShortHitter.SetActive(DifficultyManager.ShortHitter);
         changeInput.ChangeBinding(0).WithPath($"<Keyboard>/{DifficultyManager.currentInput}");
-        changeInput.Enable();
         if(changeInput.triggered)
         {
             if(enablLongHitter.activeSelf)
@@ -53,5 +53,10 @@ public class hitterChoice : MonoBehaviour
             currentButton = DifficultyManager.currentInput;
             Debug.Log(currentButton);
         }
+    }
+
+    public void DisableControl()
+    {
+        changeInput.Disable();
     }
 }

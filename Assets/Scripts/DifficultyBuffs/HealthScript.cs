@@ -1,10 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
 
 public class HealthScript : MonoBehaviour
 {
+    public UIManager triggerGameOver;
     private float Max_health = 3;
     [SerializeField] private float health = 3;
     public float HpRedc = 1;
@@ -46,8 +45,7 @@ public class HealthScript : MonoBehaviour
         HealthDisplay.text = health.ToString();
         if(health <= 0)
         {
-            Time.timeScale = 0;
-            Debug.Log("You lose");
+            triggerGameOver.TriggerGameOver();
         }
     }
 }
