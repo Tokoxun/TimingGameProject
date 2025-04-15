@@ -5,23 +5,24 @@ using UnityEngine.UI;
 public class GameOverScreen : MonoBehaviour
 {
     public GameObject resultScreen;
-    public UIManager subscribeGameOverEvent;
     public PointSystem calPoint;
     public TagInventory tagRNum;
-    public Text pointText;
     private int pointGotten;
-    private bool doneCalculatePoint;
-    public Text riskText;
     private int totalRisk;
-    private bool doneCalculateRisk;
-    public Text totalPointsText;
     private int totalPoints;
+    public Text pointText;
+    public Text riskText;
+    public Text totalPointsText;
+    public Text highScoreText;
+    private bool doneCalculatePoint;
+    private bool doneCalculateRisk;
 
     void Start()
     {
         resultScreen.SetActive(false);
         doneCalculatePoint = false;
         doneCalculateRisk = false;
+        highScoreText.text = PlayerPrefs.GetInt("playerHighScore", 0).ToString();
     }
     public void DisplayResult()
     {
@@ -38,42 +39,46 @@ public class GameOverScreen : MonoBehaviour
                 pointGotten = calPoint.points;
                 doneCalculatePoint = true;
             }
-            yield return new WaitForSeconds(2f);
+            else if(calPoint.points <= 0 && !doneCalculatePoint)
+            {
+                pointGotten = calPoint.points;
+                doneCalculatePoint = true;
+            }
             if(tagRNum.selectedTags.Count > 0 && !doneCalculateRisk)
             {
                 foreach(GameObject r in tagRNum.selectedTags)
                 {
                     InfoTag getRNumber = r.GetComponent<InfoTag>();
                     totalRisk += getRNumber.rNumber;
-                    Debug.Log("Calculating R");
                 }
+                totalPoints = pointGotten * totalRisk;
                 doneCalculateRisk = true;
             }
-            else if(calPoint.points <= 0)
-            {
-                pointGotten = calPoint.points;
-            }
-            else if(tagRNum.selectedTags.Count <= 0)
+            else if(tagRNum.selectedTags.Count <= 0 && !doneCalculateRisk)
             {
                 totalRisk = 0;
+                totalPoints = pointGotten;
+                doneCalculateRisk = true;
             }
         }
         if(doneCalculatePoint && doneCalculateRisk)
         {
             pointText.text = pointGotten.ToString();
+            yield return new WaitForSeconds(2f);
             riskText.text = totalRisk.ToString();
-            totalPointsText.text = totalPoints.ToString();
-            StopCoroutine(CalculatePoints());
-        }
-        if(totalRisk <= 0)
-        {
-            totalPoints = pointGotten;
-            doneCalculatePoint = true;
-        }
-        else if(totalRisk > 0)
-        {
-            totalPoints = pointGotten * totalRisk;
-            doneCalculateRisk = true;
+            if(totalPoints > PlayerPrefs.GetInt("playerHighScore", 0))
+            {
+                yield return new WaitForSeconds(4f);
+                totalPointsText.text = totalPoints.ToString();
+                PlayerPrefs.SetInt("playerHighScore", totalPoints);
+                StopCoroutine(CalculatePoints());
+            }
+            else if(totalPoints < PlayerPrefs.GetInt("playerHighScore", 0))
+            {
+                yield return new WaitForSeconds(2f);
+                totalPointsText.text = totalPoints.ToString();
+                StopCoroutine(CalculatePoints());
+            }
         }
     }
 }
