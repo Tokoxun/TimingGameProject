@@ -1,13 +1,45 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuUI : MonoBehaviour
 {
+    public Text normalHighScore;
+    public Text normalDisturbanceScore;
+    public GameObject normalClearScore;
+    public Text tradiHighScore;
     public string sceneName;
     public GameObject gameMenu;
+    void Start()
+    {
+        gameMenu.SetActive(false);
+    }
+    void Update()
+    {
+        if(normalHighScore != null && normalDisturbanceScore != null)
+        {
+            normalHighScore.text = PlayerPrefs.GetInt("playerHighScore").ToString();
+            normalDisturbanceScore.text = PlayerPrefs.GetInt("playerHighestRisk").ToString();
+        }
+        if(PlayerPrefs.GetInt("playerHighScore", 0) <= 0 && PlayerPrefs.GetInt("playerHighestRisk", 0) <= 0)
+        {
+            normalClearScore.SetActive(false);
+        }
+        else if(PlayerPrefs.GetInt("playerHighScore", 0) > 0 || PlayerPrefs.GetInt("playerHighestRisk", 0) > 0)
+        {
+            normalClearScore.SetActive(true);
+        }
+    }
     public void OpenGameMenu()
     {
         gameMenu.SetActive(true);
+    }
+    public void ClearHighScore(string highScoreName)
+    {
+        if(PlayerPrefs.HasKey(highScoreName))
+        {
+            PlayerPrefs.SetInt(highScoreName, 0);
+        }
     }
     public void LoadGame()
     {
