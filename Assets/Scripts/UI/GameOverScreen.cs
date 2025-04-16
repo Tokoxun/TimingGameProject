@@ -66,6 +66,10 @@ public class GameOverScreen : MonoBehaviour
             pointText.text = pointGotten.ToString();
             yield return new WaitForSeconds(2f);
             riskText.text = totalRisk.ToString();
+            if(totalRisk > PlayerPrefs.GetInt("playerHighestRisk", 0))
+            {
+                PlayerPrefs.SetInt("playerHighestRisk", totalRisk);
+            }
             if(totalPoints > PlayerPrefs.GetInt("playerHighScore", 0))
             {
                 yield return new WaitForSeconds(4f);
