@@ -10,9 +10,11 @@ public class MainMenuUI : MonoBehaviour
     public Text tradiHighScore;
     public string sceneName;
     public GameObject gameMenu;
+    public GameObject optionMenu;
     void Start()
     {
         gameMenu.SetActive(false);
+        optionMenu.SetActive(false);
     }
     void Update()
     {
@@ -30,9 +32,9 @@ public class MainMenuUI : MonoBehaviour
             normalClearScore.SetActive(true);
         }
     }
-    public void OpenGameMenu()
+    public void OpenMenu(GameObject menuUI)
     {
-        gameMenu.SetActive(true);
+        menuUI.SetActive(true);
     }
     public void ClearHighScore(string highScoreName)
     {
@@ -48,12 +50,10 @@ public class MainMenuUI : MonoBehaviour
             SceneManager.LoadScene(sceneName);
         }
     }
-    public void CancelMenu()
+    public void CancelMenu(GameObject menuUI)
     {
-        gameMenu.SetActive(false);
+        menuUI.SetActive(false);
     }
-    public void OpenOptions()
-    {}
     public void QuitGame()
     {
         Application.Quit();
