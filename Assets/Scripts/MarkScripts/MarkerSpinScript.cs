@@ -8,6 +8,7 @@ public class MarkerSpinScript : MonoBehaviour
     public float spinSpeed = -35f;
     public float buffedSpnSpd;
     public float totalBuffedSpnSpd;
+    public LevelManager levelBuff;
     public float levelbuffedSpnSpd;
     public float currentRotation;
 
@@ -22,7 +23,7 @@ public class MarkerSpinScript : MonoBehaviour
     {
         buffedSpnSpd = (DifficultyManager.addMrkSpd - DifficultyManager.decreaseMrkSpd) / 100;
         totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
-        levelbuffedSpnSpd = spinSpeed * LevelManager.levelSpeed;
+        levelbuffedSpnSpd = spinSpeed * levelBuff.levelSpeed;
         transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd + levelbuffedSpnSpd) * Time.deltaTime);
         if(changeOrNot != null && DifficultyManager.rotateMarker)
         {
