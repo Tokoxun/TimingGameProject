@@ -16,9 +16,11 @@ public class GameOverScreen : MonoBehaviour
     public Text highScoreText;
     private bool doneCalculatePoint;
     private bool doneCalculateRisk;
+    public GameObject resetBar;
 
     void Start()
     {
+        resetBar.SetActive(false);
         resultScreen.SetActive(false);
         doneCalculatePoint = false;
         doneCalculateRisk = false;
@@ -75,12 +77,14 @@ public class GameOverScreen : MonoBehaviour
                 yield return new WaitForSeconds(4f);
                 totalPointsText.text = totalPoints.ToString();
                 PlayerPrefs.SetInt("playerHighScore", totalPoints);
+                resetBar.SetActive(true);
                 StopCoroutine(CalculatePoints());
             }
             else if(totalPoints < PlayerPrefs.GetInt("playerHighScore", 0))
             {
                 yield return new WaitForSeconds(2f);
                 totalPointsText.text = totalPoints.ToString();
+                resetBar.SetActive(true);
                 StopCoroutine(CalculatePoints());
             }
         }
