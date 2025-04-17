@@ -3,7 +3,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public PlayerLevel Player;
-    public static float levelSpeed;
+    public float levelSpeed;
 
     // Update is called once per frame
     void Update()
