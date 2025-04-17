@@ -31,4 +31,14 @@ public class TagInventory : MonoBehaviour
             currentTag = selectedTags.Count;
         }
     }
+
+    public void RemoveAll()
+    {
+        foreach(GameObject st in selectedTags)
+        {
+            EffectTag stEffect = st.GetComponent<EffectTag>();
+            Debug.Log("Removed");
+            stEffect.RemoveEffect();
+        }
+    }
 }
