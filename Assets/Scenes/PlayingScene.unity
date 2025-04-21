@@ -250,6 +250,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 4400669081940640962, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 6130694993455882096, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
       propertyPath: m_Name
       value: BlackHitterShort1
@@ -452,6 +456,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 47fbbfcf1a7e8274ebc5bf680018e433, type: 3}
     volume: 1
     pitch: 1
+    source: {fileID: 0}
 --- !u!4 &48587478
 Transform:
   m_ObjectHideFlags: 0
@@ -692,6 +697,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 1159945965427983123, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 2461184372818976990, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
       propertyPath: numberText
       value: 
@@ -3001,6 +3010,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 1159945965427983123, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 2461184372818976990, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
       propertyPath: numberText
       value: 
@@ -3217,6 +3230,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 4400669081940640962, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 6130694993455882096, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
       propertyPath: m_Name
       value: BlackHitterShort1
@@ -3654,6 +3671,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 4400669081940640962, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 6130694993455882096, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
       propertyPath: m_Name
       value: BlackHitterShort1
@@ -3729,6 +3750,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 4400669081940640962, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 6130694993455882096, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
       propertyPath: m_Name
       value: BlackHitterShort1
@@ -4694,6 +4719,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 1159945965427983123, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 2461184372818976990, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
       propertyPath: numberText
       value: 
@@ -7583,6 +7612,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 1159945965427983123, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 2461184372818976990, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
       propertyPath: numberText
       value: 
@@ -9447,6 +9480,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 4400669081940640962, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 6130694993455882096, guid: 658040adbad40b04ea48d0992559f77c, type: 3}
       propertyPath: m_Name
       value: BlackHitterShort1
@@ -11046,6 +11083,10 @@ PrefabInstance:
       propertyPath: addPoints
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 1159945965427983123, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 48587477}
     - target: {fileID: 2461184372818976990, guid: 04ada980071f7a74190c5d3dd64777df, type: 3}
       propertyPath: numberText
       value: 
