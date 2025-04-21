@@ -10,6 +10,7 @@ public class MarkerScript : MonoBehaviour
     public GameObject scdHitMark;
     public GameObject trdHitMark;
     public PointSystem addPoints;
+    public AudioManager audioManager;
     void Start()
     {
         onHitted = false;
@@ -22,14 +23,17 @@ public class MarkerScript : MonoBehaviour
         {
             if(trdHitMark.activeSelf)
             {
+                audioManager.Play("MarkHitted");
                 trdHitMark.SetActive(false);
                 return;
             }
             if(scdHitMark.activeSelf)
             {
+                audioManager.Play("MarkHitted");
                 scdHitMark.SetActive(false);
                 return;
             }
+            audioManager.Play("MarkHitted");
             onHitted = true;
             fstHitMark.enabled = false;
             markCol.enabled = false;
