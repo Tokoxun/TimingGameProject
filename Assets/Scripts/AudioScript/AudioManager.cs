@@ -4,7 +4,7 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    public static float SEsetting;
+    public static float SEsetting = 1f;
     public Sounds[] sounds;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
