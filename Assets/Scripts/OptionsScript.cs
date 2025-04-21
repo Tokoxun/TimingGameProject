@@ -5,18 +5,22 @@ public class OptionsScript : MonoBehaviour
 {
     public Dropdown displayOptions;
     public Slider soundEffectSlider;
+    public Animator changesApplied;
+    [SerializeField] private float appearTime = 2f;
+    private float appearTimer;
     // Update is called once per frame
-    // void Update()
-    // {
-    //     if(displayOption.value == 0)
-    //     {
-    //         Screen.SetResolution(941, 701, false);
-    //     }
-    //     else if(displayOption.value == 1)
-    //     {
-    //         Screen.SetResolution(1920, 1080, true);
-    //     }
-    // }
+    void Update()
+    {
+        if(changesApplied.GetBool("applied") == true)
+        {
+            appearTimer += Time.deltaTime;
+            if(appearTimer >= appearTime)
+            {
+                changesApplied.SetBool("applied", false);
+                appearTimer = 0;
+            }
+        }
+    }
     void Start()
     {
         soundEffectSlider.value = AudioManager.SEsetting;
@@ -36,6 +40,7 @@ public class OptionsScript : MonoBehaviour
     public void Apply()
     {
         AudioManager.SEsetting = soundEffectSlider.value;
+        changesApplied.SetBool("applied", true);
     }
     public void Revert()
     {
