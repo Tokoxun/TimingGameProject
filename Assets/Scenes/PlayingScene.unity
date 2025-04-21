@@ -1632,7 +1632,6 @@ GameObject:
   - component: {fileID: 198509428}
   - component: {fileID: 198509429}
   - component: {fileID: 198509431}
-  - component: {fileID: 198509432}
   - component: {fileID: 198509433}
   m_Layer: 0
   m_Name: UIManager
@@ -1766,18 +1765,6 @@ MonoBehaviour:
   loadEffect: {fileID: 1720234176}
   RisksChoice: {fileID: 1720234172}
   checkListLength: {fileID: 1104899234}
---- !u!114 &198509432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 198509426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df987d1836edbcc4183f88eb16a9d984, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &198509433
 MonoBehaviour:
   m_ObjectHideFlags: 0
