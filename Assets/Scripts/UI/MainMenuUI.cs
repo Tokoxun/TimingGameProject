@@ -32,9 +32,14 @@ public class MainMenuUI : MonoBehaviour
             normalClearScore.SetActive(true);
         }
     }
-    public void OpenMenu(GameObject menuUI)
+    public void OpenGameMenu()
     {
-        menuUI.SetActive(true);
+        gameMenu.SetActive(true);
+    }
+    public void OpenOptionMenu(OptionsScript options)
+    {
+        options.soundEffectSlider.value = AudioManager.SEsetting;
+        optionMenu.SetActive(true);
     }
     public void ClearHighScore(string highScoreName)
     {
