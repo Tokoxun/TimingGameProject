@@ -10,6 +10,7 @@ public class SpinScript : MonoBehaviour
     private float[] changeOrNot;
     public float buffedSpnSpd;
     public float totalBuffedSpnSpd;
+    public LevelManager levelBuff;
     public float levelbuffedSpnSpd;
 
     void Start()
@@ -28,7 +29,7 @@ public class SpinScript : MonoBehaviour
         // Debug.Log("Z-axis rotation: " + zRotation);
         buffedSpnSpd = (DifficultyManager.addArwSpd - DifficultyManager.decreaseArwSpd) / 100;
         totalBuffedSpnSpd = spinSpeed * buffedSpnSpd;
-        levelbuffedSpnSpd = spinSpeed * LevelManager.levelSpeed;
+        levelbuffedSpnSpd = spinSpeed * levelBuff.levelSpeed;
         transform.Rotate(Vector3.forward * (spinSpeed + totalBuffedSpnSpd + levelbuffedSpnSpd) * Time.deltaTime);
         if(changeOrNot != null  && DifficultyManager.rotateHitter)
         {

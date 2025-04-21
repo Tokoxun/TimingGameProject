@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 	public InputAction pauseButton;
@@ -78,5 +79,10 @@ public class UIManager : MonoBehaviour
 	public void TriggerGameOver()
 	{
 		gameOverEvent.Invoke();
+	}
+
+	public void LoadScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
 	}
 }
