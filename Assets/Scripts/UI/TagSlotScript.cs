@@ -37,7 +37,7 @@ public class TagSlotScript : MonoBehaviour
                     break;
             }
         }
-        if(tagEnchance != null)
+        if(tagEnchance != null && !GameOverScreen.isGameOver)
         {
             // Debug.Log(tagEnchance.maxLevel);
             // Debug.Log(tagEnchance.phase);
