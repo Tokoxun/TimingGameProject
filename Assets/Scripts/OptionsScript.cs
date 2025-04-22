@@ -24,7 +24,6 @@ public class OptionsScript : MonoBehaviour
     void Start()
     {
         soundEffectSlider.value = AudioManager.SEsetting;
-        Screen.SetResolution(941, 701, false);
     }
     public void displayOption()
     {
