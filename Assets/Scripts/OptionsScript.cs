@@ -5,20 +5,15 @@ public class OptionsScript : MonoBehaviour
 {
     public GameObject optionMenu;
     public Dropdown displayOptions;
-    private int currentDisplay;
+    public static int currentDisplay;
     public Slider soundEffectSlider;
     public Animator changesApplied;
     public GameObject confirmWarning;
-    private bool applyChange;
     [SerializeField] private float appearTime = 2f;
     private float appearTimer;
     // Update is called once per frame
     void Update()
     {
-        if(soundEffectSlider.value != AudioManager.SEsetting)
-        {
-            applyChange = false;
-        }
         if(changesApplied.GetBool("applied") == true)
         {
             appearTimer += Time.deltaTime;
@@ -31,10 +26,8 @@ public class OptionsScript : MonoBehaviour
     }
     void Start()
     {
-        applyChange = true;
         confirmWarning.SetActive(false);
         soundEffectSlider.value = AudioManager.SEsetting;
-        displayOptions.value = currentDisplay;
     }
     public void displayOption()
     {
@@ -54,24 +47,27 @@ public class OptionsScript : MonoBehaviour
         confirmWarning.SetActive(false);
         AudioManager.SEsetting = soundEffectSlider.value;
         changesApplied.SetBool("applied", true);
-        applyChange = true;
     }
     public void Revert()
     {
         confirmWarning.SetActive(false);
-        applyChange = true;
         soundEffectSlider.value = soundEffectSlider.maxValue;
         AudioManager.SEsetting = soundEffectSlider.maxValue;
         displayOptions.value = 0;
         displayOption();
     }
+    public void CancelSave()
+    {
+        soundEffectSlider.value = AudioManager.SEsetting;
+        confirmWarning.SetActive(false);
+    }
     public void CloseOption()
     {
-        if(!applyChange)
+        if(soundEffectSlider.value != AudioManager.SEsetting)
         {
             confirmWarning.SetActive(true);
         }
-        else if(applyChange)
+        else if(soundEffectSlider.value == AudioManager.SEsetting)
         {
             optionMenu.SetActive(false);
         }
