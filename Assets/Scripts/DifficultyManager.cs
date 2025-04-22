@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class DifficultyManager
+public class DifficultyManager : MonoBehaviour
 {
     public static bool displayVariableNum = false;
     public static bool rotateMarker = false;
