@@ -39,6 +39,7 @@ public class MainMenuUI : MonoBehaviour
     public void OpenOptionMenu(OptionsScript options)
     {
         options.soundEffectSlider.value = AudioManager.SEsetting;
+        options.displayOptions.value = OptionsScript.currentDisplay;
         optionMenu.SetActive(true);
     }
     public void ClearHighScore(string highScoreName)

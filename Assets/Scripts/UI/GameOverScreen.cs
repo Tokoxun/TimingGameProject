@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class GameOverScreen : MonoBehaviour
 {
+    public static bool isGameOver;
     public GameObject resultScreen;
     public PointSystem calPoint;
     public TagInventory tagRNum;
@@ -20,6 +21,7 @@ public class GameOverScreen : MonoBehaviour
 
     void Start()
     {
+        isGameOver = false;
         resetBar.SetActive(false);
         resultScreen.SetActive(false);
         doneCalculatePoint = false;
@@ -28,6 +30,7 @@ public class GameOverScreen : MonoBehaviour
     }
     public void DisplayResult()
     {
+        isGameOver = true;
         resultScreen.SetActive(true);
         StartCoroutine(CalculatePoints());
     }
