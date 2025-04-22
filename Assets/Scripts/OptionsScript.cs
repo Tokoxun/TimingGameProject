@@ -8,6 +8,7 @@ public class OptionsScript : MonoBehaviour
     private int currentDisplay;
     public Slider soundEffectSlider;
     public Animator changesApplied;
+    public GameObject confirmWarning;
     private bool applyChange;
     [SerializeField] private float appearTime = 2f;
     private float appearTimer;
@@ -30,6 +31,8 @@ public class OptionsScript : MonoBehaviour
     }
     void Start()
     {
+        applyChange = true;
+        confirmWarning.SetActive(false);
         soundEffectSlider.value = AudioManager.SEsetting;
         displayOptions.value = currentDisplay;
     }
@@ -48,12 +51,14 @@ public class OptionsScript : MonoBehaviour
     }
     public void Apply()
     {
+        confirmWarning.SetActive(false);
         AudioManager.SEsetting = soundEffectSlider.value;
         changesApplied.SetBool("applied", true);
         applyChange = true;
     }
     public void Revert()
     {
+        confirmWarning.SetActive(false);
         applyChange = true;
         soundEffectSlider.value = soundEffectSlider.maxValue;
         AudioManager.SEsetting = soundEffectSlider.maxValue;
@@ -64,7 +69,7 @@ public class OptionsScript : MonoBehaviour
     {
         if(!applyChange)
         {
-            Debug.Log("There are unsaved changes");
+            confirmWarning.SetActive(true);
         }
         else if(applyChange)
         {
