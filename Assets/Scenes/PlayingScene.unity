@@ -6587,6 +6587,7 @@ MonoBehaviour:
   - {fileID: 5260663741378192561, guid: 698a56033f57e6f43833d213e7b40202, type: 3}
   - {fileID: 751329543939582614, guid: bb641edb50eaf1346be6172f430c85de, type: 3}
   - {fileID: 5317342263332538949, guid: 2f6d5818b03a6d64e8b41786723ff56c, type: 3}
+  - {fileID: 9187221607823835401, guid: 72ca042d9ab0c3541a01122cb269de96, type: 3}
   tempRisks:
   - {fileID: 5492349580425436539, guid: 55ad746277e67f54d822547aa985b01f, type: 3}
   conditionTags:
