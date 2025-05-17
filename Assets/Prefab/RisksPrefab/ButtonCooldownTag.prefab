@@ -92,8 +92,8 @@ MonoBehaviour:
   phase: 1
   currentLevel: 0
   maxLevel: 2
-  enchanceTimer: 0
-  enchanceTime: 20
+  enchanceTimer: 3.9707437
+  enchanceTime: 30
 --- !u!114 &2554862725944876455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eac646f475fff8418faaf36bddf72ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentType: 0
   rNumber: 1
   baseImage: {fileID: 3800655532096931216}
   Level_I: {fileID: -1171248015360825024, guid: bda7d6e51fe2bc644b9d69072c660aab, type: 3}
