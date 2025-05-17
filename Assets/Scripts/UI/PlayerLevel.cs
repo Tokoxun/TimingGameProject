@@ -18,6 +18,7 @@ public class PlayerLevel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        levelNum.text = playerLevel.ToString();
         if(increaseSpeed > 0)
         {
             if(levelSlider.value < levelSlider.maxValue)
@@ -28,7 +29,6 @@ public class PlayerLevel : MonoBehaviour
             {
                 choiceTrigger = true;
                 playerLevel += 1;
-                levelNum.text = playerLevel.ToString();
                 levelSlider.value = 0;
             }
         }
