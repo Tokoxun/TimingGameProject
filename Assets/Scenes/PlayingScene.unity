@@ -2401,6 +2401,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1735361083}
     - target: {fileID: 2637605953575992268, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
+      propertyPath: levelProgress
+      value: 
+      objectReference: {fileID: 540642383}
+    - target: {fileID: 2637605953575992268, guid: 51bd6591f6d78d34194646265b92937f, type: 3}
       propertyPath: resetComboTimer
       value: 
       objectReference: {fileID: 1117311331}
@@ -3507,7 +3511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelNum: {fileID: 1197735908}
   playerLevel: 0
-  increaseSpeed: 10
+  increaseSpeed: 5
 --- !u!1 &552902912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4516,6 +4520,10 @@ PrefabInstance:
       propertyPath: addingPoint
       value: 
       objectReference: {fileID: 1735361083}
+    - target: {fileID: 319411752252927837, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
+      propertyPath: levelProgress
+      value: 
+      objectReference: {fileID: 540642383}
     - target: {fileID: 319411752252927837, guid: 9b486c8e68d578e46be9851cd20a66c5, type: 3}
       propertyPath: resetComboTimer
       value: 
