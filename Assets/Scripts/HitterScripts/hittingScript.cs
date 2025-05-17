@@ -11,6 +11,7 @@ public class hittingScript : MonoBehaviour
     private float hitReset = 0.2f;
     private float Resettimer;
     public Collider2D hitPoint;
+    public PlayerLevel levelProgress;
     public DisplayCombo calCombo;
     public ComboTimer resetComboTimer;
     public HealthScript calHealth;
@@ -33,6 +34,7 @@ public class hittingScript : MonoBehaviour
             resetComboTimer.ResetTimer();
             calHealth.RecoverHealth(calCombo.currentCombo);
             calCombo.AddCombo();
+            levelProgress.progressJump();
             hitPoint.enabled = false;
             Resettimer = 0;
             actvCooldown = true;
