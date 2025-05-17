@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eac646f475fff8418faaf36bddf72ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentType: 0
   rNumber: 1
   baseImage: {fileID: 4868049455656838503}
   Level_I: {fileID: -3110034596274334453, guid: 0bff8491919864b489a0bb58949a0a0a, type: 3}
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phase: 1
-  currentLevel: 0
+  currentLevel: 1
   maxLevel: 1
   enchanceTimer: 0
-  enchanceTime: 20
+  enchanceTime: 40
