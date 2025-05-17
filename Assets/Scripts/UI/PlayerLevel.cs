@@ -34,6 +34,10 @@ public class PlayerLevel : MonoBehaviour
         }
     }
 
+    public void progressJump()
+    {
+        levelSlider.value += 3;
+    }
     public void StopLeveling()
     {
         increaseSpeed = 0;
