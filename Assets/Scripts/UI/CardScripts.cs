@@ -11,6 +11,7 @@ public class CardScripts : MonoBehaviour
     public RisksCompiler rlist;
     public TagInventory playerInventory;
     public GameObject chosenR;
+    private EffectChoice effectChoice;
     private EffectTag activateCurrentEffect;
     public bool Chosen = false;
 
@@ -27,6 +28,10 @@ public class CardScripts : MonoBehaviour
     //         }
     //     }
     // }
+    void Start()
+    {
+        effectChoice = gameObject.GetComponentInParent<EffectChoice>();
+    }
     public void RefreshCard()
     {
         activateCurrentEffect = chosenR.GetComponent<EffectTag>();
@@ -41,11 +46,13 @@ public class CardScripts : MonoBehaviour
         {
             Chosen = true;
             EffectChoice.chosenTag += ActivateTag;
+            effectChoice.selectedChoice += 1;
         }
         else if(Chosen)
         {
             Chosen = false;
             EffectChoice.chosenTag -= ActivateTag;
+            effectChoice.selectedChoice -= 1;
         }
     }
 

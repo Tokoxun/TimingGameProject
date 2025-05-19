@@ -7,7 +7,7 @@ public class MarkerRespawn : MonoBehaviour
     delegate void RespawnItem();
     RespawnItem triggerRespawn;
     public float totalRespawnTime;
-    private float respawnTime = 0.5f;
+    private float respawnTime = 1f;
     private float respawnTimer;
     private MarkerScript currentMarkRes;
     public MarkerSpinScript markRotation;

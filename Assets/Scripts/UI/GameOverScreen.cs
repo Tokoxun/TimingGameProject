@@ -51,10 +51,9 @@ public class GameOverScreen : MonoBehaviour
             }
             if(tagRNum.selectedTags.Count > 0 && !doneCalculateRisk)
             {
-                foreach(GameObject r in tagRNum.selectedTags)
+                foreach(TagSlotScript r in tagRNum.tagSlot)
                 {
-                    InfoTag getRNumber = r.GetComponent<InfoTag>();
-                    totalRisk += getRNumber.rNumber;
+                    totalRisk += r.recordedRNum;
                 }
                 totalPoints = pointGotten * totalRisk;
                 doneCalculateRisk = true;

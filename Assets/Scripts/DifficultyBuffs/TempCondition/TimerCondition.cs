@@ -2,15 +2,24 @@ using UnityEngine;
 
 public class TimerCondition : ConditionTag
 {
-    private float timeCondition = 10f;
+    [SerializeField] private float timeCondition = 10f;
     private float currentTimer;
+
+    void Start()
+    {
+        currentTimer = timeCondition;
+    }
 
     void Update()
     {
-        currentTimer += Time.deltaTime;
-        if(currentTimer >= timeCondition)
+        currentTimer -= Time.deltaTime;
+        if (currentTimer <= 0)
         {
-            tempGroupScript.resetAllTemp();
+            ConditionExpire();
+        }
+        else if (currentTimer > 0)
+        {
+            tempGroupScript.conditionTimer.text = Mathf.Round(currentTimer).ToString();
         }
     }
 }

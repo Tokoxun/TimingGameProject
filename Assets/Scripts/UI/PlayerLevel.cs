@@ -11,12 +11,14 @@ public class PlayerLevel : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        choiceTrigger = false;
         levelSlider = this.gameObject.GetComponent<Slider>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        levelNum.text = playerLevel.ToString();
         if(increaseSpeed > 0)
         {
             if(levelSlider.value < levelSlider.maxValue)
@@ -27,12 +29,15 @@ public class PlayerLevel : MonoBehaviour
             {
                 choiceTrigger = true;
                 playerLevel += 1;
-                levelNum.text = playerLevel.ToString();
                 levelSlider.value = 0;
             }
         }
     }
 
+    public void progressJump()
+    {
+        levelSlider.value += 3;
+    }
     public void StopLeveling()
     {
         increaseSpeed = 0;

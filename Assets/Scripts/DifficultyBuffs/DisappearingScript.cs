@@ -34,5 +34,13 @@ public class DisappearingScript : MonoBehaviour
                 } 
             }
         }
+        else if(!DifficultyManager.mrkDisap)
+        {
+            AppearTime = 0;
+            DisapTimer = 0;
+            purpleMarkAnim.SetBool("Fade", false);
+            orangeMarkAnim.SetBool("Fade", false);
+            markAnim.SetBool("Fade", false);
+        }
     }
 }
