@@ -5,6 +5,7 @@ public abstract class EffectTag : MonoBehaviour
     public bool phase = false;
     public int currentLevel;
     public int maxLevel;
+    public InfoTag infoTag;
     public float enchanceTimer;
     public float enchanceTime;
     public abstract void ActivateEffect();
