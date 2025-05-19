@@ -33,7 +33,7 @@ public class HealthScript : MonoBehaviour
                 recoveryBar.value = 0;
             }
         }
-        else if(health >= Max_health)
+        else if(health > Max_health)
         {
             health = Max_health;
         }
@@ -43,9 +43,13 @@ public class HealthScript : MonoBehaviour
     void Update()
     {
         HealthDisplay.text = health.ToString();
-        if(health <= 0)
+        if (health <= 0)
         {
             triggerGameOver.TriggerGameOver();
+        }
+        if(health > Max_health)
+        {
+            health = Max_health;
         }
     }
 }
