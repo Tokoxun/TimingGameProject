@@ -11,7 +11,6 @@ public class CardScripts : MonoBehaviour
     public GameObject chosenR;
     private EffectChoice effectChoice;
     private EffectTag activateCurrentEffect;
-    public Animator appearAnim;
     public Animator selectedAnimation;
     public bool Chosen = false;
 
