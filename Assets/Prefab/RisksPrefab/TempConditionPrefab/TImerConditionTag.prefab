@@ -89,8 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6f2328b7a85d74fa400d33876f593c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 0
-  linkingTag: {fileID: 0}
+  tempGroupScript: {fileID: 0}
+  linkingTag: {fileID: 4910773708989588402, guid: 55ad746277e67f54d822547aa985b01f, type: 3}
+  timeCondition: 60
 --- !u!114 &5026744485299749521
 MonoBehaviour:
   m_ObjectHideFlags: 0
