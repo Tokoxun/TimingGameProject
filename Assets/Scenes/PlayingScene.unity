@@ -1060,6 +1060,7 @@ MonoBehaviour:
   rlist: {fileID: 1104899234}
   playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 0}
+  selectedAnimation: {fileID: 0}
   Chosen: 0
 --- !u!1 &134045328
 GameObject:
@@ -1545,6 +1546,7 @@ MonoBehaviour:
   rlist: {fileID: 1104899234}
   playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 0}
+  selectedAnimation: {fileID: 0}
   Chosen: 0
 --- !u!1 &180871892
 GameObject:
@@ -4251,7 +4253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &610829291
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5016,6 +5018,7 @@ MonoBehaviour:
   rlist: {fileID: 1104899234}
   playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 0}
+  selectedAnimation: {fileID: 0}
   Chosen: 0
 --- !u!1 &836440806
 GameObject:
@@ -9542,6 +9545,7 @@ MonoBehaviour:
   rlist: {fileID: 1104899234}
   playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 0}
+  selectedAnimation: {fileID: 0}
   Chosen: 0
 --- !u!1 &1538014111
 GameObject:
@@ -10135,6 +10139,7 @@ MonoBehaviour:
   rlist: {fileID: 0}
   playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 8943624635737165218, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
+  selectedAnimation: {fileID: 0}
   Chosen: 0
   choosing: {fileID: 802531708}
   tagEffect: {fileID: 8509053573378700823, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
@@ -12533,6 +12538,7 @@ MonoBehaviour:
   rlist: {fileID: 0}
   playerInventory: {fileID: 1323223533}
   chosenR: {fileID: 6076506906674750341, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
+  selectedAnimation: {fileID: 0}
   Chosen: 0
   choosing: {fileID: 802531708}
   tagEffect: {fileID: 7927692570975078643, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
