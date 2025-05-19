@@ -111,5 +111,6 @@ MonoBehaviour:
   phase: 1
   currentLevel: 1
   maxLevel: 1
+  infoTag: {fileID: 7424879525346884926}
   enchanceTimer: 0
   enchanceTime: 40

@@ -111,6 +111,7 @@ MonoBehaviour:
   phase: 1
   currentLevel: 1
   maxLevel: 1
+  infoTag: {fileID: 2147767543873903975}
   enchanceTimer: 0
   enchanceTime: 35
   decreaseMrkRespawn_I: 3
