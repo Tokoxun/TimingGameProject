@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TempGroupScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TempGroupScript : MonoBehaviour
     private bool deployed;
     public TempTagSlot leftSlot;
     public TempTagSlotRight rightSlot;
+    public Text conditionTimer;
     public int levelTrigger;
     private int triggerInterval = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -42,6 +44,7 @@ public class TempGroupScript : MonoBehaviour
         if(rightSlot.selectedCondition == null && activated)
         {
             levelTrigger = levelCheck.playerLevel + triggerInterval;
+            conditionTimer.text = null;
             activated = false;
             deployed = false;
         }
