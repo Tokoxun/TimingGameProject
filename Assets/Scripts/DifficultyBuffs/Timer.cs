@@ -17,14 +17,15 @@ public class Timer : MonoBehaviour
     void Update()
     {
         TimerDisplay.text = timer.ToString();
-        if(timer <= 0)
+        if (timer <= 0)
         {
             timer = 0;
             triggerGameOver.TriggerGameOver();
         }
-        else if(timer > 0)
+        else if (timer > 0)
         {
-            timer -= timeSpeed*Time.deltaTime;
+            timer -= timeSpeed * Time.deltaTime;
+            timer = Mathf.Round(timer);
         }
     }
 }
