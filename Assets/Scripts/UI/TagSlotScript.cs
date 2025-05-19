@@ -10,6 +10,7 @@ public class TagSlotScript : MonoBehaviour
     private Image currentTagImage;
     private Sprite emptySlotImage;
     public Text tagNumber;
+    public int recordedRNum;
 
     void Start()
     {
@@ -26,14 +27,17 @@ public class TagSlotScript : MonoBehaviour
                 case 0:
                     currentTagImage.sprite = tagInfo.baseImage.sprite;
                     tagNumber.text = tagInfo.rNumber.ToString();
+                    recordedRNum = tagInfo.rNumber;
                     break;
                 case 1:
                     currentTagImage.sprite = tagInfo.Level_II;
-                    tagNumber.text = tagInfo.rNumber.ToString();
+                    tagNumber.text = (tagInfo.rNumber + 1).ToString();
+                    recordedRNum = tagInfo.rNumber + 1;
                     break;
                 case 2:
                     currentTagImage.sprite = tagInfo.Level_III;
-                    tagNumber.text = tagInfo.rNumber.ToString();
+                    tagNumber.text = (tagInfo.rNumber + 2).ToString();
+                    recordedRNum = tagInfo.rNumber + 2;
                     break;
             }
         }
