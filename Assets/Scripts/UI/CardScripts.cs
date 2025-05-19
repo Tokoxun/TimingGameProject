@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +11,7 @@ public class CardScripts : MonoBehaviour
     public GameObject chosenR;
     private EffectChoice effectChoice;
     private EffectTag activateCurrentEffect;
+    public Animator selectedAnimation;
     public bool Chosen = false;
 
     // void Update()
@@ -42,17 +41,19 @@ public class CardScripts : MonoBehaviour
 
     public void SelectedCard()
     {
-        if(!Chosen)
+        if (!Chosen)
         {
             Chosen = true;
             EffectChoice.chosenTag += ActivateTag;
             effectChoice.selectedChoice += 1;
+            selectedAnimation.SetBool("selected", true);
         }
-        else if(Chosen)
+        else if (Chosen)
         {
             Chosen = false;
             EffectChoice.chosenTag -= ActivateTag;
             effectChoice.selectedChoice -= 1;
+            selectedAnimation.SetBool("selected", false);
         }
     }
 
