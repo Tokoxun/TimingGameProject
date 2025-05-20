@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CardScriptsStarter : MonoBehaviour
 {
+    public TextMeshProUGUI tagNameDisplay;
     public Text DisplayRNum;
     public Image DisplayStartR;
     public TagInventory playerInventory;
@@ -14,8 +16,10 @@ public class CardScriptsStarter : MonoBehaviour
 
     void Start()
     {
-        DisplayRNum.text = starterTag.GetComponent<InfoTag>().rNumber.ToString();
-        DisplayStartR.sprite = starterTag.GetComponent<InfoTag>().baseImage.sprite;
+        InfoTag infoTag = starterTag.GetComponent<InfoTag>();
+        DisplayRNum.text = infoTag.rNumber.ToString();
+        DisplayStartR.sprite = infoTag.baseImage.sprite;
+        tagNameDisplay.text = infoTag.tagName;
     }
     public void SelectedCard()
     {

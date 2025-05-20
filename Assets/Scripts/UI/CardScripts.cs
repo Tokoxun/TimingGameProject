@@ -1,8 +1,10 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CardScripts : MonoBehaviour
 {
+    public TextMeshProUGUI tagNameDisplay;
     public Text displayRnumber;
     public Image displayR;
     // private Image ImageR;
@@ -35,6 +37,7 @@ public class CardScripts : MonoBehaviour
     {
         activateCurrentEffect = chosenR.GetComponent<EffectTag>();
         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+        tagNameDisplay.text = rInfo.tagName;
         displayR.sprite = rInfo.baseImage.sprite;
         displayRnumber.text = rInfo.rNumber.ToString();
     }
