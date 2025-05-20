@@ -1,11 +1,10 @@
-using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InfoTag : MonoBehaviour
 {
     public tagType currentType;
+    public string tagName;
     public int rNumber;
     public Image baseImage;
     public Sprite Level_I;
