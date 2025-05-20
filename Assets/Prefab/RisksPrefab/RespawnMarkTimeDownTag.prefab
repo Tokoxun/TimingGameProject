@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Mark Respawn Time Down
   rNumber: 1
   baseImage: {fileID: 2017114801899824929}
   Level_I: {fileID: 3416849809341863586, guid: 549bd9d1a4ce7cc41be00832892e916e, type: 3}

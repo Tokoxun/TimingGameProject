@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Short Hitter
   rNumber: 2
   baseImage: {fileID: 4935448911070935774}
   Level_I: {fileID: -7989297819956799334, guid: f1a83a0534885754e993719286618bdf, type: 3}

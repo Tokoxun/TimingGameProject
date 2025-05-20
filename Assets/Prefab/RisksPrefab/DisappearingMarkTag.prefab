@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Blinking Mark
   rNumber: 1
   baseImage: {fileID: 7335347505660836525}
   Level_I: {fileID: -8454405783906398238, guid: 006d1d61412926b498d0dcbc605ad980, type: 3}

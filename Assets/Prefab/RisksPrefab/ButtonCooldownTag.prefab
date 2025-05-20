@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Button Cooldown
   rNumber: 1
   baseImage: {fileID: 3800655532096931216}
   Level_I: {fileID: -1171248015360825024, guid: bda7d6e51fe2bc644b9d69072c660aab, type: 3}

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Input Changer
   rNumber: 4
   baseImage: {fileID: 2470301008695955991}
   Level_I: {fileID: 2159436849217188541, guid: ca835564ddbcc0644a44d8a799069dab, type: 3}

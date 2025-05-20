@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Turning Marker
   rNumber: 1
   baseImage: {fileID: 3579501707071436371}
   Level_I: {fileID: -7864770620120238174, guid: dee34999621688f4b991e26a1a97e2d3, type: 3}

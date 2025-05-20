@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Pause Disabler
   rNumber: 4
   baseImage: {fileID: 758551026012247664}
   Level_I: {fileID: 1701677751947133040, guid: 57c0e082dca086b4e90622ba65e2a247, type: 3}
