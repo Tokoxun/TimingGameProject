@@ -1,57 +1,85 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopUpDetails : MonoBehaviour
 {
-    public DetailsColorSwitch clrSwtch;
-    public RectTransform uiElement; // Reference to the UI element you want to move
-    public float moveSpeed = 80f; // Distance to move the UI upwards
-    public float moveDistanceUp;
-    public float moveDistanceDown;
+    public CardScripts cardScripts;
+    public GameObject detailsBox;
+    public Text detailsText;
+    private GameObject m_Blocker;
+    public Canvas rootCanvas;
 
-    private bool isMoving = false;
-    private bool Up = false;
-    private bool Down = true;
-
-    void Update()
+    public void ViewDetails()
     {
-        if (isMoving && Down)
+        if (detailsBox != null)
         {
-            // Move the UI upwards
-            Vector3 newPosition = uiElement.anchoredPosition;
-            newPosition.y += moveSpeed * Time.deltaTime; // Move by distance over time
-            uiElement.anchoredPosition = newPosition;
-
-            // Check if reached the desired position
-            if (newPosition.y >= moveDistanceUp)
-            {
-                isMoving = false;
-                Down = false;
-                Up = true;
-            }
-        }
-        if(isMoving && Up)
-        {
-            // Move the UI downwards
-            Vector3 newPosition = uiElement.anchoredPosition;
-            newPosition.y -= moveSpeed * Time.deltaTime; // Move by distance over time
-            uiElement.anchoredPosition = newPosition;
-
-            // Check if reached the desired position
-            if (newPosition.y <= moveDistanceDown)
-            {
-                isMoving = false;
-                Up = false;
-                Down = true;
-            }
+            detailsBox.SetActive(true);
+            m_Blocker = CreateBlocker(rootCanvas);
         }
     }
 
-    public void MoveUIUp()
+    public void HideDetails()
     {
-        clrSwtch.ChangeSourceImage();
-        // Triggered when the button is pressed
-        isMoving = true;
+        if (detailsBox != null)
+        {
+            detailsBox.SetActive(false);
+            DestroyBlocker(m_Blocker);
+        }
     }
+    protected virtual GameObject CreateBlocker(Canvas rootCanvas)
+    {
+        // Create blocker GameObject.
+        GameObject blocker = new GameObject("Blocker");
+
+        // Set the game object layer to match the Canvas' game object layer, as not doing this can lead to issues
+        // especially in XR applications like PolySpatial on VisionOS (UUM-62470).
+        blocker.layer = rootCanvas.gameObject.layer;
+
+        // Setup blocker RectTransform to cover entire root canvas area.
+        RectTransform blockerRect = blocker.AddComponent<RectTransform>();
+        blockerRect.SetParent(rootCanvas.transform, false);
+        blockerRect.anchorMin = Vector3.zero;
+        blockerRect.anchorMax = Vector3.one;
+        blockerRect.sizeDelta = Vector2.zero;
+
+        // Make blocker be in separate canvas in same layer as dropdown and in layer just below it.
+        Canvas blockerCanvas = blocker.AddComponent<Canvas>();
+        blockerCanvas.overrideSorting = true;
+        blockerCanvas.sortingLayerID = rootCanvas.sortingLayerID;
+        blockerCanvas.sortingOrder = 2;
+
+        if (rootCanvas != null)
+        {
+            blocker.AddComponent(rootCanvas.GetComponent<GraphicRaycaster>().GetType());
+        }
+
+        // Add image since it's needed to block, but make it clear.
+        Image blockerImage = blocker.AddComponent<Image>();
+        blockerImage.color = Color.clear;
+
+        // Add button since it's needed to block, and to close the dropdown when blocking area is clicked.
+        Button blockerButton = blocker.AddComponent<Button>();
+        blockerButton.onClick.AddListener(HideDetails);
+
+        //add canvas group to ensure clicking outside the dropdown will hide it (UUM-33691)
+        CanvasGroup blockerCanvasGroup = blocker.AddComponent<CanvasGroup>();
+        blockerCanvasGroup.ignoreParentGroups = true;
+
+        return blocker;
+    }
+
+    protected virtual void DestroyBlocker(GameObject blocker)
+    {
+        Destroy(blocker);
+    }
+
+    public void OnDisable()
+        {
+            if (m_Blocker != null)
+            {
+                DestroyBlocker(m_Blocker);
+                m_Blocker = null;
+            }
+        }
 }
