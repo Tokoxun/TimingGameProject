@@ -91,12 +91,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Short Marker
-  rNumber: 1
   baseImage: {fileID: 7791150786942260711}
-  Level_I: {fileID: 21300000, guid: 99bc451260633e34e8c7c13a130e52f4, type: 3}
-  Level_II: {fileID: 0}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Short Marker
+    rNumber: 1
+    tagSprite: {fileID: 21300000, guid: 99bc451260633e34e8c7c13a130e52f4, type: 3}
+    Description: Marker area is reduced
+  detailLevel: 0
 --- !u!114 &5586843934912679246
 MonoBehaviour:
   m_ObjectHideFlags: 0

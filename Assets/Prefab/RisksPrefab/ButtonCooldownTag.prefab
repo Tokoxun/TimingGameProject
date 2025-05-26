@@ -109,9 +109,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Button Cooldown
-  rNumber: 1
   baseImage: {fileID: 3800655532096931216}
-  Level_I: {fileID: -1171248015360825024, guid: bda7d6e51fe2bc644b9d69072c660aab, type: 3}
-  Level_II: {fileID: -4887010794786903878, guid: 4689627e493956349878849826b16319, type: 3}
-  Level_III: {fileID: -1359219264592893627, guid: 162a8afe02ef57f4fbeafa17e6cbdb86, type: 3}
-  Description: 
+  details:
+  - detailsName: Button Cooldown
+    rNumber: 1
+    tagSprite: {fileID: -1171248015360825024, guid: bda7d6e51fe2bc644b9d69072c660aab, type: 3}
+    Description: Hitting button cooldown have increased
+  - detailsName: Button Cooldown+
+    rNumber: 2
+    tagSprite: {fileID: -4887010794786903878, guid: 4689627e493956349878849826b16319, type: 3}
+    Description: Button cooldown is slightly increased
+  - detailsName: Button Cooldown++
+    rNumber: 3
+    tagSprite: {fileID: -1359219264592893627, guid: 162a8afe02ef57f4fbeafa17e6cbdb86, type: 3}
+    Description: Button cooldown is moderately increased
+  detailLevel: 0

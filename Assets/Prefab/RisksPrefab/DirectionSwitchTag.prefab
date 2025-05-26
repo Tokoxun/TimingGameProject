@@ -109,9 +109,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Turning Hitter
-  rNumber: 2
   baseImage: {fileID: 8637408034021149555}
-  Level_I: {fileID: 2313664775521137784, guid: 353ea2c43ee5f804aa03bf9529b42949, type: 3}
-  Level_II: {fileID: 0}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Turning Hitter
+    rNumber: 2
+    tagSprite: {fileID: 2313664775521137784, guid: 353ea2c43ee5f804aa03bf9529b42949, type: 3}
+    Description: Hitter will randomly change direction
+  detailLevel: 0

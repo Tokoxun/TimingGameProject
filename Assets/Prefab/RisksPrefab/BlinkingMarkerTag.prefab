@@ -91,12 +91,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Flashing Mark
-  rNumber: 1
   baseImage: {fileID: 9013827667393625972}
-  Level_I: {fileID: 2779613158989536700, guid: ba1343dc031eb56499e29e2131967577, type: 3}
-  Level_II: {fileID: 803828757857861286, guid: 1293c4ba857b0f746ac2670cc111f6f8, type: 3}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Flashing Mark
+    rNumber: 1
+    tagSprite: {fileID: 2779613158989536700, guid: ba1343dc031eb56499e29e2131967577, type: 3}
+    Description: Marker will have a flashing effect(cannot be hitted when mark disappears)
+  - detailsName: Flashing Mark+
+    rNumber: 2
+    tagSprite: {fileID: 803828757857861286, guid: 1293c4ba857b0f746ac2670cc111f6f8, type: 3}
+    Description: Marker will have a intensified flashing effect(cannot be hitted
+      when mark disappears)
+  detailLevel: 0
 --- !u!114 &874398872115613131
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -91,12 +91,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Timer
-  rNumber: 5
   baseImage: {fileID: 3185905742688606899}
-  Level_I: {fileID: -6045806337700834723, guid: c5171b1bc12c9594aad523d2cdf00fcf, type: 3}
-  Level_II: {fileID: 0}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Timer
+    rNumber: 5
+    tagSprite: {fileID: -6045806337700834723, guid: c5171b1bc12c9594aad523d2cdf00fcf, type: 3}
+    Description: Start the game with a timer
+  detailLevel: 0
 --- !u!114 &8509053573378700823
 MonoBehaviour:
   m_ObjectHideFlags: 0

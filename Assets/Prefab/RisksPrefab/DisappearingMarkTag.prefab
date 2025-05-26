@@ -91,12 +91,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Blinking Mark
-  rNumber: 1
   baseImage: {fileID: 7335347505660836525}
-  Level_I: {fileID: -8454405783906398238, guid: 006d1d61412926b498d0dcbc605ad980, type: 3}
-  Level_II: {fileID: 5663135162032127775, guid: 8e3daadf26e2c3c4eb6337df93aa3f1e, type: 3}
-  Level_III: {fileID: 9091648982200845045, guid: 4573c64b03010814082e3d62b0608a58, type: 3}
-  Description: 
+  details:
+  - detailsName: Blinking Mark
+    rNumber: 1
+    tagSprite: {fileID: -8454405783906398238, guid: 006d1d61412926b498d0dcbc605ad980, type: 3}
+    Description: Mark will disappear somtime(can be hitted when mark disappears)
+  detailLevel: 0
 --- !u!114 &5443454428607897720
 MonoBehaviour:
   m_ObjectHideFlags: 0

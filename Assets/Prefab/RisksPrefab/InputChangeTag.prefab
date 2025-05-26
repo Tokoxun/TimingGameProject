@@ -91,12 +91,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   tagName: Input Changer
-  rNumber: 4
   baseImage: {fileID: 2470301008695955991}
-  Level_I: {fileID: 2159436849217188541, guid: ca835564ddbcc0644a44d8a799069dab, type: 3}
-  Level_II: {fileID: 0}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Input Changer
+    rNumber: 4
+    tagSprite: {fileID: 2159436849217188541, guid: ca835564ddbcc0644a44d8a799069dab, type: 3}
+    Description: Hitting button input will change randomly
+  detailLevel: 0
 --- !u!114 &798333465949940422
 MonoBehaviour:
   m_ObjectHideFlags: 0
