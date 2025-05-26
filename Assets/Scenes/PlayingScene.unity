@@ -5220,6 +5220,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836440806}
   m_CullTransparentMesh: 1
+--- !u!114 &843289144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9125323857984801725, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+  m_PrefabInstance: {fileID: 1009563817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b18a1e01abe3949b2af2737bb405b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &853390947
 GameObject:
   m_ObjectHideFlags: 0
@@ -7071,6 +7082,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboCounter: {fileID: 198509433}
   timer: {fileID: 1278519507}
+--- !u!114 &1139737184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9125323857984801725, guid: e7a601af778b79e47a06090c99b8ae4d, type: 3}
+  m_PrefabInstance: {fileID: 489110828}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b18a1e01abe3949b2af2737bb405b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141537991
 GameObject:
   m_ObjectHideFlags: 0
@@ -10357,6 +10379,7 @@ MonoBehaviour:
   tagNameDisplay: {fileID: 932865204}
   DisplayRNum: {fileID: 1816474008}
   DisplayStartR: {fileID: 1728391540}
+  displayDetails: {fileID: 843289144}
   playerInventory: {fileID: 1323223533}
   starterTag: {fileID: 8943624635737165218, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
   tagEffect: {fileID: 8509053573378700823, guid: 0c195b3d4a9f37d469bc5aaf7ec3f9fd, type: 3}
@@ -12828,6 +12851,7 @@ MonoBehaviour:
   tagNameDisplay: {fileID: 229935841}
   DisplayRNum: {fileID: 1505386020}
   DisplayStartR: {fileID: 2089802363}
+  displayDetails: {fileID: 1139737184}
   playerInventory: {fileID: 1323223533}
   starterTag: {fileID: 6076506906674750341, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
   tagEffect: {fileID: 7927692570975078643, guid: a8c5b821816e18a4ab19cd438db2e7eb, type: 3}
