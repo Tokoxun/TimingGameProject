@@ -14,7 +14,7 @@ public class DeclineEffect : MonoBehaviour
             if(triggerEffects.selectedFilter[p].GetComponent<InfoTag>() != null)
             {
                 tagNumber = triggerEffects.selectedFilter[p].GetComponent<InfoTag>();
-                levelPenalty.playerLevel += tagNumber.rNumber;
+                levelPenalty.playerLevel += tagNumber.details[tagNumber.detailLevel].rNumber;
             }
         }
         RiskChoice.SetActive(false);

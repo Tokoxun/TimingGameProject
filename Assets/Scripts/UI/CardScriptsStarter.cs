@@ -17,7 +17,7 @@ public class CardScriptsStarter : MonoBehaviour
     void Start()
     {
         InfoTag infoTag = starterTag.GetComponent<InfoTag>();
-        DisplayRNum.text = infoTag.rNumber.ToString();
+        DisplayRNum.text = infoTag.details[infoTag.detailLevel].rNumber.ToString();
         DisplayStartR.sprite = infoTag.baseImage.sprite;
         tagNameDisplay.text = infoTag.tagName;
     }

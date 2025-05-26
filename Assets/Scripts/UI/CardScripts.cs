@@ -39,7 +39,7 @@ public class CardScripts : MonoBehaviour
         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
         tagNameDisplay.text = rInfo.tagName;
         displayR.sprite = rInfo.baseImage.sprite;
-        displayRnumber.text = rInfo.rNumber.ToString();
+        displayRnumber.text = rInfo.details[rInfo.detailLevel].rNumber.ToString();
     }
 
     public void SelectedCard()
