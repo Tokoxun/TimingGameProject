@@ -5,12 +5,9 @@ public class InfoTag : MonoBehaviour
 {
     public tagType currentType;
     public string tagName;
-    public int rNumber;
     public Image baseImage;
-    public Sprite Level_I;
-    public Sprite Level_II;
-    public Sprite Level_III;
-    public string Description;
+    public DetailsTag[] details;
+    public int detailLevel;
 }
 
 public enum tagType {Permanent, Temporary};
