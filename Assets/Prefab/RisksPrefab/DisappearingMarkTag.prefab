@@ -96,7 +96,7 @@ MonoBehaviour:
   - detailsName: Blinking Mark
     rNumber: 1
     tagSprite: {fileID: -8454405783906398238, guid: 006d1d61412926b498d0dcbc605ad980, type: 3}
-    Description: Mark will disappear somtime(can be hitted when mark disappears)
+    Description: Mark will disappear sometime(can be hitted when mark disappears)
   detailLevel: 0
 --- !u!114 &5443454428607897720
 MonoBehaviour:
