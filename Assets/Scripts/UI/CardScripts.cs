@@ -7,6 +7,7 @@ public class CardScripts : MonoBehaviour
     public TextMeshProUGUI tagNameDisplay;
     public Text displayRnumber;
     public Image displayR;
+    public DetailsDisplayer displayDetails;
     // private Image ImageR;
     public RisksCompiler rlist;
     public TagInventory playerInventory;
@@ -40,6 +41,7 @@ public class CardScripts : MonoBehaviour
         tagNameDisplay.text = rInfo.tagName;
         displayR.sprite = rInfo.baseImage.sprite;
         displayRnumber.text = rInfo.details[rInfo.detailLevel].rNumber.ToString();
+        displayDetails.UpdateDetail(rInfo.details[rInfo.detailLevel].Description, rInfo.details[rInfo.detailLevel].detailsName);
     }
 
     public void SelectedCard()

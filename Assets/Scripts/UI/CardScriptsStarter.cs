@@ -7,6 +7,7 @@ public class CardScriptsStarter : MonoBehaviour
     public TextMeshProUGUI tagNameDisplay;
     public Text DisplayRNum;
     public Image DisplayStartR;
+    public DetailsDisplayer displayDetails;
     public TagInventory playerInventory;
     public GameObject starterTag;
     public EffectTag tagEffect;
@@ -20,6 +21,7 @@ public class CardScriptsStarter : MonoBehaviour
         DisplayRNum.text = infoTag.details[infoTag.detailLevel].rNumber.ToString();
         DisplayStartR.sprite = infoTag.baseImage.sprite;
         tagNameDisplay.text = infoTag.tagName;
+        displayDetails.UpdateDetail(infoTag.details[infoTag.detailLevel].Description, infoTag.details[infoTag.detailLevel].detailsName);
     }
     public void SelectedCard()
     {
