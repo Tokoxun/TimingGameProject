@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TriggerChoice : MonoBehaviour
 {
+    public EffectChoice effectChoice;
     public TriggerEffects loadEffect;
     public GameObject RisksChoice;
     public RisksCompiler checkListLength;
@@ -27,6 +28,8 @@ public class TriggerChoice : MonoBehaviour
         if(PlayerLevel.choiceTrigger && targetListLength)
         {
             PlayerLevel.choiceTrigger = false;
+            effectChoice.selectedChoice = 0;
+            effectChoice.chosenTag = null;
             Time.timeScale = 0;
             RisksChoice.SetActive(true);
             loadEffect.preLoadChoice(checkListLength);
