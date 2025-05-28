@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
+  tagName: Random Marker Hit Point
   rNumber: 4
   baseImage: {fileID: 5252772021656087542}
   Level_I: {fileID: 5619747087526438649, guid: d81035bd80cd2f04eafc35d8e79cb946, type: 3}

@@ -90,12 +90,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
-  rNumber: 1
+  tagName: Mark Respawn Time Down
   baseImage: {fileID: 2017114801899824929}
-  Level_I: {fileID: 3416849809341863586, guid: 549bd9d1a4ce7cc41be00832892e916e, type: 3}
-  Level_II: {fileID: -4713898344440672190, guid: 947fdfa47b5d30c47b55352d68b58e6d, type: 3}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Mark Respawn Down
+    rNumber: 1
+    tagSprite: {fileID: 3416849809341863586, guid: 549bd9d1a4ce7cc41be00832892e916e, type: 3}
+    Description: Marker respawn time is increased
+  - detailsName: Mark Respawn Down+
+    rNumber: 2
+    tagSprite: {fileID: -4713898344440672190, guid: 947fdfa47b5d30c47b55352d68b58e6d, type: 3}
+    Description: Marker respawn time is increase slightly
+  detailLevel: 0
 --- !u!114 &4790243115041679674
 MonoBehaviour:
   m_ObjectHideFlags: 0

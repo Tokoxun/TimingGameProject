@@ -90,12 +90,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
-  rNumber: 5
+  tagName: Health Bar
   baseImage: {fileID: 4183519182909956601}
-  Level_I: {fileID: -2070706615613017665, guid: 3b35fd3b6bfe324458b61db80eb502a8, type: 3}
-  Level_II: {fileID: 0}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Health Bar
+    rNumber: 5
+    tagSprite: {fileID: -2070706615613017665, guid: 3b35fd3b6bfe324458b61db80eb502a8, type: 3}
+    Description: Start the game with a health bar
+  detailLevel: 0
 --- !u!114 &7927692570975078643
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,18 +26,18 @@ public class TagSlotScript : MonoBehaviour
             {
                 case 0:
                     currentTagImage.sprite = tagInfo.baseImage.sprite;
-                    tagNumber.text = tagInfo.rNumber.ToString();
-                    recordedRNum = tagInfo.rNumber;
+                    tagNumber.text = tagInfo.details[0].rNumber.ToString();
+                    recordedRNum = tagInfo.details[0].rNumber;
                     break;
                 case 1:
-                    currentTagImage.sprite = tagInfo.Level_II;
-                    tagNumber.text = (tagInfo.rNumber + 1).ToString();
-                    recordedRNum = tagInfo.rNumber + 1;
+                    currentTagImage.sprite = tagInfo.details[1].tagSprite;
+                    tagNumber.text = tagInfo.details[1].rNumber.ToString();
+                    recordedRNum = tagInfo.details[1].rNumber;
                     break;
                 case 2:
-                    currentTagImage.sprite = tagInfo.Level_III;
-                    tagNumber.text = (tagInfo.rNumber + 2).ToString();
-                    recordedRNum = tagInfo.rNumber + 2;
+                    currentTagImage.sprite = tagInfo.details[2].tagSprite;
+                    tagNumber.text = tagInfo.details[2].rNumber.ToString();
+                    recordedRNum = tagInfo.details[2].rNumber;
                     break;
             }
         }

@@ -90,12 +90,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentType: 0
-  rNumber: 4
+  tagName: Pause Disabler
   baseImage: {fileID: 758551026012247664}
-  Level_I: {fileID: 1701677751947133040, guid: 57c0e082dca086b4e90622ba65e2a247, type: 3}
-  Level_II: {fileID: 0}
-  Level_III: {fileID: 0}
-  Description: 
+  details:
+  - detailsName: Pause Disabler
+    rNumber: 4
+    tagSprite: {fileID: 1701677751947133040, guid: 57c0e082dca086b4e90622ba65e2a247, type: 3}
+    Description: Cannot pause while this tag is active
+  detailLevel: 0
 --- !u!114 &7227223584384995105
 MonoBehaviour:
   m_ObjectHideFlags: 0

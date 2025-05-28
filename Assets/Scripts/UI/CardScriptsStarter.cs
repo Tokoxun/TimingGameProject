@@ -1,31 +1,49 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CardScriptsStarter : CardScripts
+public class CardScriptsStarter : MonoBehaviour
 {
-    public EffectChoiceStarter choosing;
+    public TextMeshProUGUI tagNameDisplay;
+    public Text DisplayRNum;
+    public Image DisplayStartR;
+    public DetailsDisplayer displayDetails;
+    public TagInventory playerInventory;
+    public GameObject starterTag;
     public EffectTag tagEffect;
+    public bool Chosen;
+    public Animator selectedAnimation; 
+    public EffectChoiceStarter choosing;
 
     void Start()
     {
-        RefreshCard();
+        InfoTag infoTag = starterTag.GetComponent<InfoTag>();
+        DisplayRNum.text = infoTag.details[infoTag.detailLevel].rNumber.ToString();
+        DisplayStartR.sprite = infoTag.baseImage.sprite;
+        tagNameDisplay.text = infoTag.tagName;
+        displayDetails.UpdateDetail(infoTag.details[infoTag.detailLevel].Description, infoTag.details[infoTag.detailLevel].detailsName);
     }
-    public new void SelectedCard()
+    public void SelectedCard()
     {
-        if(!Chosen)
+        if (!Chosen)
         {
-            Chosen =true;
-            choosing.startEffect = ActivateTag;
+            Chosen = true;
+            choosing.startEffect = ActivateStarterTag;
+            choosing.cardStarter.Add(this.gameObject.GetComponent<CardScriptsStarter>());
+            selectedAnimation.SetBool("selected", true);
         }
-        else if(Chosen)
+        else if (Chosen)
         {
             Chosen = false;
             choosing.startEffect = null;
+            choosing.cardStarter.Remove(this.gameObject.GetComponent<CardScriptsStarter>());
+            selectedAnimation.SetBool("selected", false);
         }
     }
 
-    public new void ActivateTag()
+    public void ActivateStarterTag()
     {
-        playerInventory.selectedTags.Add(chosenR);
+        playerInventory.selectedTags.Add(starterTag);
         tagEffect.ActivateEffect();
     }
 }

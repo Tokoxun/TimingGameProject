@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CardScripts : MonoBehaviour
 {
+    public TextMeshProUGUI tagNameDisplay;
     public Text displayRnumber;
     public Image displayR;
+    public DetailsDisplayer displayDetails;
     // private Image ImageR;
     public RisksCompiler rlist;
     public TagInventory playerInventory;
     public GameObject chosenR;
     private EffectChoice effectChoice;
     private EffectTag activateCurrentEffect;
+    public Animator selectedAnimation;
     public bool Chosen = false;
 
     // void Update()
@@ -36,23 +38,27 @@ public class CardScripts : MonoBehaviour
     {
         activateCurrentEffect = chosenR.GetComponent<EffectTag>();
         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
+        tagNameDisplay.text = rInfo.tagName;
         displayR.sprite = rInfo.baseImage.sprite;
-        displayRnumber.text = rInfo.rNumber.ToString();
+        displayRnumber.text = rInfo.details[rInfo.detailLevel].rNumber.ToString();
+        displayDetails.UpdateDetail(rInfo.details[rInfo.detailLevel].Description, rInfo.details[rInfo.detailLevel].detailsName);
     }
 
     public void SelectedCard()
     {
-        if(!Chosen)
+        if (!Chosen)
         {
             Chosen = true;
             EffectChoice.chosenTag += ActivateTag;
             effectChoice.selectedChoice += 1;
+            selectedAnimation.SetBool("selected", true);
         }
-        else if(Chosen)
+        else if (Chosen)
         {
             Chosen = false;
             EffectChoice.chosenTag -= ActivateTag;
             effectChoice.selectedChoice -= 1;
+            selectedAnimation.SetBool("selected", false);
         }
     }
 
