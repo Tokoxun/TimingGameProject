@@ -1,10 +1,10 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 public class InputChange : MonoBehaviour
 {
     private string[] totalInput;
     private string chosenInput;
-    public Text currentButtonText;
+    public TextMeshProUGUI currentButtonText;
     private float changeInput;
     private float changeTimer = 20f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
