@@ -1,10 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerLevel : MonoBehaviour
 {
     private Slider levelSlider;
-    public Text levelNum;
+    public TextMeshProUGUI levelNum;
     public int playerLevel;
     public float increaseSpeed;
     public static bool choiceTrigger = false;

@@ -36,6 +36,8 @@ public class CardScripts : MonoBehaviour
     }
     public void RefreshCard()
     {
+        Chosen = false;
+        selectedAnimation.SetBool("selected", false);
         activateCurrentEffect = chosenR.GetComponent<EffectTag>();
         InfoTag rInfo = chosenR.GetComponent<InfoTag>();
         tagNameDisplay.text = rInfo.tagName;
@@ -49,14 +51,14 @@ public class CardScripts : MonoBehaviour
         if (!Chosen)
         {
             Chosen = true;
-            EffectChoice.chosenTag += ActivateTag;
+            effectChoice.chosenTag += ActivateTag;
             effectChoice.selectedChoice += 1;
             selectedAnimation.SetBool("selected", true);
         }
         else if (Chosen)
         {
             Chosen = false;
-            EffectChoice.chosenTag -= ActivateTag;
+            effectChoice.chosenTag -= ActivateTag;
             effectChoice.selectedChoice -= 1;
             selectedAnimation.SetBool("selected", false);
         }

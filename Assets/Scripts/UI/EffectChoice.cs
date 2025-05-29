@@ -4,9 +4,8 @@ using UnityEngine.UI;
 public class EffectChoice : MonoBehaviour
 {
     public delegate void chosenEffect();
-    public static chosenEffect chosenTag;
+    public chosenEffect chosenTag;
     public Text currentlySelectedTag;
-    private int maxChoice = 4;
     public int selectedChoice;
     public GameObject conButton;
     public GameObject RiskChoice;
