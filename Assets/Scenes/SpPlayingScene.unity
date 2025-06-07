@@ -388,6 +388,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 477477985}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1257838131}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: pointsScript
       value: 
       objectReference: {fileID: 2045472672}
@@ -457,6 +461,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 874906027}
     m_Modifications:
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1257838131}
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: pointsScript
       value: 
@@ -906,6 +914,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1164624580}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1257838131}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: pointsScript
       value: 
       objectReference: {fileID: 2045472672}
@@ -1042,6 +1054,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1913023407}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1257838131}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: pointsScript
       value: 
       objectReference: {fileID: 2045472672}
@@ -1114,6 +1130,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0193d42c6d2290b42b683b6a1dd22b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1257838130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1257838132}
+  - component: {fileID: 1257838131}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1257838131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257838130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdc6ad2bb18a6144b3bebb7f18f95cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: MarkHitted
+    audioClip: {fileID: 8300000, guid: 47fbbfcf1a7e8274ebc5bf680018e433, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &1257838132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257838130}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.19262841, y: -1.1764127, z: -0.0018293292}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1370022183 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
@@ -1945,6 +2011,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1371747278}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1257838131}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: pointsScript
       value: 
       objectReference: {fileID: 2045472672}
@@ -2026,6 +2096,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1731936087}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1257838131}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: pointsScript
       value: 
       objectReference: {fileID: 2045472672}
@@ -2092,3 +2166,4 @@ SceneRoots:
   - {fileID: 73470103}
   - {fileID: 1658881955}
   - {fileID: 2045472671}
+  - {fileID: 1257838132}
