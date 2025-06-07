@@ -7,6 +7,7 @@ public class SpHitScript : MonoBehaviour
     private float Resettimer;
     public bool onCooldown;
     public Collider2D hitPoint;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -34,6 +35,7 @@ public class SpHitScript : MonoBehaviour
                 hitPoint.enabled = false;
                 Resettimer = 0;
                 onCooldown = true;
+                gameManager.GameOver();
             }
         }
     }
