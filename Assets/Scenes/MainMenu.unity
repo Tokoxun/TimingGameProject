@@ -3558,13 +3558,13 @@ MonoBehaviour:
       - m_Target: {fileID: 2088346258}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
         m_MethodName: LoadGame
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: PlayingScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &994783006
@@ -6155,7 +6155,6 @@ MonoBehaviour:
   normalDisturbanceScore: {fileID: 1931457788}
   normalClearScore: {fileID: 729889166}
   tradiHighScore: {fileID: 0}
-  sceneName: Scenes/PlayingScene
   gameMenu: {fileID: 299137930}
   optionMenu: {fileID: 1734532106}
 --- !u!4 &2088346259
@@ -6273,7 +6272,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2092207709}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2088346258}
+        m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
+        m_MethodName: LoadGame
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SpPlayingScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2092207709
 MonoBehaviour:
   m_ObjectHideFlags: 0
