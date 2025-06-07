@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class SpLevelManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float levelDiff;
+    public PointSystem pointLevel;
 
     // Update is called once per frame
     void Update()
     {
-        
+        levelDiff = pointLevel.points / 100;
     }
 }
