@@ -11,8 +11,8 @@ public class PointSystem : MonoBehaviour
         PointsDisplay.text = points.ToString();
     }
 
-    public void AddPoint()
+    public void AddPoint(int amount)
     {
-        points += 1;
+        points += amount;
     }
 }
