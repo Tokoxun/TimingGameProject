@@ -4,6 +4,8 @@ public class SpSpinScript : MonoBehaviour
 {
     [SerializeField] private float dirChangeTime = 2f;
     public float changeTime;
+    public SpLevelManager spLevelManager;
+    private float totalSpinSpeed;
     public float spinSpeed = -100f;
     private float[] changeOrNot;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +17,8 @@ public class SpSpinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.forward * (spinSpeed * Time.deltaTime));
+        totalSpinSpeed = spinSpeed + (spinSpeed * spLevelManager.levelDiff);
+        transform.Rotate(Vector3.forward * (totalSpinSpeed * Time.deltaTime));
         if(changeOrNot != null)
         {
             changeOrNot[0] = spinSpeed;
