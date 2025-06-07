@@ -11,7 +11,7 @@ public class SpHitScript : MonoBehaviour
     void Start()
     {
         hitterSprite = gameObject.GetComponent<SpriteRenderer>();
-        hitPoint = this.gameObject.GetComponent<BoxCollider2D>();
+        hitPoint = this.gameObject.GetComponent<PolygonCollider2D>();
     }
 
     public void OnTriggerEnter2D(Collider2D col)
