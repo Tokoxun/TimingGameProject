@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         resultBoard.SetActive(false);
+        highScoreText.text = PlayerPrefs.GetInt("SpPlayerHighScore", 0).ToString();
+        highScoreText.enabled = false;
         playerScoreText.enabled = false;
     }
     public void GameOver()
@@ -32,16 +34,18 @@ public class GameManager : MonoBehaviour
         {
             if (pointSystem.points > PlayerPrefs.GetInt("SpPlayerHighScore", 0))
             {
-                PlayerPrefs.SetInt("SpPlayerHighScore", pointSystem.points);
                 playerScoreText.enabled = true;
                 playerScoreText.text = pointSystem.points.ToString();
                 yield return new WaitForSeconds(2f);
+                highScoreText.enabled = true;
                 highScoreText.text = PlayerPrefs.GetInt("SpPlayerHighScore", 0).ToString();
+                PlayerPrefs.SetInt("SpPlayerHighScore", pointSystem.points);
                 retryButton.SetActive(true);
                 exitButton.SetActive(true);
             }
             else if (pointSystem.points <= PlayerPrefs.GetInt("SpPlayerHighScore", 0))
             {
+                highScoreText.enabled = true;
                 playerScoreText.enabled = true;
                 playerScoreText.text = pointSystem.points.ToString();
                 retryButton.SetActive(true);
