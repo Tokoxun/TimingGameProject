@@ -4,7 +4,7 @@ public class SpMarkerScript : MonoBehaviour
 {
     private SpriteRenderer spMarker;
     public bool onHitted;
-    public PointsScript pointsScript;
+    public PointSystem pointsScript;
     public SpMarkerRespawn spMarkerRespawn;
     public Collider2D markCol;
     // public AudioManager audioManager;
@@ -25,7 +25,7 @@ public class SpMarkerScript : MonoBehaviour
             onHitted = true;
             spMarker.enabled = false;
             markCol.enabled = false;
-            pointsScript.AddPoints();
+            pointsScript.AddPoint();
         }
     }
     public void Respawn()
