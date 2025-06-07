@@ -17,11 +17,15 @@ public class MainMenuUI : MonoBehaviour
     }
     void Update()
     {
-        if(normalHighScore != null && normalDisturbanceScore != null)
+        if (tradiHighScore != null)
         {
-            normalHighScore.text = PlayerPrefs.GetInt("playerHighScore").ToString();
-            normalDisturbanceScore.text = PlayerPrefs.GetInt("playerHighestRisk").ToString();
+            tradiHighScore.text = PlayerPrefs.GetInt("SpPlayerHighScore", 0).ToString();
         }
+        if (normalHighScore != null && normalDisturbanceScore != null)
+            {
+                normalHighScore.text = PlayerPrefs.GetInt("playerHighScore").ToString();
+                normalDisturbanceScore.text = PlayerPrefs.GetInt("playerHighestRisk").ToString();
+            }
         if(PlayerPrefs.GetInt("playerHighScore", 0) <= 0 && PlayerPrefs.GetInt("playerHighestRisk", 0) <= 0)
         {
             normalClearScore.SetActive(false);
