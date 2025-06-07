@@ -7,10 +7,12 @@ public class SpMarkerSpinScript : MonoBehaviour
     private float[] changeOrNot;
     public float spinSpeed = -35f;
     public float currentRotation;
+    public SpMarkerRespawn spMarkerRespawn;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         changeOrNot = new float[2];
+        spMarkerRespawn.triggerRespawn += randomCurrentMarkPosition;
     }
 
     // Update is called once per frame
