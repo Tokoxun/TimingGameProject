@@ -7,7 +7,7 @@ public class SpMarkerScript : MonoBehaviour
     public PointSystem pointsScript;
     public SpMarkerRespawn spMarkerRespawn;
     public Collider2D markCol;
-    // public AudioManager audioManager;
+    public AudioManager audioManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,7 +21,7 @@ public class SpMarkerScript : MonoBehaviour
     {
         if(col.CompareTag("point"))
         {
-            // audioManager.Play("MarkHitted");
+            audioManager.Play("MarkHitted");
             onHitted = true;
             spMarker.enabled = false;
             markCol.enabled = false;
