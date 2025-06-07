@@ -388,6 +388,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 477477985}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: pointsScript
+      value: 
+      objectReference: {fileID: 2045472672}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: spMarkerRespawn
       value: 
       objectReference: {fileID: 477477987}
@@ -453,6 +457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 874906027}
     m_Modifications:
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: pointsScript
+      value: 
+      objectReference: {fileID: 2045472672}
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: spMarkerRespawn
       value: 
@@ -822,7 +830,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirChangeTime: 2
   changeTime: 0
-  spinSpeed: -100
+  spinSpeed: -90
 --- !u!1 &874906026
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +905,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1164624580}
     m_Modifications:
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: pointsScript
+      value: 
+      objectReference: {fileID: 2045472672}
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: spMarkerRespawn
       value: 
@@ -1029,6 +1041,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1913023407}
     m_Modifications:
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: pointsScript
+      value: 
+      objectReference: {fileID: 2045472672}
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: spMarkerRespawn
       value: 
@@ -1357,7 +1373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2108791555
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2942901500692167761, guid: d1128cda409d58c498a1ec1976e4733e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1539,7 +1555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1964171778}
   - component: {fileID: 1964171779}
-  - component: {fileID: 1964171780}
+  - component: {fileID: 1964171782}
   - component: {fileID: 1964171781}
   m_Layer: 0
   m_Name: HitterCollection1_1
@@ -1618,8 +1634,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1964171780
-BoxCollider2D:
+--- !u!114 &1964171781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964171777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ae6a0020940284498b10c0d45b9d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitterSprite: {fileID: 0}
+  onCooldown: 0
+  hitPoint: {fileID: 0}
+--- !u!60 &1964171782
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1662,23 +1693,25 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6, y: 0.6}
-  m_EdgeRadius: 0
---- !u!114 &1964171781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1964171777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ae6a0020940284498b10c0d45b9d81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitterSprite: {fileID: 0}
-  onCooldown: 0
-  hitPoint: {fileID: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.171094, y: 0.22492391}
+      - {x: 0.10176351, y: 0.26117483}
+      - {x: -0.005637298, y: 0.2886712}
+      - {x: -0.12941003, y: 0.2558803}
+      - {x: -0.23117356, y: 0.17940873}
+      - {x: -0.29552832, y: 0.041757416}
+      - {x: -0.25516507, y: -0.16101001}
+      - {x: -0.2170553, y: -0.1964692}
+      - {x: -0.18470185, y: -0.23470306}
+      - {x: -0.078495316, y: -0.28777727}
+      - {x: 0.08587922, y: -0.2823522}
+      - {x: 0.18058611, y: -0.22882132}
+      - {x: 0.2617635, y: -0.12882276}
+      - {x: 0.27529305, y: -0.10529435}
+      - {x: 0.28503898, y: 0.022416463}
+      - {x: 0.25764525, y: 0.13235098}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1970638817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1790,6 +1823,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2045472671}
+  - component: {fileID: 2045472672}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1806,12 +1840,26 @@ Transform:
   m_GameObject: {fileID: 2045472670}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1682444, y: 1.5812443, z: -0.023277748}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045472672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045472670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2125cfd0077d1534cb9a17b2889835c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
+  PointsDisplay: {fileID: 203811848}
 --- !u!1 &2118493147
 GameObject:
   m_ObjectHideFlags: 0
@@ -1897,6 +1945,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1371747278}
     m_Modifications:
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: pointsScript
+      value: 
+      objectReference: {fileID: 2045472672}
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: spMarkerRespawn
       value: 
       objectReference: {fileID: 1371747280}
@@ -1973,6 +2025,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1731936087}
     m_Modifications:
+    - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
+      propertyPath: pointsScript
+      value: 
+      objectReference: {fileID: 2045472672}
     - target: {fileID: 754839877259015251, guid: b01733063b6d3c845bd219b7c5d72888, type: 3}
       propertyPath: spMarkerRespawn
       value: 
