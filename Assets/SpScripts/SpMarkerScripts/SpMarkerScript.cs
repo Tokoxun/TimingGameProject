@@ -25,7 +25,7 @@ public class SpMarkerScript : MonoBehaviour
             onHitted = true;
             spMarker.enabled = false;
             markCol.enabled = false;
-            pointsScript.AddPoint();
+            pointsScript.AddPoint(1);
         }
     }
     public void Respawn()
