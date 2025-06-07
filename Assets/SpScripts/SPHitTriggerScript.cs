@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class SPHitTriggerScript : MonoBehaviour
 {
+    public GameManager gameManager;
     public InputAction inputAction;
     public GameObject hitterObject;
     [SerializeField] private float cooldownTimer = 0.5f;
@@ -10,6 +11,7 @@ public class SPHitTriggerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameManager.gameOverEvent += stopButton;
         inputAction.Enable();
     }
 
@@ -35,5 +37,10 @@ public class SPHitTriggerScript : MonoBehaviour
                 spHitScript.hitterSprite.enabled = false;
             }
         }
+    }
+
+    public void stopButton()
+    {
+        inputAction.Disable();
     }
 }
