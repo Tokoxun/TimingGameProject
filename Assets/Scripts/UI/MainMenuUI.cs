@@ -8,7 +8,6 @@ public class MainMenuUI : MonoBehaviour
     public Text normalDisturbanceScore;
     public GameObject normalClearScore;
     public Text tradiHighScore;
-    public string sceneName;
     public GameObject gameMenu;
     public GameObject optionMenu;
     void Start()
@@ -49,7 +48,7 @@ public class MainMenuUI : MonoBehaviour
             PlayerPrefs.SetInt(highScoreName, 0);
         }
     }
-    public void LoadGame()
+    public void LoadGame(string sceneName)
     {
         if(sceneName != null)
         {
