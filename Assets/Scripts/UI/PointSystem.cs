@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class PointSystem : MonoBehaviour
 {
     public int points = 0;
-    public Text PointsDisplay;
+    public TextMeshProUGUI PointsDisplay;
 
     // Update is called once per frame
     void Update()
