@@ -21,4 +21,10 @@ public class SpMarkerRespawn : MonoBehaviour
             }
         }
     }
+
+    public void randomizeCooldown()
+    {
+        int cooldownRandom = Random.Range(0, 3);
+        markCooldownTimer = cooldownRandom;
+    }
 }
