@@ -28,6 +28,7 @@ public class OptionsScript : MonoBehaviour
     {
         confirmWarning.SetActive(false);
         soundEffectSlider.value = AudioManager.SEsetting;
+        displayOptions.value = currentDisplay;
     }
     public void displayOption()
     {

@@ -37,7 +37,7 @@ public class MarkerScript : MonoBehaviour
             onHitted = true;
             fstHitMark.enabled = false;
             markCol.enabled = false;
-            addPoints.AddPoint();
+            addPoints.AddPoint(1);
         }
     }
 
