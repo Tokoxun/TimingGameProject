@@ -21,6 +21,7 @@ public class SpMarkerScript : MonoBehaviour
     {
         if(col.CompareTag("point"))
         {
+            spMarkerRespawn.randomizeCooldown();
             audioManager.Play("MarkHitted");
             onHitted = true;
             spMarker.enabled = false;
