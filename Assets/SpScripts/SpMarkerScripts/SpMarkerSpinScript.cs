@@ -4,6 +4,8 @@ public class SpMarkerSpinScript : MonoBehaviour
 {
     [SerializeField] private float dirChangeTime = 2f;
     public float changeTime;
+    private float switchPlacementTimer = 8f;
+    private float switchPlacement;
     private float[] changeOrNot;
     public float spinSpeed = -35f;
     public SpLevelManager spLevelManager;
@@ -31,6 +33,15 @@ public class SpMarkerSpinScript : MonoBehaviour
             {
                 spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
                 changeTime = 0;
+            }
+        }
+        if (spLevelManager.startSwitch)
+        {
+            switchPlacement += Time.deltaTime;
+            if (switchPlacement >= switchPlacementTimer)
+            {
+                randomCurrentMarkPosition();
+                switchPlacement = 0;
             }
         }
     }
