@@ -14,13 +14,16 @@ public class OptionsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(changesApplied.GetBool("applied") == true)
+        if (changesApplied.enabled)
         {
-            appearTimer += Time.deltaTime;
-            if(appearTimer >= appearTime)
+            if (changesApplied.GetBool("applied") == true)
             {
-                changesApplied.SetBool("applied", false);
-                appearTimer = 0;
+                appearTimer += Time.deltaTime;
+                if (appearTimer >= appearTime)
+                {
+                    changesApplied.SetBool("applied", false);
+                    appearTimer = 0;
+                }
             }
         }
     }

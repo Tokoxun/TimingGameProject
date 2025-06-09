@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
 	public InputAction pauseButton;
-    public GameObject[] pauseObjects;
+    public GameObject pauseObjects;
 	public GameObject startingTag;
 	public UnityEvent gameOverEvent;
 
@@ -19,18 +19,18 @@ public class UIManager : MonoBehaviour
 	}
 
 	// Update is called once per frame
-	void Update () 
-    {
+	void Update()
+	{
 		//uses the p button to pause and unpause the game
-		if(pauseButton.triggered)
+		if (pauseButton.triggered)
 		{
-			if(Time.timeScale == 1 && DifficultyManager.disablePause == false)
+			if (Time.timeScale == 1 && DifficultyManager.disablePause == false)
 			{
 				Time.timeScale = 0;
 				showPaused();
-			} 
-            else if (Time.timeScale == 0)
-            {
+			}
+			else if (Time.timeScale == 0)
+			{
 				Time.timeScale = 1;
 				hidePaused();
 			}
@@ -51,19 +51,15 @@ public class UIManager : MonoBehaviour
 	}
 
 	//shows objects with ShowOnPause tag
-	public void showPaused(){
-		foreach(GameObject g in pauseObjects)
-        {
-			g.SetActive(true);
-		}
+	public void showPaused()
+	{
+		pauseObjects.SetActive(true);
 	}
 
 	//hides objects with ShowOnPause tag
-	public void hidePaused(){
-		foreach(GameObject g in pauseObjects)
-        {
-			g.SetActive(false);
-		}
+	public void hidePaused()
+	{
+		pauseObjects.SetActive(false);
 	}
 
 	//loads inputted level
