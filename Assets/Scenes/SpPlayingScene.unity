@@ -827,7 +827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: 0}
+  m_AnchoredPosition: {x: 0.000022888, y: 92}
   m_SizeDelta: {x: 587.398, y: 190.403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258621213
@@ -910,7 +910,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2604.714, y: 1515.269}
+  m_SizeDelta: {x: 1780.9, y: 898.615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304870713
 MonoBehaviour:
@@ -1200,7 +1200,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -333}
+  m_AnchoredPosition: {x: 0, y: -285}
   m_SizeDelta: {x: 291.37, y: 112.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510521405
@@ -1248,7 +1248,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2045472675}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: pauseControls, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
         m_Arguments:
@@ -2734,7 +2734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -196}
+  m_AnchoredPosition: {x: -0.000030518, y: -140}
   m_SizeDelta: {x: 291.371, y: 112.106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897989344
@@ -2782,7 +2782,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2045472675}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: pauseControls, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -3611,19 +3611,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045472670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9253bab149931b4b98cca948aabe7cf, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f2937e3cc75ed449be1f54325b05c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseButton:
     m_Name: Pause Button
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: d2614a11-f528-4d01-9f0c-7d549763749f
+    m_Id: c4cd9787-a99f-43bf-ab82-be6066896f01
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
-      m_Id: 6ccd1fcc-01ae-46b5-9d4b-0aebba2576a1
+      m_Id: 170a82a9-af1b-4c0a-ae4e-ea7743baea8f
       m_Path: <Keyboard>/escape
       m_Interactions: 
       m_Processors: 
@@ -3632,10 +3632,6 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   pauseObjects: {fileID: 304870711}
-  startingTag: {fileID: 0}
-  gameOverEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2064534213
 GameObject:
   m_ObjectHideFlags: 0

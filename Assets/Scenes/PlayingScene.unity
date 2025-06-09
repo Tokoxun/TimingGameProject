@@ -1788,7 +1788,7 @@ MonoBehaviour:
       m_Action: Pause Button
       m_Flags: 0
     m_Flags: 0
-  pauseObjects: {fileID: 0}
+  pauseObjects: {fileID: 1449619548}
   startingTag: {fileID: 802531706}
   gameOverEvent:
     m_PersistentCalls:
@@ -1906,7 +1906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: 0}
+  m_AnchoredPosition: {x: 0.000022888, y: 79}
   m_SizeDelta: {x: 587.398, y: 190.403}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &206744159
@@ -2152,8 +2152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030518, y: -196}
-  m_SizeDelta: {x: 291.371, y: 112.106}
+  m_AnchoredPosition: {x: 0, y: -124}
+  m_SizeDelta: {x: 291, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321167468
 MonoBehaviour:
@@ -8310,8 +8310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -333}
-  m_SizeDelta: {x: 291.37, y: 112.1}
+  m_AnchoredPosition: {x: 0, y: -261}
+  m_SizeDelta: {x: 291, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264596659
 MonoBehaviour:
@@ -9656,7 +9656,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 3059.404, y: 1670.745}
+  m_SizeDelta: {x: 1875, y: 875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449619550
 MonoBehaviour:
