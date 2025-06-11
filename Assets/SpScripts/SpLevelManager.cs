@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class SpLevelManager : MonoBehaviour
 {
+    public SpSpinScript spSpinScript;
+    public SpMarkerScript spMarkerScript;
     public float levelDiff;
     public PointSystem pointLevel;
     public bool hitterSwitch;
@@ -23,6 +25,12 @@ public class SpLevelManager : MonoBehaviour
                 break;
             case 30:
                 hitterSwitch = true;
+                break;
+            case 50:
+                spSpinScript.signalTime = 0.5f;
+                break;
+            case 100:
+                spSpinScript.signalTime = 0.2f;
                 break;
         }
     }
