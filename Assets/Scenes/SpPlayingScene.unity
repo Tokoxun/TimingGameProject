@@ -1714,7 +1714,7 @@ MonoBehaviour:
   dirChangeTime: 2
   changeTime: 0
   spLevelManager: {fileID: 2045472674}
-  spinSpeed: -90
+  spinSpeed: -100
 --- !u!1 &874906026
 GameObject:
   m_ObjectHideFlags: 0
