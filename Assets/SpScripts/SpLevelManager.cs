@@ -37,7 +37,7 @@ public class SpLevelManager : MonoBehaviour
             case 60:
                 warningSwitch = true;
                 break;
-            case 1:
+            case 80:
                 mineSwitch = true;
                 break;
             case 100:
