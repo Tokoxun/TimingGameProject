@@ -5,6 +5,7 @@ public class SpLevelManager : MonoBehaviour
     public float levelDiff;
     public PointSystem pointLevel;
     public bool hitterSwitch;
+    public bool markSwitch;
     public bool startSwitch;
 
     void Start()
@@ -17,6 +18,9 @@ public class SpLevelManager : MonoBehaviour
         levelDiff = (float)pointLevel.points / 100;
         switch (pointLevel.points)
         {
+            case 20:
+                markSwitch = true;
+                break;
             case 30:
                 hitterSwitch = true;
                 break;
