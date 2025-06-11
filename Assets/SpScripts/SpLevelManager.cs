@@ -9,6 +9,7 @@ public class SpLevelManager : MonoBehaviour
     public bool hitterSwitch;
     public bool markSwitch;
     public bool startSwitch;
+    public bool mineSwitch;
 
     void Start()
     {
@@ -37,6 +38,9 @@ public class SpLevelManager : MonoBehaviour
                 {
                     markerScript.startEndTime = true;
                 }
+                break;
+            case 1:
+                mineSwitch = true;
                 break;
             case 100:
                 spSpinScript.signalTime = 0.2f;
