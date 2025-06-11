@@ -14,6 +14,7 @@ public class SpSpinScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        signalTime = 1f;
         changeOrNot = new float[2];
         change = spinSpeed;
     }
