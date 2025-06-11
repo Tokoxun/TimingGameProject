@@ -26,6 +26,9 @@ public class SpLevelManager : MonoBehaviour
             case 30:
                 hitterSwitch = true;
                 break;
+            case 40:
+                startSwitch = true;
+                break;
             case 50:
                 spSpinScript.signalTime = 0.5f;
                 break;
