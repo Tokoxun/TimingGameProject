@@ -5,7 +5,6 @@ public class SpMarkerScript : MonoBehaviour
     private SpriteRenderer spMarker;
     public SpLevelManager spLevelManager;
     public bool onHitted;
-    public bool startEndTime;
     public markPurplePoint markPurplePoint;
     public markBlackPoint markBlackPoint;
     public PointSystem pointsScript;
@@ -35,7 +34,7 @@ public class SpMarkerScript : MonoBehaviour
     }
     public void Respawn()
     {
-        if (markPurplePoint != null && startEndTime)
+        if (markPurplePoint != null && spLevelManager.warningSwitch)
         {
             markPurplePoint.StartEffect();
         }

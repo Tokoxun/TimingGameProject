@@ -19,7 +19,7 @@ public class markPurplePoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (markerScript.startEndTime && chosenEnd)
+        if (markerScript.spLevelManager.warningSwitch && chosenEnd)
         {
             endTime += Time.deltaTime;
             pointAnimator.speed = endTime;

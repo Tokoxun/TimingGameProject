@@ -3,12 +3,13 @@ using UnityEngine;
 public class SpLevelManager : MonoBehaviour
 {
     public SpSpinScript spSpinScript;
-    public SpMarkerScript[] spMarkerScript;
+    public SpMarkerScript spMarkerScript;
     public float levelDiff;
     public PointSystem pointLevel;
     public bool hitterSwitch;
     public bool markSwitch;
     public bool startSwitch;
+    public bool warningSwitch;
     public bool mineSwitch;
 
     void Start()
@@ -34,10 +35,7 @@ public class SpLevelManager : MonoBehaviour
                 spSpinScript.signalTime = 0.5f;
                 break;
             case 60:
-                foreach (SpMarkerScript markerScript in spMarkerScript)
-                {
-                    markerScript.startEndTime = true;
-                }
+                warningSwitch = true;
                 break;
             case 1:
                 mineSwitch = true;
