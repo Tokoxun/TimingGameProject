@@ -13,7 +13,7 @@ public class SpLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        levelDiff = pointLevel.points / 100;
+        levelDiff = (float)pointLevel.points / 100;
         if (pointLevel.points >= 20)
         {
             startSwitch = true;
