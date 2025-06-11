@@ -3,9 +3,11 @@ using UnityEngine;
 public class SpMarkerScript : MonoBehaviour
 {
     private SpriteRenderer spMarker;
+    public SpLevelManager spLevelManager;
     public bool onHitted;
     public bool startEndTime;
     public markPurplePoint markPurplePoint;
+    public markBlackPoint markBlackPoint;
     public PointSystem pointsScript;
     public SpMarkerRespawn spMarkerRespawn;
     public Collider2D markCol;
@@ -36,6 +38,10 @@ public class SpMarkerScript : MonoBehaviour
         if (markPurplePoint != null && startEndTime)
         {
             markPurplePoint.StartEffect();
+        }
+        else if (markBlackPoint != null && spLevelManager.mineSwitch)
+        {
+            markBlackPoint.StartEffect();
         }
         onHitted = false;
         spMarker.enabled = true;
