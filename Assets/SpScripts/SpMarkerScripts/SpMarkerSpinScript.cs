@@ -16,6 +16,8 @@ public class SpMarkerSpinScript : MonoBehaviour
     void Start()
     {
         changeOrNot = new float[2];
+        changeOrNot[0] = spinSpeed;
+        changeOrNot[1] = -spinSpeed;
         spMarkerRespawn.triggerRespawn += randomCurrentMarkPosition;
     }
 
@@ -24,7 +26,7 @@ public class SpMarkerSpinScript : MonoBehaviour
     {
         totalSpinSpeed = spinSpeed + (spinSpeed * spLevelManager.levelDiff);
         transform.Rotate(Vector3.forward * (totalSpinSpeed * Time.deltaTime));
-        if (changeOrNot != null)
+        if (changeOrNot != null && spLevelManager.markSwitch)
         {
             changeOrNot[0] = spinSpeed;
             changeOrNot[1] = -spinSpeed;
