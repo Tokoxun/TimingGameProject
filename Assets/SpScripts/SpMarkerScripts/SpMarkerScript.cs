@@ -4,6 +4,8 @@ public class SpMarkerScript : MonoBehaviour
 {
     private SpriteRenderer spMarker;
     public bool onHitted;
+    public bool startEndTime;
+    public markPurplePoint markPurplePoint;
     public PointSystem pointsScript;
     public SpMarkerRespawn spMarkerRespawn;
     public Collider2D markCol;
@@ -31,6 +33,10 @@ public class SpMarkerScript : MonoBehaviour
     }
     public void Respawn()
     {
+        if (markPurplePoint != null && startEndTime)
+        {
+            markPurplePoint.StartEffect();
+        }
         onHitted = false;
         spMarker.enabled = true;
         markCol.enabled = true;
