@@ -2,9 +2,15 @@ using UnityEngine;
 
 public class SpLevelManager : MonoBehaviour
 {
+    public SpSpinScript spSpinScript;
+    public SpMarkerScript spMarkerScript;
     public float levelDiff;
     public PointSystem pointLevel;
+    public bool hitterSwitch;
+    public bool markSwitch;
     public bool startSwitch;
+    public bool warningSwitch;
+    public bool mineSwitch;
 
     void Start()
     {
@@ -13,10 +19,30 @@ public class SpLevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        levelDiff = pointLevel.points / 100;
-        if (pointLevel.points >= 20)
+        levelDiff = (float)pointLevel.points / 100;
+        switch (pointLevel.points)
         {
-            startSwitch = true;
+            case 20:
+                markSwitch = true;
+                break;
+            case 30:
+                hitterSwitch = true;
+                break;
+            case 40:
+                startSwitch = true;
+                break;
+            case 50:
+                spSpinScript.signalTime = 0.5f;
+                break;
+            case 60:
+                mineSwitch = true;
+                break;
+            case 80:
+                warningSwitch = true;
+                break;
+            case 100:
+                spSpinScript.signalTime = 0.2f;
+                break;
         }
     }
 }
