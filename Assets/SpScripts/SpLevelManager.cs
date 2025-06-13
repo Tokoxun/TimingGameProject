@@ -35,10 +35,10 @@ public class SpLevelManager : MonoBehaviour
                 spSpinScript.signalTime = 0.5f;
                 break;
             case 60:
-                warningSwitch = true;
+                mineSwitch = true;
                 break;
             case 80:
-                mineSwitch = true;
+                warningSwitch = true;
                 break;
             case 100:
                 spSpinScript.signalTime = 0.2f;
