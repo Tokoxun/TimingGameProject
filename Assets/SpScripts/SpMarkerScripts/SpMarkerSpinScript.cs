@@ -6,6 +6,7 @@ public class SpMarkerSpinScript : MonoBehaviour
     public float changeTime;
     private float switchPlacementTimer = 8f;
     private float switchPlacement;
+    public GameObject blueWarning;
     private float[] changeOrNot;
     public float spinSpeed = -35f;
     public SpLevelManager spLevelManager;
@@ -15,6 +16,7 @@ public class SpMarkerSpinScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        blueWarning.SetActive(false);
         changeOrNot = new float[2];
         changeOrNot[0] = spinSpeed;
         changeOrNot[1] = -spinSpeed;
@@ -40,6 +42,10 @@ public class SpMarkerSpinScript : MonoBehaviour
         if (spLevelManager.startSwitch)
         {
             switchPlacement += Time.deltaTime;
+            if (switchPlacementTimer - switchPlacement < 1)
+            {
+                blueWarning.SetActive(true);
+            }
             if (switchPlacement >= switchPlacementTimer)
             {
                 randomCurrentMarkPosition();
@@ -52,5 +58,6 @@ public class SpMarkerSpinScript : MonoBehaviour
         spinSpeed = changeOrNot[Random.Range(0, changeOrNot.Length)];
         currentRotation = Random.Range(0, 361);
         gameObject.transform.rotation = Quaternion.Euler(0, 0, currentRotation);
+        blueWarning.SetActive(false);
     }
 }
