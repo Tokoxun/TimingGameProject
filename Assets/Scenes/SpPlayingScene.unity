@@ -2659,7 +2659,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Flags: 0
   hitterObject: {fileID: 1964171777}
-  cooldownTimer: 0.5
+  cooldownTimer: 0.1
   hitCooldown: 0
   spHitScript: {fileID: 1964171781}
 --- !u!1 &1643530739 stripped
