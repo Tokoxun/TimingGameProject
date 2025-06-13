@@ -24,7 +24,7 @@ public class SpMarkerRespawn : MonoBehaviour
 
     public void randomizeCooldown()
     {
-        int cooldownRandom = Random.Range(0, 3);
+        int cooldownRandom = Random.Range(1, 3);
         markCooldownTimer = cooldownRandom;
     }
 }
